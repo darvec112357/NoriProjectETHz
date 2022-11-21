@@ -1,0 +1,13 @@
+# Target labels
+ glfw_p
+# Source files and their labels
+C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/src/nanogui_p-build/CMakeFiles/glfw_p
+C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/src/nanogui_p-build/CMakeFiles/dad1d655a95b6e33fb2801d5cbb67ba8/glfw_p.rule
+C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/src/nanogui_p-build/CMakeFiles/5b743b3b2c2c0e860b18f782c260dd74/glfw_p-complete.rule
+C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/src/nanogui_p-build/CMakeFiles/090e118e8892ec0029f8d3c91250fb51/glfw_p-build.rule
+C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/src/nanogui_p-build/CMakeFiles/090e118e8892ec0029f8d3c91250fb51/glfw_p-configure.rule
+C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/src/nanogui_p-build/CMakeFiles/090e118e8892ec0029f8d3c91250fb51/glfw_p-download.rule
+C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/src/nanogui_p-build/CMakeFiles/090e118e8892ec0029f8d3c91250fb51/glfw_p-install.rule
+C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/src/nanogui_p-build/CMakeFiles/090e118e8892ec0029f8d3c91250fb51/glfw_p-mkdir.rule
+C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/src/nanogui_p-build/CMakeFiles/090e118e8892ec0029f8d3c91250fb51/glfw_p-patch.rule
+C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/src/nanogui_p-build/CMakeFiles/090e118e8892ec0029f8d3c91250fb51/glfw_p-update.rule

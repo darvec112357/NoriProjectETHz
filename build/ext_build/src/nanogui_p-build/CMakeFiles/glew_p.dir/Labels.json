@@ -1,0 +1,43 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/src/nanogui_p-build/CMakeFiles/glew_p"
+		},
+		{
+			"file" : "C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/src/nanogui_p-build/CMakeFiles/dad1d655a95b6e33fb2801d5cbb67ba8/glew_p.rule"
+		},
+		{
+			"file" : "C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/src/nanogui_p-build/CMakeFiles/5b743b3b2c2c0e860b18f782c260dd74/glew_p-complete.rule"
+		},
+		{
+			"file" : "C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/src/nanogui_p-build/CMakeFiles/9e3e343587067df6533912e1db3ddc7d/glew_p-build.rule"
+		},
+		{
+			"file" : "C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/src/nanogui_p-build/CMakeFiles/9e3e343587067df6533912e1db3ddc7d/glew_p-configure.rule"
+		},
+		{
+			"file" : "C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/src/nanogui_p-build/CMakeFiles/9e3e343587067df6533912e1db3ddc7d/glew_p-download.rule"
+		},
+		{
+			"file" : "C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/src/nanogui_p-build/CMakeFiles/9e3e343587067df6533912e1db3ddc7d/glew_p-install.rule"
+		},
+		{
+			"file" : "C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/src/nanogui_p-build/CMakeFiles/9e3e343587067df6533912e1db3ddc7d/glew_p-mkdir.rule"
+		},
+		{
+			"file" : "C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/src/nanogui_p-build/CMakeFiles/9e3e343587067df6533912e1db3ddc7d/glew_p-patch.rule"
+		},
+		{
+			"file" : "C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/src/nanogui_p-build/CMakeFiles/9e3e343587067df6533912e1db3ddc7d/glew_p-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"glew_p"
+		],
+		"name" : "glew_p"
+	}
+}

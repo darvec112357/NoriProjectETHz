@@ -1,0 +1,43 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "C:/Users/Rongxing/Desktop/ETH/CG/nori/build/CMakeFiles/zlib_p"
+		},
+		{
+			"file" : "C:/Users/Rongxing/Desktop/ETH/CG/nori/build/CMakeFiles/05d1c1a7d5a6a4f48adad25ab4cf48ec/zlib_p.rule"
+		},
+		{
+			"file" : "C:/Users/Rongxing/Desktop/ETH/CG/nori/build/CMakeFiles/e8e355cd154dfbe159359221e7a18aed/zlib_p-complete.rule"
+		},
+		{
+			"file" : "C:/Users/Rongxing/Desktop/ETH/CG/nori/build/CMakeFiles/b90196296a3e10a0a8f8b9d28516d618/zlib_p-build.rule"
+		},
+		{
+			"file" : "C:/Users/Rongxing/Desktop/ETH/CG/nori/build/CMakeFiles/b90196296a3e10a0a8f8b9d28516d618/zlib_p-configure.rule"
+		},
+		{
+			"file" : "C:/Users/Rongxing/Desktop/ETH/CG/nori/build/CMakeFiles/b90196296a3e10a0a8f8b9d28516d618/zlib_p-download.rule"
+		},
+		{
+			"file" : "C:/Users/Rongxing/Desktop/ETH/CG/nori/build/CMakeFiles/b90196296a3e10a0a8f8b9d28516d618/zlib_p-install.rule"
+		},
+		{
+			"file" : "C:/Users/Rongxing/Desktop/ETH/CG/nori/build/CMakeFiles/b90196296a3e10a0a8f8b9d28516d618/zlib_p-mkdir.rule"
+		},
+		{
+			"file" : "C:/Users/Rongxing/Desktop/ETH/CG/nori/build/CMakeFiles/b90196296a3e10a0a8f8b9d28516d618/zlib_p-patch.rule"
+		},
+		{
+			"file" : "C:/Users/Rongxing/Desktop/ETH/CG/nori/build/CMakeFiles/b90196296a3e10a0a8f8b9d28516d618/zlib_p-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"zlib_p"
+		],
+		"name" : "zlib_p"
+	}
+}

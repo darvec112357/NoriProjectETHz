@@ -1,0 +1,35 @@
+# CMake generation dependency list for this directory.
+C:/Program Files/CMake/share/cmake-3.25/Modules/CMakeCInformation.cmake
+C:/Program Files/CMake/share/cmake-3.25/Modules/CMakeCXXInformation.cmake
+C:/Program Files/CMake/share/cmake-3.25/Modules/CMakeCommonLanguageInclude.cmake
+C:/Program Files/CMake/share/cmake-3.25/Modules/CMakeGenericSystem.cmake
+C:/Program Files/CMake/share/cmake-3.25/Modules/CMakeInitializeConfigs.cmake
+C:/Program Files/CMake/share/cmake-3.25/Modules/CMakeLanguageInformation.cmake
+C:/Program Files/CMake/share/cmake-3.25/Modules/CMakeParseArguments.cmake
+C:/Program Files/CMake/share/cmake-3.25/Modules/CMakeRCInformation.cmake
+C:/Program Files/CMake/share/cmake-3.25/Modules/CMakeSystemSpecificInformation.cmake
+C:/Program Files/CMake/share/cmake-3.25/Modules/CMakeSystemSpecificInitialize.cmake
+C:/Program Files/CMake/share/cmake-3.25/Modules/Compiler/CMakeCommonCompilerMacros.cmake
+C:/Program Files/CMake/share/cmake-3.25/Modules/Compiler/MSVC-C.cmake
+C:/Program Files/CMake/share/cmake-3.25/Modules/Compiler/MSVC-CXX.cmake
+C:/Program Files/CMake/share/cmake-3.25/Modules/Compiler/MSVC.cmake
+C:/Program Files/CMake/share/cmake-3.25/Modules/ExternalProject.cmake
+C:/Program Files/CMake/share/cmake-3.25/Modules/ExternalProject/RepositoryInfo.txt.in
+C:/Program Files/CMake/share/cmake-3.25/Modules/ExternalProject/cfgcmd.txt.in
+C:/Program Files/CMake/share/cmake-3.25/Modules/ExternalProject/mkdirs.cmake.in
+C:/Program Files/CMake/share/cmake-3.25/Modules/Platform/Windows-MSVC-C.cmake
+C:/Program Files/CMake/share/cmake-3.25/Modules/Platform/Windows-MSVC-CXX.cmake
+C:/Program Files/CMake/share/cmake-3.25/Modules/Platform/Windows-MSVC.cmake
+C:/Program Files/CMake/share/cmake-3.25/Modules/Platform/Windows.cmake
+C:/Program Files/CMake/share/cmake-3.25/Modules/Platform/WindowsPaths.cmake
+C:/Users/Rongxing/Desktop/ETH/CG/nori/CMakeConfig.txt
+C:/Users/Rongxing/Desktop/ETH/CG/nori/CMakeLists.txt
+C:/Users/Rongxing/Desktop/ETH/CG/nori/build/CMakeFiles/3.25.0/CMakeCCompiler.cmake
+C:/Users/Rongxing/Desktop/ETH/CG/nori/build/CMakeFiles/3.25.0/CMakeCXXCompiler.cmake
+C:/Users/Rongxing/Desktop/ETH/CG/nori/build/CMakeFiles/3.25.0/CMakeRCCompiler.cmake
+C:/Users/Rongxing/Desktop/ETH/CG/nori/build/CMakeFiles/3.25.0/CMakeSystem.cmake
+C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/tmp/IlmBase_p-mkdirs.cmake
+C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/tmp/OpenEXR_p-mkdirs.cmake
+C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/tmp/nanogui_p-mkdirs.cmake
+C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/tmp/tbb_p-mkdirs.cmake
+C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/tmp/zlib_p-mkdirs.cmake

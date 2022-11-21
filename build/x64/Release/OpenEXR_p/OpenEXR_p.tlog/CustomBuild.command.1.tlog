@@ -1,0 +1,134 @@
+^C:\USERS\RONGXING\DESKTOP\ETH\CG\NORI\BUILD\CMAKEFILES\510CE549B7AF167B8C48B6C75E9AC21C\OPENEXR_P-MKDIR.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -Dcfgdir=/Release -P C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/tmp/OpenEXR_p-mkdirs.cmake
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/src/OpenEXR_p-stamp/Release/OpenEXR_p-mkdir
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\RONGXING\DESKTOP\ETH\CG\NORI\BUILD\CMAKEFILES\510CE549B7AF167B8C48B6C75E9AC21C\OPENEXR_P-DOWNLOAD.RULE
+setlocal
+cd C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E rm -rf C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/src/OpenEXR_p
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_directory C:/Users/Rongxing/Desktop/ETH/CG/nori/ext/openexr/OpenEXR C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/src/OpenEXR_p
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/src/OpenEXR_p-stamp/Release/OpenEXR_p-download
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\RONGXING\DESKTOP\ETH\CG\NORI\BUILD\CMAKEFILES\510CE549B7AF167B8C48B6C75E9AC21C\OPENEXR_P-UPDATE.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/src/OpenEXR_p-stamp/Release/OpenEXR_p-update
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\RONGXING\DESKTOP\ETH\CG\NORI\BUILD\CMAKEFILES\510CE549B7AF167B8C48B6C75E9AC21C\OPENEXR_P-PATCH.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/src/OpenEXR_p-stamp/Release/OpenEXR_p-patch
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\RONGXING\DESKTOP\ETH\CG\NORI\BUILD\CMAKEFILES\510CE549B7AF167B8C48B6C75E9AC21C\OPENEXR_P-CONFIGURE.RULE
+setlocal
+cd C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\OpenEXR_p-build
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Release "-DCMAKE_GENERATOR=Visual Studio 16 2019" -Wno-dev -DCMAKE_INSTALL_PREFIX=C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist "-DCMAKE_CXX_FLAGS:INTERNAL=/DWIN32 /D_WINDOWS /W3 /GR /EHsc" "-DCMAKE_CXX_FLAGS_DEBUG:INTERNAL=/MTd /Zi /Ob0 /Od /RTC1" "-DCMAKE_CXX_FLAGS_RELEASE:INTERNAL=/MT /O2 /Ob2 /DNDEBUG" "-DCMAKE_CXX_FLAGS_MINSIZEREL:INTERNAL=/MT /O1 /Ob1 /DNDEBUG" "-DCMAKE_CXX_FLAGS_RELWITHDEBINFO:INTERNAL=/MT /Zi /O2 /Ob1 /DNDEBUG" "-DCMAKE_C_FLAGS:INTERNAL=/DWIN32 /D_WINDOWS /W3" "-DCMAKE_C_FLAGS_DEBUG:INTERNAL=/MTd /Zi /Ob0 /Od /RTC1" "-DCMAKE_C_FLAGS_RELEASE:INTERNAL=/MT /O2 /Ob2 /DNDEBUG" "-DCMAKE_C_FLAGS_MINSIZEREL:INTERNAL=/MT /O1 /Ob1 /DNDEBUG" "-DCMAKE_C_FLAGS_RELWITHDEBINFO:INTERNAL=/MT /Zi /O2 /Ob1 /DNDEBUG" -DILMBASE_PACKAGE_PREFIX=C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist -DBUILD_SHARED_LIBS=OFF -DNAMESPACE_VERSIONING=NO "-GVisual Studio 16 2019" "-DCMAKE_GENERATOR_INSTANCE:INTERNAL=C:/Program Files (x86)/Microsoft Visual Studio/2019/Community" C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/src/OpenEXR_p
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/src/OpenEXR_p-stamp/Release/OpenEXR_p-configure
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\RONGXING\DESKTOP\ETH\CG\NORI\BUILD\CMAKEFILES\510CE549B7AF167B8C48B6C75E9AC21C\OPENEXR_P-BUILD.RULE
+setlocal
+cd C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\OpenEXR_p-build
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" --build . --config Release
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/src/OpenEXR_p-stamp/Release/OpenEXR_p-build
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\RONGXING\DESKTOP\ETH\CG\NORI\BUILD\CMAKEFILES\510CE549B7AF167B8C48B6C75E9AC21C\OPENEXR_P-INSTALL.RULE
+setlocal
+cd C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\OpenEXR_p-build
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" --install . --config Release
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/src/OpenEXR_p-stamp/Release/OpenEXR_p-install
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\RONGXING\DESKTOP\ETH\CG\NORI\BUILD\CMAKEFILES\E8E355CD154DFBE159359221E7A18AED\OPENEXR_P-COMPLETE.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E make_directory C:/Users/Rongxing/Desktop/ETH/CG/nori/build/CMakeFiles/Release
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/Rongxing/Desktop/ETH/CG/nori/build/CMakeFiles/Release/OpenEXR_p-complete
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/src/OpenEXR_p-stamp/Release/OpenEXR_p-done
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\RONGXING\DESKTOP\ETH\CG\NORI\BUILD\CMAKEFILES\05D1C1A7D5A6A4F48ADAD25AB4CF48EC\OPENEXR_P.RULE
+setlocal
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\RONGXING\DESKTOP\ETH\CG\NORI\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/Rongxing/Desktop/ETH/CG/nori -BC:/Users/Rongxing/Desktop/ETH/CG/nori/build --check-stamp-file C:/Users/Rongxing/Desktop/ETH/CG/nori/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

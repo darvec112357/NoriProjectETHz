@@ -1,0 +1,7 @@
+C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/lib/zlib.lib
+C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/bin/zlib.dll
+C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/lib/zlibstatic.lib
+C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/include/zconf.h
+C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/include/zlib.h
+C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/share/man/man3/zlib.3
+C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/share/pkgconfig/zlib.pc

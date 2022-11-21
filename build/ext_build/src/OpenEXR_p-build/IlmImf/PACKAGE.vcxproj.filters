@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\OpenEXR_p-build\CMakeFiles\77f834a92d9aceb1a450b8cebe2572b1\PACKAGE_force.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{9C268997-140C-30D5-A724-54411EBE2B41}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

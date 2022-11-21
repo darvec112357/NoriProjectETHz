@@ -1,0 +1,301 @@
+﻿  Creating directories for 'tbb_p'
+  Building Custom Rule C:/Users/Rongxing/Desktop/ETH/CG/nori/CMakeLists.txt
+  Performing download step (DIR copy) for 'tbb_p'
+  No update step for 'tbb_p'
+  No patch step for 'tbb_p'
+  Performing configure step for 'tbb_p'
+  -- Selecting Windows SDK version 10.0.19041.0 to target Windows 10.0.22621.
+  -- The C compiler identification is MSVC 19.29.30147.0
+  -- The CXX compiler identification is MSVC 19.29.30147.0
+  -- Detecting C compiler ABI info
+  -- Detecting C compiler ABI info - done
+  -- Check for working C compiler: C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.29.30133/bin/Hostx64/x64/cl.exe - skipped
+  -- Detecting C compile features
+  -- Detecting C compile features - done
+  -- Detecting CXX compiler ABI info
+  -- Detecting CXX compiler ABI info - done
+  -- Check for working CXX compiler: C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.29.30133/bin/Hostx64/x64/cl.exe - skipped
+  -- Detecting CXX compile features
+  -- Detecting CXX compile features - done
+  -- The ASM_MASM compiler identification is MSVC
+  -- Found assembler: C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.29.30133/bin/Hostx64/x64/ml64.exe
+  -- Configuring done
+  -- Generating done
+CUSTOMBUILD : CMake warning : 
+    Manually-specified variables were not used by the project:
+  
+      CMAKE_BUILD_TYPE
+      CMAKE_C_FLAGS_DEBUG
+      CMAKE_C_FLAGS_MINSIZEREL
+      CMAKE_C_FLAGS_RELEASE
+      CMAKE_C_FLAGS_RELWITHDEBINFO
+  
+  
+  -- Build files have been written to: C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/src/tbb_p-build
+  Performing build step for 'tbb_p'
+  Microsoft (R) Build Engine version 16.11.2+f32259642 for .NET Framework
+  Copyright (C) Microsoft Corporation. All rights reserved.
+  
+    Checking Build System
+    Building Custom Rule C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/src/tbb_p/CMakeLists.txt
+    Assembling C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p\src\tbb\intel64-masm\atomic_support.asm...
+    Assembling C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p\src\tbb\intel64-masm\itsx.asm...
+    Assembling C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p\src\tbb\intel64-masm\intel64_misc.asm...
+    Microsoft (R) C/C++ Optimizing Compiler Version 19.29.30147 for x64
+    arena.cpp
+    Copyright (C) Microsoft Corporation.  All rights reserved.
+    cl /c /IC:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p\include /IC:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p\src /IC:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p\src\rml\include /W3 /WX- /diagnostics:column /O2 /Ob2 /D _MBCS /D WIN32 /D _WINDOWS /D USE_WINTHREAD /D _TBB_CPP0X /D _CRT_SECURE_NO_DEPRECATE /D _WIN32_WINNT=0x0600 /D NDEBUG /D __TBB_BUILD=1 /D DO_ITT_NOTIFY /D "CMAKE_INTDIR=\"Release\"" /Gm- /EHsc /MT /GS- /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"tbb.dir\Release\\" /Fd"C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p-build\Release\tbb.pdb" /external:W3 /Gd /TP /errorReport:queue  /volatile:iso C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p\src\tbb\arena.cpp C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p\src\tbb\cache_aligned_allocator.cpp C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p\src\tbb\concurrent_hash_map.cpp C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p\src\tbb\concurrent_monitor.cpp C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p\src\tbb\concurrent_queue.cpp C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p\src\tbb\concurrent_vector.cpp C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p\src\tbb\condition_variable.cpp C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p\src\tbb\critical_section.cpp C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p\src\tbb\dynamic_link.cpp C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p\src\tbb\governor.cpp C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p\src\tbb\itt_notify.cpp C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p\src\tbb\market.cpp C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p\src\tbb\mutex.cpp C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p\src\tbb\observer_proxy.cpp C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p\src\tbb\pipeline.cpp C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p\src\tbb\private_server.cpp C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p\src\tbb\queuing_mutex.cpp C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p\src\tbb\queuing_rw_mutex.cpp C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p\src\tbb\reader_writer_lock.cpp C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p\src\tbb\recursive_mutex.cpp C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p\src\tbb\scheduler.cpp C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p\src\tbb\semaphore.cpp C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p\src\tbb\spin_mutex.cpp C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p\src\tbb\spin_rw_mutex.cpp C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p\src\tbb\task.cpp C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p\src\tbb\task_group_context.cpp C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p\src\tbb\tbb_main.cpp C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p\src\tbb\tbb_misc.cpp C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p\src\tbb\tbb_misc_ex.cpp C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p\src\tbb\tbb_statistics.cpp C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p\src\tbb\tbb_thread.cpp C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p\src\tbb\x86_rtm_rw_mutex.cpp C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p\src\rml\client\rml_tbb.cpp
+    cache_aligned_allocator.cpp
+    concurrent_hash_map.cpp
+    concurrent_monitor.cpp
+    concurrent_queue.cpp
+    concurrent_vector.cpp
+    condition_variable.cpp
+    critical_section.cpp
+    dynamic_link.cpp
+    governor.cpp
+    itt_notify.cpp
+    market.cpp
+    mutex.cpp
+    observer_proxy.cpp
+    pipeline.cpp
+    private_server.cpp
+    queuing_mutex.cpp
+    queuing_rw_mutex.cpp
+    reader_writer_lock.cpp
+    recursive_mutex.cpp
+    Generating Code...
+    Compiling...
+    scheduler.cpp
+    semaphore.cpp
+    spin_mutex.cpp
+    spin_rw_mutex.cpp
+    task.cpp
+    task_group_context.cpp
+    tbb_main.cpp
+    tbb_misc.cpp
+    tbb_misc_ex.cpp
+    tbb_statistics.cpp
+    tbb_thread.cpp
+    x86_rtm_rw_mutex.cpp
+    rml_tbb.cpp
+    Generating Code...
+    tbb.vcxproj -> C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p-build\Release\tbb.lib
+    Building Custom Rule C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/src/tbb_p/CMakeLists.txt
+    Microsoft (R) C/C++ Optimizing Compiler Version 19.29.30147 for x64
+    Copyright (C) Microsoft Corporation.  All rights reserved.
+    cl /c /IC:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p\include /IC:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p\src /IC:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p\src\rml\include /W3 /WX- /diagnostics:column /O2 /Ob2 /D _MBCS /D WIN32 /D _WINDOWS /D USE_WINTHREAD /D _TBB_CPP0X /D _CRT_SECURE_NO_DEPRECATE /D _WIN32_WINNT=0x0600 /D NDEBUG /D __TBBMALLOC_BUILD=1 /D DO_ITT_NOTIFY /D "CMAKE_INTDIR=\"Release\"" /Gm- /EHsc /MT /GS- /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR- /Fo"tbbmalloc.dir\Release\\" /Fd"C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p-build\Release\tbbmalloc.pdb" /external:W3 /Gd /TP /errorReport:queue  /volatile:iso /EHs- C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p\src\tbbmalloc\backend.cpp C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p\src\tbbmalloc\large_objects.cpp C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p\src\tbbmalloc\backref.cpp C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p\src\tbbmalloc\tbbmalloc.cpp C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p\src\tbbmalloc\frontend.cpp C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p\src\tbb\itt_notify.cpp
+cl : command line warning D9025: overriding '/EHs' with '/EHs-' [C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p-build\tbbmalloc.vcxproj]
+    backend.cpp
+C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p\src\tbbmalloc\tbbmalloc_internal.h(845,1): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data [C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p-build\tbbmalloc.vcxproj]
+C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p\src\tbbmalloc\backend.cpp(139,40): warning C4146: unary minus operator applied to unsigned type, result still unsigned [C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p-build\tbbmalloc.vcxproj]
+C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p\src\tbbmalloc\tbbmalloc_internal.h(194,40): warning C4244: '=': conversion from 'intptr_t' to 'int', possible loss of data [C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p-build\tbbmalloc.vcxproj]
+  C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p\src\tbbmalloc\tbbmalloc_internal.h(185): message : while compiling class template member function 'int rml::internal::BitMaskBasic<512>::getMinTrue(unsigned int) const' [C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p-build\tbbmalloc.vcxproj]
+  C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p\src\tbbmalloc\tbbmalloc_internal.h(212): message : see reference to function template instantiation 'int rml::internal::BitMaskBasic<512>::getMinTrue(unsigned int) const' being compiled [C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p-build\tbbmalloc.vcxproj]
+  C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p\src\tbbmalloc\tbbmalloc_internal.h(208): message : see reference to class template instantiation 'rml::internal::BitMaskBasic<512>' being compiled [C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p-build\tbbmalloc.vcxproj]
+  C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p\src\tbbmalloc\tbbmalloc_internal.h(713): message : see reference to class template instantiation 'rml::internal::BitMaskMin<512>' being compiled [C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p-build\tbbmalloc.vcxproj]
+C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p\src\tbbmalloc\tbbmalloc_internal.h(199,40): warning C4244: '=': conversion from 'intptr_t' to 'int', possible loss of data [C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p-build\tbbmalloc.vcxproj]
+    large_objects.cpp
+C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p\src\tbbmalloc\tbbmalloc_internal.h(845,1): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data [C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p-build\tbbmalloc.vcxproj]
+C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p\src\tbbmalloc\tbbmalloc_internal.h(446,1): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data [C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p-build\tbbmalloc.vcxproj]
+  C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p\src\tbbmalloc\tbbmalloc_internal.h(444): message : while compiling class template member function 'int rml::internal::LargeObjectCacheImpl<rml::internal::LargeObjectCache::LargeCacheTypeProps>::sizeToIdx(size_t)' [C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p-build\tbbmalloc.vcxproj]
+  C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p\src\tbbmalloc\large_objects.cpp(753): message : see reference to function template instantiation 'int rml::internal::LargeObjectCacheImpl<rml::internal::LargeObjectCache::LargeCacheTypeProps>::sizeToIdx(size_t)' being compiled [C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p-build\tbbmalloc.vcxproj]
+  C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p\src\tbbmalloc\tbbmalloc_internal.h(490): message : see reference to class template instantiation 'rml::internal::LargeObjectCacheImpl<rml::internal::LargeObjectCache::LargeCacheTypeProps>' being compiled [C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p-build\tbbmalloc.vcxproj]
+C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p\src\tbbmalloc\tbbmalloc_internal.h(194,40): warning C4244: '=': conversion from 'intptr_t' to 'int', possible loss of data [C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p-build\tbbmalloc.vcxproj]
+  C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p\src\tbbmalloc\tbbmalloc_internal.h(185): message : while compiling class template member function 'int rml::internal::BitMaskBasic<512>::getMinTrue(unsigned int) const' [C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p-build\tbbmalloc.vcxproj]
+  C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p\src\tbbmalloc\tbbmalloc_internal.h(212): message : see reference to function template instantiation 'int rml::internal::BitMaskBasic<512>::getMinTrue(unsigned int) const' being compiled [C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p-build\tbbmalloc.vcxproj]
+  C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p\src\tbbmalloc\tbbmalloc_internal.h(208): message : see reference to class template instantiation 'rml::internal::BitMaskBasic<512>' being compiled [C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p-build\tbbmalloc.vcxproj]
+  C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p\src\tbbmalloc\tbbmalloc_internal.h(713): message : see reference to class template instantiation 'rml::internal::BitMaskMin<512>' being compiled [C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p-build\tbbmalloc.vcxproj]
+C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p\src\tbbmalloc\tbbmalloc_internal.h(199,40): warning C4244: '=': conversion from 'intptr_t' to 'int', possible loss of data [C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p-build\tbbmalloc.vcxproj]
+C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p\src\tbbmalloc\large_objects.cpp(289,48): warning C4146: unary minus operator applied to unsigned type, result still unsigned [C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p-build\tbbmalloc.vcxproj]
+  C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p\src\tbbmalloc\large_objects.cpp(264): message : while compiling class template member function 'void rml::internal::LargeObjectCacheImpl<rml::internal::LargeObjectCache::HugeCacheTypeProps>::CacheBin::CacheBinFunctor::operator ()(rml::internal::CacheBinOperation *)' [C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p-build\tbbmalloc.vcxproj]
+  C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p\include\tbb/internal/_aggregator_impl.h(136): message : see reference to function template instantiation 'void rml::internal::LargeObjectCacheImpl<rml::internal::LargeObjectCache::HugeCacheTypeProps>::CacheBin::CacheBinFunctor::operator ()(rml::internal::CacheBinOperation *)' being compiled [C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p-build\tbbmalloc.vcxproj]
+  C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p\include\tbb/internal/_aggregator_impl.h(88): message : see reference to function template instantiation 'void tbb::interface6::internal::aggregator_generic<OperationType>::start_handle_operations<handler_type>(handler_type &)' being compiled [C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p-build\tbbmalloc.vcxproj]
+            with
+            [
+                OperationType=rml::internal::CacheBinOperation,
+                handler_type=rml::internal::LargeObjectCacheImpl<rml::internal::LargeObjectCache::HugeCacheTypeProps>::CacheBin::CacheBinFunctor
+            ]
+  C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p\include\tbb/internal/_aggregator_impl.h(88): message : see reference to function template instantiation 'void tbb::interface6::internal::aggregator_generic<OperationType>::start_handle_operations<handler_type>(handler_type &)' being compiled [C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p-build\tbbmalloc.vcxproj]
+            with
+            [
+                OperationType=rml::internal::CacheBinOperation,
+                handler_type=rml::internal::LargeObjectCacheImpl<rml::internal::LargeObjectCache::HugeCacheTypeProps>::CacheBin::CacheBinFunctor
+            ]
+  C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p\src\tbbmalloc\large_objects.cpp(346): message : see reference to function template instantiation 'void tbb::interface6::internal::aggregator_generic<OperationType>::execute<rml::internal::LargeObjectCacheImpl<rml::internal::LargeObjectCache::HugeCacheTypeProps>::CacheBin::CacheBinFunctor>(operation_type *,handler_type &,bool)' being compiled [C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p-build\tbbmalloc.vcxproj]
+            with
+            [
+                OperationType=rml::internal::CacheBinOperation,
+                operation_type=rml::internal::CacheBinOperation,
+                handler_type=rml::internal::LargeObjectCacheImpl<rml::internal::LargeObjectCache::HugeCacheTypeProps>::CacheBin::CacheBinFunctor
+            ]
+  C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p\src\tbbmalloc\large_objects.cpp(346): message : see reference to function template instantiation 'void tbb::interface6::internal::aggregator_generic<OperationType>::execute<rml::internal::LargeObjectCacheImpl<rml::internal::LargeObjectCache::HugeCacheTypeProps>::CacheBin::CacheBinFunctor>(operation_type *,handler_type &,bool)' being compiled [C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p-build\tbbmalloc.vcxproj]
+            with
+            [
+                OperationType=rml::internal::CacheBinOperation,
+                operation_type=rml::internal::CacheBinOperation,
+                handler_type=rml::internal::LargeObjectCacheImpl<rml::internal::LargeObjectCache::HugeCacheTypeProps>::CacheBin::CacheBinFunctor
+            ]
+  C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p\src\tbbmalloc\large_objects.cpp(344): message : while compiling class template member function 'void rml::internal::LargeObjectCacheImpl<rml::internal::LargeObjectCache::HugeCacheTypeProps>::CacheBin::ExecuteOperation(rml::internal::CacheBinOperation *,rml::internal::ExtMemoryPool *,rml::internal::BitMaskMax<242> *,int,bool)' [C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p-build\tbbmalloc.vcxproj]
+  C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p\src\tbbmalloc\large_objects.cpp(372): message : see reference to function template instantiation 'void rml::internal::LargeObjectCacheImpl<rml::internal::LargeObjectCache::HugeCacheTypeProps>::CacheBin::ExecuteOperation(rml::internal::CacheBinOperation *,rml::internal::ExtMemoryPool *,rml::internal::BitMaskMax<242> *,int,bool)' being compiled [C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p-build\tbbmalloc.vcxproj]
+  C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p\src\tbbmalloc\large_objects.cpp(367): message : while compiling class template member function 'void rml::internal::LargeObjectCacheImpl<rml::internal::LargeObjectCache::HugeCacheTypeProps>::CacheBin::putList(rml::internal::ExtMemoryPool *,rml::internal::LargeMemoryBlock *,rml::internal::BitMaskMax<242> *,int)' [C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p-build\tbbmalloc.vcxproj]
+  C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p\src\tbbmalloc\large_objects.cpp(738): message : see reference to function template instantiation 'void rml::internal::LargeObjectCacheImpl<rml::internal::LargeObjectCache::HugeCacheTypeProps>::CacheBin::putList(rml::internal::ExtMemoryPool *,rml::internal::LargeMemoryBlock *,rml::internal::BitMaskMax<242> *,int)' being compiled [C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p-build\tbbmalloc.vcxproj]
+  C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p\src\tbbmalloc\large_objects.cpp(734): message : while compiling class template member function 'void rml::internal::LargeObjectCacheImpl<rml::internal::LargeObjectCache::HugeCacheTypeProps>::putList(rml::internal::ExtMemoryPool *,rml::internal::LargeMemoryBlock *)' [C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p-build\tbbmalloc.vcxproj]
+  C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p\src\tbbmalloc\large_objects.cpp(792): message : see reference to function template instantiation 'void rml::internal::LargeObjectCacheImpl<rml::internal::LargeObjectCache::HugeCacheTypeProps>::putList(rml::internal::ExtMemoryPool *,rml::internal::LargeMemoryBlock *)' being compiled [C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p-build\tbbmalloc.vcxproj]
+C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p\src\tbbmalloc\large_objects.cpp(338,29): warning C4146: unary minus operator applied to unsigned type, result still unsigned [C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p-build\tbbmalloc.vcxproj]
+C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p\src\tbbmalloc\tbbmalloc_internal.h(373,57): warning C4146: unary minus operator applied to unsigned type, result still unsigned [C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p-build\tbbmalloc.vcxproj]
+  C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p\src\tbbmalloc\tbbmalloc_internal.h(373): message : while compiling class template member function 'uintptr_t rml::internal::LargeObjectCacheImpl<rml::internal::LargeObjectCache::LargeCacheTypeProps>::CacheBin::CacheBinFunctor::OperationPreprocessor::getTimeRange(void) const' [C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p-build\tbbmalloc.vcxproj]
+  C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p\src\tbbmalloc\large_objects.cpp(270): message : see reference to function template instantiation 'uintptr_t rml::internal::LargeObjectCacheImpl<rml::internal::LargeObjectCache::LargeCacheTypeProps>::CacheBin::CacheBinFunctor::OperationPreprocessor::getTimeRange(void) const' being compiled [C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p-build\tbbmalloc.vcxproj]
+  C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p\src\tbbmalloc\large_objects.cpp(267): message : see reference to class template instantiation 'rml::internal::LargeObjectCacheImpl<rml::internal::LargeObjectCache::LargeCacheTypeProps>::CacheBin::CacheBinFunctor::OperationPreprocessor' being compiled [C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p-build\tbbmalloc.vcxproj]
+  C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p\src\tbbmalloc\large_objects.cpp(264): message : while compiling class template member function 'void rml::internal::LargeObjectCacheImpl<rml::internal::LargeObjectCache::LargeCacheTypeProps>::CacheBin::CacheBinFunctor::operator ()(rml::internal::CacheBinOperation *)' [C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p-build\tbbmalloc.vcxproj]
+  C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p\include\tbb/internal/_aggregator_impl.h(136): message : see reference to function template instantiation 'void rml::internal::LargeObjectCacheImpl<rml::internal::LargeObjectCache::LargeCacheTypeProps>::CacheBin::CacheBinFunctor::operator ()(rml::internal::CacheBinOperation *)' being compiled [C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p-build\tbbmalloc.vcxproj]
+C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p\src\tbbmalloc\large_objects.cpp(502,34): warning C4018: '>': signed/unsigned mismatch [C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p-build\tbbmalloc.vcxproj]
+  C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p\src\tbbmalloc\large_objects.cpp(491): message : while compiling class template member function 'void rml::internal::LargeObjectCacheImpl<rml::internal::LargeObjectCache::HugeCacheTypeProps>::CacheBin::forgetOutdatedState(uintptr_t)' [C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p-build\tbbmalloc.vcxproj]
+  C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p\src\tbbmalloc\large_objects.cpp(294): message : see reference to function template instantiation 'void rml::internal::LargeObjectCacheImpl<rml::internal::LargeObjectCache::HugeCacheTypeProps>::CacheBin::forgetOutdatedState(uintptr_t)' being compiled [C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p-build\tbbmalloc.vcxproj]
+    backref.cpp
+C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p\src\tbbmalloc\tbbmalloc_internal.h(845,1): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data [C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p-build\tbbmalloc.vcxproj]
+C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p\src\tbbmalloc\backref.cpp(148,37): warning C4244: 'argument': conversion from 'intptr_t' to 'int', possible loss of data [C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p-build\tbbmalloc.vcxproj]
+C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p\src\tbbmalloc\tbbmalloc_internal.h(194,40): warning C4244: '=': conversion from 'intptr_t' to 'int', possible loss of data [C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p-build\tbbmalloc.vcxproj]
+  C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p\src\tbbmalloc\tbbmalloc_internal.h(185): message : while compiling class template member function 'int rml::internal::BitMaskBasic<512>::getMinTrue(unsigned int) const' [C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p-build\tbbmalloc.vcxproj]
+  C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p\src\tbbmalloc\tbbmalloc_internal.h(212): message : see reference to function template instantiation 'int rml::internal::BitMaskBasic<512>::getMinTrue(unsigned int) const' being compiled [C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p-build\tbbmalloc.vcxproj]
+  C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p\src\tbbmalloc\tbbmalloc_internal.h(208): message : see reference to class template instantiation 'rml::internal::BitMaskBasic<512>' being compiled [C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p-build\tbbmalloc.vcxproj]
+  C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p\src\tbbmalloc\tbbmalloc_internal.h(713): message : see reference to class template instantiation 'rml::internal::BitMaskMin<512>' being compiled [C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p-build\tbbmalloc.vcxproj]
+C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p\src\tbbmalloc\tbbmalloc_internal.h(199,40): warning C4244: '=': conversion from 'intptr_t' to 'int', possible loss of data [C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p-build\tbbmalloc.vcxproj]
+    tbbmalloc.cpp
+    frontend.cpp
+C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p\src\tbbmalloc\tbbmalloc_internal.h(845,1): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data [C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p-build\tbbmalloc.vcxproj]
+C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p\src\tbbmalloc\frontend.cpp(1010,31): warning C4267: 'argument': conversion from 'size_t' to 'unsigned int', possible loss of data [C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p-build\tbbmalloc.vcxproj]
+C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p\src\tbbmalloc\frontend.cpp(1511,39): warning C4267: 'argument': conversion from 'size_t' to 'unsigned int', possible loss of data [C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p-build\tbbmalloc.vcxproj]
+C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p\src\tbbmalloc\frontend.cpp(1512,44): warning C4267: 'argument': conversion from 'size_t' to 'unsigned int', possible loss of data [C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p-build\tbbmalloc.vcxproj]
+C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p\src\tbbmalloc\frontend.cpp(2231,27): warning C4244: 'initializing': conversion from 'uintptr_t' to 'unsigned int', possible loss of data [C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p-build\tbbmalloc.vcxproj]
+C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p\src\tbbmalloc\frontend.cpp(2238,39): warning C4267: 'initializing': conversion from 'size_t' to 'unsigned int', possible loss of data [C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p-build\tbbmalloc.vcxproj]
+C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p\src\tbbmalloc\frontend.cpp(2364,21): warning C4244: 'initializing': conversion from 'uintptr_t' to 'uint16_t', possible loss of data [C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p-build\tbbmalloc.vcxproj]
+C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p\src\tbbmalloc\frontend.cpp(2499,56): warning C4267: 'argument': conversion from 'size_t' to 'unsigned int', possible loss of data [C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p-build\tbbmalloc.vcxproj]
+C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p\src\tbbmalloc\frontend.cpp(2505,60): warning C4267: 'argument': conversion from 'size_t' to 'unsigned int', possible loss of data [C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p-build\tbbmalloc.vcxproj]
+C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p\src\tbbmalloc\tbbmalloc_internal.h(194,40): warning C4244: '=': conversion from 'intptr_t' to 'int', possible loss of data [C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p-build\tbbmalloc.vcxproj]
+  C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p\src\tbbmalloc\tbbmalloc_internal.h(185): message : while compiling class template member function 'int rml::internal::BitMaskBasic<512>::getMinTrue(unsigned int) const' [C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p-build\tbbmalloc.vcxproj]
+  C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p\src\tbbmalloc\tbbmalloc_internal.h(212): message : see reference to function template instantiation 'int rml::internal::BitMaskBasic<512>::getMinTrue(unsigned int) const' being compiled [C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p-build\tbbmalloc.vcxproj]
+  C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p\src\tbbmalloc\tbbmalloc_internal.h(208): message : see reference to class template instantiation 'rml::internal::BitMaskBasic<512>' being compiled [C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p-build\tbbmalloc.vcxproj]
+  C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p\src\tbbmalloc\tbbmalloc_internal.h(713): message : see reference to class template instantiation 'rml::internal::BitMaskMin<512>' being compiled [C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p-build\tbbmalloc.vcxproj]
+C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p\src\tbbmalloc\tbbmalloc_internal.h(199,40): warning C4244: '=': conversion from 'intptr_t' to 'int', possible loss of data [C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p-build\tbbmalloc.vcxproj]
+    itt_notify.cpp
+    Generating Code...
+    tbbmalloc.vcxproj -> C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p-build\Release\tbbmalloc.lib
+    Building Custom Rule C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/src/tbb_p/CMakeLists.txt
+    Microsoft (R) C/C++ Optimizing Compiler Version 19.29.30147 for x64
+    Copyright (C) Microsoft Corporation.  All rights reserved.
+    cl /c /IC:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p\include /IC:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p\src /IC:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p\src\rml\include /W3 /WX- /diagnostics:column /O2 /Ob2 /D _MBCS /D WIN32 /D _WINDOWS /D USE_WINTHREAD /D _TBB_CPP0X /D _CRT_SECURE_NO_DEPRECATE /D _WIN32_WINNT=0x0600 /D NDEBUG /D __TBBMALLOC_BUILD=1 /D DO_ITT_NOTIFY /D "CMAKE_INTDIR=\"Release\"" /Gm- /EHsc /MT /GS- /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR- /Fo"tbbmalloc_proxy.dir\Release\\" /Fd"C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p-build\Release\tbbmalloc_proxy.pdb" /external:W3 /Gd /TP /errorReport:queue  /volatile:iso /EHs- C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p\src\tbbmalloc\proxy.cpp C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p\src\tbbmalloc\tbb_function_replacement.cpp
+cl : command line warning D9025: overriding '/EHs' with '/EHs-' [C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p-build\tbbmalloc_proxy.vcxproj]
+    proxy.cpp
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\stdint.h(91,1): warning C4005: 'UINTPTR_MAX': macro redefinition [C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p-build\tbbmalloc_proxy.vcxproj]
+  C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p\src\tbbmalloc\shared_utils.h(31): message : see previous definition of 'UINTPTR_MAX' [C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p-build\tbbmalloc_proxy.vcxproj]
+    tbb_function_replacement.cpp
+    Generating Code...
+    tbbmalloc_proxy.vcxproj -> C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\tbb_p-build\Release\tbbmalloc_proxy.lib
+    Building Custom Rule C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/src/tbb_p/CMakeLists.txt
+  Performing install step for 'tbb_p'
+  -- Installing: C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/lib/tbb.lib
+  -- Installing: C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/lib/tbbmalloc.lib
+  -- Installing: C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/lib/tbbmalloc_proxy.lib
+  -- Installing: C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/include/tbb
+  -- Installing: C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/include/tbb/aggregator.h
+  -- Installing: C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/include/tbb/aligned_space.h
+  -- Installing: C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/include/tbb/atomic.h
+  -- Installing: C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/include/tbb/blocked_range.h
+  -- Installing: C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/include/tbb/blocked_range2d.h
+  -- Installing: C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/include/tbb/blocked_range3d.h
+  -- Installing: C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/include/tbb/cache_aligned_allocator.h
+  -- Installing: C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/include/tbb/combinable.h
+  -- Installing: C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/include/tbb/compat
+  -- Installing: C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/include/tbb/compat/condition_variable
+  -- Installing: C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/include/tbb/compat/ppl.h
+  -- Installing: C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/include/tbb/compat/thread
+  -- Installing: C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/include/tbb/compat/tuple
+  -- Installing: C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/include/tbb/concurrent_hash_map.h
+  -- Installing: C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/include/tbb/concurrent_lru_cache.h
+  -- Installing: C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/include/tbb/concurrent_priority_queue.h
+  -- Installing: C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/include/tbb/concurrent_queue.h
+  -- Installing: C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/include/tbb/concurrent_unordered_map.h
+  -- Installing: C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/include/tbb/concurrent_unordered_set.h
+  -- Installing: C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/include/tbb/concurrent_vector.h
+  -- Installing: C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/include/tbb/critical_section.h
+  -- Installing: C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/include/tbb/enumerable_thread_specific.h
+  -- Installing: C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/include/tbb/flow_graph.h
+  -- Installing: C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/include/tbb/index.html
+  -- Installing: C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/include/tbb/internal
+  -- Installing: C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/include/tbb/internal/_aggregator_impl.h
+  -- Installing: C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/include/tbb/internal/_concurrent_queue_impl.h
+  -- Installing: C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/include/tbb/internal/_concurrent_unordered_impl.h
+  -- Installing: C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/include/tbb/internal/_flow_graph_impl.h
+  -- Installing: C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/include/tbb/internal/_flow_graph_indexer_impl.h
+  -- Installing: C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/include/tbb/internal/_flow_graph_item_buffer_impl.h
+  -- Installing: C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/include/tbb/internal/_flow_graph_join_impl.h
+  -- Installing: C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/include/tbb/internal/_flow_graph_node_impl.h
+  -- Installing: C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/include/tbb/internal/_flow_graph_tagged_buffer_impl.h
+  -- Installing: C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/include/tbb/internal/_flow_graph_trace_impl.h
+  -- Installing: C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/include/tbb/internal/_flow_graph_types_impl.h
+  -- Installing: C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/include/tbb/internal/_mutex_padding.h
+  -- Installing: C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/include/tbb/internal/_range_iterator.h
+  -- Installing: C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/include/tbb/internal/_tbb_strings.h
+  -- Installing: C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/include/tbb/internal/_tbb_windef.h
+  -- Installing: C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/include/tbb/internal/_x86_eliding_mutex_impl.h
+  -- Installing: C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/include/tbb/internal/_x86_rtm_rw_mutex_impl.h
+  -- Installing: C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/include/tbb/machine
+  -- Installing: C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/include/tbb/machine/gcc_armv7.h
+  -- Installing: C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/include/tbb/machine/gcc_generic.h
+  -- Installing: C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/include/tbb/machine/gcc_ia32_common.h
+  -- Installing: C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/include/tbb/machine/gcc_itsx.h
+  -- Installing: C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/include/tbb/machine/ibm_aix51.h
+  -- Installing: C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/include/tbb/machine/icc_generic.h
+  -- Installing: C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/include/tbb/machine/linux_common.h
+  -- Installing: C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/include/tbb/machine/linux_ia32.h
+  -- Installing: C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/include/tbb/machine/linux_ia64.h
+  -- Installing: C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/include/tbb/machine/linux_intel64.h
+  -- Installing: C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/include/tbb/machine/macos_common.h
+  -- Installing: C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/include/tbb/machine/mac_ppc.h
+  -- Installing: C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/include/tbb/machine/mic_common.h
+  -- Installing: C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/include/tbb/machine/msvc_armv7.h
+  -- Installing: C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/include/tbb/machine/msvc_ia32_common.h
+  -- Installing: C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/include/tbb/machine/sunos_sparc.h
+  -- Installing: C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/include/tbb/machine/windows_api.h
+  -- Installing: C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/include/tbb/machine/windows_ia32.h
+  -- Installing: C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/include/tbb/machine/windows_intel64.h
+  -- Installing: C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/include/tbb/machine/xbox360_ppc.h
+  -- Installing: C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/include/tbb/memory_pool.h
+  -- Installing: C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/include/tbb/mutex.h
+  -- Installing: C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/include/tbb/null_mutex.h
+  -- Installing: C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/include/tbb/null_rw_mutex.h
+  -- Installing: C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/include/tbb/parallel_do.h
+  -- Installing: C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/include/tbb/parallel_for.h
+  -- Installing: C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/include/tbb/parallel_for_each.h
+  -- Installing: C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/include/tbb/parallel_invoke.h
+  -- Installing: C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/include/tbb/parallel_reduce.h
+  -- Installing: C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/include/tbb/parallel_scan.h
+  -- Installing: C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/include/tbb/parallel_sort.h
+  -- Installing: C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/include/tbb/parallel_while.h
+  -- Installing: C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/include/tbb/partitioner.h
+  -- Installing: C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/include/tbb/pipeline.h
+  -- Installing: C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/include/tbb/queuing_mutex.h
+  -- Installing: C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/include/tbb/queuing_rw_mutex.h
+  -- Installing: C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/include/tbb/reader_writer_lock.h
+  -- Installing: C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/include/tbb/recursive_mutex.h
+  -- Installing: C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/include/tbb/runtime_loader.h
+  -- Installing: C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/include/tbb/scalable_allocator.h
+  -- Installing: C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/include/tbb/spin_mutex.h
+  -- Installing: C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/include/tbb/spin_rw_mutex.h
+  -- Installing: C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/include/tbb/task.h
+  -- Installing: C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/include/tbb/task_arena.h
+  -- Installing: C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/include/tbb/task_group.h
+  -- Installing: C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/include/tbb/task_scheduler_init.h
+  -- Installing: C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/include/tbb/task_scheduler_observer.h
+  -- Installing: C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/include/tbb/tbb.h
+  -- Installing: C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/include/tbb/tbbmalloc_proxy.h
+  -- Installing: C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/include/tbb/tbb_allocator.h
+  -- Installing: C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/include/tbb/tbb_config.h
+  -- Installing: C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/include/tbb/tbb_exception.h
+  -- Installing: C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/include/tbb/tbb_machine.h
+  -- Installing: C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/include/tbb/tbb_profiling.h
+  -- Installing: C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/include/tbb/tbb_stddef.h
+  -- Installing: C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/include/tbb/tbb_thread.h
+  -- Installing: C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/include/tbb/tick_count.h
+  Completed 'tbb_p'

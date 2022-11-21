@@ -1,0 +1,116 @@
+﻿  Building Custom Rule C:/Users/Rongxing/Desktop/ETH/CG/nori/CMakeLists.txt
+  bitmap.cpp
+C:\Users\Rongxing\Desktop\ETH\CG\nori\ext\stb_image_write.h(147,1): warning C4005: '_CRT_SECURE_NO_WARNINGS': macro redefinition
+C:\Users\Rongxing\Desktop\ETH\CG\nori\src\bitmap.cpp : message : see previous definition of '_CRT_SECURE_NO_WARNINGS'
+C:\Users\Rongxing\Desktop\ETH\CG\nori\ext\stb_image_write.h(798,20): warning C4189: 'k': local variable is initialized but not referenced
+C:\Users\Rongxing\Desktop\ETH\CG\nori\src\bitmap.cpp(138,65): warning C4244: 'argument': conversion from '__int64' to 'int', possible loss of data
+C:\Users\Rongxing\Desktop\ETH\CG\nori\src\bitmap.cpp(138,48): warning C4244: 'argument': conversion from '__int64' to 'int', possible loss of data
+C:\Users\Rongxing\Desktop\ETH\CG\nori\src\bitmap.cpp(138,41): warning C4244: 'argument': conversion from '__int64' to 'int', possible loss of data
+  block.cpp
+C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\dist\include\tbb\task_group.h(122,1): warning C4297: 'tbb::internal::task_group_base::~task_group_base': function assumed not to throw an exception but does
+C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\dist\include\tbb\task_group.h(122,1): message : destructor or deallocator has a (possibly implicit) non-throwing exception specification
+C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\dist\include\tbb\enumerable_thread_specific.h(112,1): warning C4334: '<<': result of 32-bit shift implicitly converted to 64 bits (was 64-bit shift intended?)
+C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\dist\include\tbb\enumerable_thread_specific.h(111): message : while compiling class template member function 'void tbb::interface6::internal::ets_base<tbb::ets_no_key>::free(tbb::interface6::internal::ets_base<tbb::ets_no_key>::array *)'
+C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\dist\include\tbb\enumerable_thread_specific.h(211): message : see reference to function template instantiation 'void tbb::interface6::internal::ets_base<tbb::ets_no_key>::free(tbb::interface6::internal::ets_base<tbb::ets_no_key>::array *)' being compiled
+C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\dist\include\tbb\enumerable_thread_specific.h(238): message : see reference to class template instantiation 'tbb::interface6::internal::ets_base<tbb::ets_no_key>' being compiled
+C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\dist\include\tbb\enumerable_thread_specific.h(105,1): warning C4334: '<<': result of 32-bit shift implicitly converted to 64 bits (was 64-bit shift intended?)
+C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\dist\include\tbb\enumerable_thread_specific.h(104): message : while compiling class template member function 'tbb::interface6::internal::ets_base<tbb::ets_no_key>::array *tbb::interface6::internal::ets_base<tbb::ets_no_key>::allocate(size_t)'
+C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\dist\include\tbb\enumerable_thread_specific.h(202): message : see reference to function template instantiation 'tbb::interface6::internal::ets_base<tbb::ets_no_key>::array *tbb::interface6::internal::ets_base<tbb::ets_no_key>::allocate(size_t)' being compiled
+  bvh.cpp
+C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\dist\include\tbb\task_group.h(122,1): warning C4297: 'tbb::internal::task_group_base::~task_group_base': function assumed not to throw an exception but does
+C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\dist\include\tbb\task_group.h(122,1): message : destructor or deallocator has a (possibly implicit) non-throwing exception specification
+C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\dist\include\tbb\enumerable_thread_specific.h(112,1): warning C4334: '<<': result of 32-bit shift implicitly converted to 64 bits (was 64-bit shift intended?)
+C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\dist\include\tbb\enumerable_thread_specific.h(111): message : while compiling class template member function 'void tbb::interface6::internal::ets_base<tbb::ets_no_key>::free(tbb::interface6::internal::ets_base<tbb::ets_no_key>::array *)'
+C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\dist\include\tbb\enumerable_thread_specific.h(211): message : see reference to function template instantiation 'void tbb::interface6::internal::ets_base<tbb::ets_no_key>::free(tbb::interface6::internal::ets_base<tbb::ets_no_key>::array *)' being compiled
+C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\dist\include\tbb\enumerable_thread_specific.h(238): message : see reference to class template instantiation 'tbb::interface6::internal::ets_base<tbb::ets_no_key>' being compiled
+C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\dist\include\tbb\enumerable_thread_specific.h(105,1): warning C4334: '<<': result of 32-bit shift implicitly converted to 64 bits (was 64-bit shift intended?)
+C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\dist\include\tbb\enumerable_thread_specific.h(104): message : while compiling class template member function 'tbb::interface6::internal::ets_base<tbb::ets_no_key>::array *tbb::interface6::internal::ets_base<tbb::ets_no_key>::allocate(size_t)'
+C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\dist\include\tbb\enumerable_thread_specific.h(202): message : see reference to function template instantiation 'tbb::interface6::internal::ets_base<tbb::ets_no_key>::array *tbb::interface6::internal::ets_base<tbb::ets_no_key>::allocate(size_t)' being compiled
+  chi2test.cpp
+C:\Users\Rongxing\Desktop\ETH\CG\nori\ext\hypothesis\cephes.h(333,22): warning C4459: declaration of 'big' hides global declaration
+C:\Users\Rongxing\Desktop\ETH\CG\nori\ext\hypothesis\cephes.h(35,22): message : see declaration of 'cephes::big'
+  common.cpp
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\algorithm(2650,24): warning C4244: '=': conversion from 'int' to 'char', possible loss of data
+C:\Users\Rongxing\Desktop\ETH\CG\nori\src\common.cpp(66): message : see reference to function template instantiation '_OutIt std::transform<std::_String_const_iterator<std::_String_val<std::_Simple_types<_Elem>>>,std::_String_iterator<std::_String_val<std::_Simple_types<_Elem>>>,int(__cdecl *)(int)>(const _InIt,const _InIt,_OutIt,_Fn)' being compiled
+          with
+          [
+              _OutIt=std::_String_iterator<std::_String_val<std::_Simple_types<char>>>,
+              _Elem=char,
+              _InIt=std::_String_const_iterator<std::_String_val<std::_Simple_types<char>>>,
+              _Fn=int (__cdecl *)(int)
+          ]
+  consttexture.cpp
+  checkerboard.cpp
+C:\Users\Rongxing\Desktop\ETH\CG\nori\src\checkerboard.cpp(34,9): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\Rongxing\Desktop\ETH\CG\nori\src\checkerboard.cpp(31): message : while compiling class template member function 'T nori::Checkerboard<T>::eval(const nori::Point2f &)'
+          with
+          [
+              T=nori::Color3f
+          ]
+C:\Users\Rongxing\Desktop\ETH\CG\nori\src\checkerboard.cpp(63): message : see reference to class template instantiation 'nori::Checkerboard<nori::Color3f>' being compiled
+C:\Users\Rongxing\Desktop\ETH\CG\nori\src\checkerboard.cpp(35,9): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+  diffuse.cpp
+  gui.cpp
+  independent.cpp
+  main.cpp
+  mesh.cpp
+C:\Users\Rongxing\Desktop\ETH\CG\nori\src\mesh.cpp(46,42): warning C4267: 'argument': conversion from 'size_t' to 'uint32_t', possible loss of data
+C:\Users\Rongxing\Desktop\ETH\CG\nori\src\mesh.cpp(48,47): warning C4267: 'argument': conversion from 'size_t' to 'uint32_t', possible loss of data
+  obj.cpp
+  object.cpp
+  parser.cpp
+  perspective.cpp
+  proplist.cpp
+  render.cpp
+  rfilter.cpp
+  scene.cpp
+  Generating Code...
+  Compiling...
+  shape.cpp
+  ttest.cpp
+C:\Users\Rongxing\Desktop\ETH\CG\nori\ext\hypothesis\cephes.h(333,22): warning C4459: declaration of 'big' hides global declaration
+C:\Users\Rongxing\Desktop\ETH\CG\nori\ext\hypothesis\cephes.h(35,22): message : see declaration of 'cephes::big'
+  warp.cpp
+C:\Users\Rongxing\Desktop\ETH\CG\nori\src\warp.cpp(125,17): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\Rongxing\Desktop\ETH\CG\nori\src\warp.cpp(133,57): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
+  microfacet.cpp
+  photon.cpp
+C:\Users\Rongxing\Desktop\ETH\CG\nori\src\photon.cpp(72,21): warning C4244: '=': conversion from 'int' to 'uint8_t', possible loss of data
+  mirror.cpp
+  dielectric.cpp
+C:\Users\Rongxing\Desktop\ETH\CG\nori\src\dielectric.cpp(60,62): warning C4244: 'argument': conversion from 'double' to 'const float', possible loss of data
+  photonmapper.cpp
+C:\Users\Rongxing\Desktop\ETH\CG\nori\src\photonmapper.cpp(63,46): warning C4244: 'argument': conversion from 'unsigned __int64' to 'const float', possible loss of data
+C:\Users\Rongxing\Desktop\ETH\CG\nori\include\nori/kdtree.h(502,27): warning C4244: 'argument': conversion from 'int' to 'uint8_t', possible loss of data
+C:\Users\Rongxing\Desktop\ETH\CG\nori\include\nori/kdtree.h(446): message : while compiling class template member function 'void nori::PointKDTree<nori::Photon>::build(size_t,std::_Vector_iterator<std::_Vector_val<std::_Simple_types<_Ty>>>,std::_Vector_iterator<std::_Vector_val<std::_Simple_types<_Ty>>>,std::_Vector_iterator<std::_Vector_val<std::_Simple_types<_Ty>>>)'
+          with
+          [
+              _Ty=uint32_t
+          ]
+C:\Users\Rongxing\Desktop\ETH\CG\nori\include\nori/kdtree.h(247): message : see reference to function template instantiation 'void nori::PointKDTree<nori::Photon>::build(size_t,std::_Vector_iterator<std::_Vector_val<std::_Simple_types<_Ty>>>,std::_Vector_iterator<std::_Vector_val<std::_Simple_types<_Ty>>>,std::_Vector_iterator<std::_Vector_val<std::_Simple_types<_Ty>>>)' being compiled
+          with
+          [
+              _Ty=uint32_t
+          ]
+C:\Users\Rongxing\Desktop\ETH\CG\nori\src\photonmapper.cpp(48): message : see reference to class template instantiation 'nori::PointKDTree<nori::Photon>' being compiled
+  sphere.cpp
+C:\Users\Rongxing\Desktop\ETH\CG\nori\src\sphere.cpp(86,45): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\Rongxing\Desktop\ETH\CG\nori\src\sphere.cpp(89,41): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
+  arealight.cpp
+  normals.cpp
+  av.cpp
+C:\Users\Rongxing\Desktop\ETH\CG\nori\src\av.cpp(21,1): warning C4239: nonstandard extension used: 'initializing': conversion from 'nori::Ray3f' to 'nori::Ray3f &'
+C:\Users\Rongxing\Desktop\ETH\CG\nori\src\av.cpp(21,1): message : A non-const reference may only be bound to an lvalue
+  pointlight.cpp
+  direct.cpp
+  direct_ems.cpp
+  direct_mats.cpp
+  direct_mis.cpp
+  path_mats.cpp
+  path_mis.cpp
+C:\Users\Rongxing\Desktop\ETH\CG\nori\src\path_mis.cpp(73,1): warning C4456: declaration of 'ratio' hides previous local declaration
+C:\Users\Rongxing\Desktop\ETH\CG\nori\src\path_mis.cpp(22,15): message : see declaration of 'ratio'
+C:\Users\Rongxing\Desktop\ETH\CG\nori\src\path_mis.cpp(22,15): warning C4189: 'ratio': local variable is initialized but not referenced
+  Generating Code...
+     Creating library C:/Users/Rongxing/Desktop/ETH/CG/nori/build/Release/nori.lib and object C:/Users/Rongxing/Desktop/ETH/CG/nori/build/Release/nori.exp
+  nori.vcxproj -> C:\Users\Rongxing\Desktop\ETH\CG\nori\build\Release\nori.exe

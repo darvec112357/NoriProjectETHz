@@ -1,0 +1,289 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\OpenEXR_p\IlmImf\ImfAttribute.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\OpenEXR_p\IlmImf\ImfBoxAttribute.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\OpenEXR_p\IlmImf\ImfCRgbaFile.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\OpenEXR_p\IlmImf\ImfChannelList.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\OpenEXR_p\IlmImf\ImfChannelListAttribute.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\OpenEXR_p\IlmImf\ImfFloatAttribute.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\OpenEXR_p\IlmImf\ImfFrameBuffer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\OpenEXR_p\IlmImf\ImfHeader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\OpenEXR_p\IlmImf\ImfIO.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\OpenEXR_p\IlmImf\ImfInputFile.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\OpenEXR_p\IlmImf\ImfIntAttribute.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\OpenEXR_p\IlmImf\ImfLineOrderAttribute.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\OpenEXR_p\IlmImf\ImfMatrixAttribute.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\OpenEXR_p\IlmImf\ImfOpaqueAttribute.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\OpenEXR_p\IlmImf\ImfOutputFile.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\OpenEXR_p\IlmImf\ImfRgbaFile.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\OpenEXR_p\IlmImf\ImfStringAttribute.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\OpenEXR_p\IlmImf\ImfVecAttribute.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\OpenEXR_p\IlmImf\ImfHuf.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\OpenEXR_p\IlmImf\ImfThreading.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\OpenEXR_p\IlmImf\ImfWav.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\OpenEXR_p\IlmImf\ImfLut.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\OpenEXR_p\IlmImf\ImfCompressor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\OpenEXR_p\IlmImf\ImfRleCompressor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\OpenEXR_p\IlmImf\ImfZipCompressor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\OpenEXR_p\IlmImf\ImfPizCompressor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\OpenEXR_p\IlmImf\ImfB44Compressor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\OpenEXR_p\IlmImf\ImfDwaCompressor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\OpenEXR_p\IlmImf\ImfMisc.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\OpenEXR_p\IlmImf\ImfCompressionAttribute.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\OpenEXR_p\IlmImf\ImfDoubleAttribute.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\OpenEXR_p\IlmImf\ImfConvert.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\OpenEXR_p\IlmImf\ImfPreviewImage.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\OpenEXR_p\IlmImf\ImfPreviewImageAttribute.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\OpenEXR_p\IlmImf\ImfVersion.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\OpenEXR_p\IlmImf\ImfChromaticities.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\OpenEXR_p\IlmImf\ImfChromaticitiesAttribute.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\OpenEXR_p\IlmImf\ImfKeyCode.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\OpenEXR_p\IlmImf\ImfKeyCodeAttribute.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\OpenEXR_p\IlmImf\ImfTimeCode.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\OpenEXR_p\IlmImf\ImfTimeCodeAttribute.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\OpenEXR_p\IlmImf\ImfRational.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\OpenEXR_p\IlmImf\ImfRationalAttribute.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\OpenEXR_p\IlmImf\ImfFramesPerSecond.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\OpenEXR_p\IlmImf\ImfStandardAttributes.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\OpenEXR_p\IlmImf\ImfStdIO.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\OpenEXR_p\IlmImf\ImfEnvmap.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\OpenEXR_p\IlmImf\ImfEnvmapAttribute.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\OpenEXR_p\IlmImf\ImfScanLineInputFile.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\OpenEXR_p\IlmImf\ImfTiledInputFile.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\OpenEXR_p\IlmImf\ImfTiledMisc.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\OpenEXR_p\IlmImf\ImfTiledOutputFile.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\OpenEXR_p\IlmImf\ImfTiledRgbaFile.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\OpenEXR_p\IlmImf\ImfTileDescriptionAttribute.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\OpenEXR_p\IlmImf\ImfTileOffsets.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\OpenEXR_p\IlmImf\ImfRgbaYca.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\OpenEXR_p\IlmImf\ImfPxr24Compressor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\OpenEXR_p\IlmImf\ImfTestFile.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\OpenEXR_p\IlmImf\ImfStringVectorAttribute.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\OpenEXR_p\IlmImf\ImfMultiView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\OpenEXR_p\IlmImf\ImfAcesFile.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\OpenEXR_p\IlmImf\ImfMultiPartOutputFile.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\OpenEXR_p\IlmImf\ImfGenericOutputFile.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\OpenEXR_p\IlmImf\ImfOutputPartData.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\OpenEXR_p\IlmImf\ImfMultiPartInputFile.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\OpenEXR_p\IlmImf\ImfGenericInputFile.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\OpenEXR_p\IlmImf\ImfPartType.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\OpenEXR_p\IlmImf\ImfInputPartData.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\OpenEXR_p\IlmImf\ImfOutputPart.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\OpenEXR_p\IlmImf\ImfTiledOutputPart.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\OpenEXR_p\IlmImf\ImfInputPart.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\OpenEXR_p\IlmImf\ImfTiledInputPart.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\OpenEXR_p\IlmImf\ImfDeepScanLineInputPart.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\OpenEXR_p\IlmImf\ImfDeepScanLineOutputPart.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\OpenEXR_p\IlmImf\ImfDeepScanLineInputFile.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\OpenEXR_p\IlmImf\ImfDeepScanLineOutputFile.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\OpenEXR_p\IlmImf\ImfDeepTiledInputPart.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\OpenEXR_p\IlmImf\ImfDeepTiledOutputPart.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\OpenEXR_p\IlmImf\ImfDeepTiledInputFile.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\OpenEXR_p\IlmImf\ImfDeepTiledOutputFile.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\OpenEXR_p\IlmImf\ImfDeepFrameBuffer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\OpenEXR_p\IlmImf\ImfDeepCompositing.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\OpenEXR_p\IlmImf\ImfCompositeDeepScanLine.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\OpenEXR_p\IlmImf\ImfDeepImageStateAttribute.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\OpenEXR_p\IlmImf\ImfFastHuf.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\OpenEXR_p\IlmImf\ImfFloatVectorAttribute.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\OpenEXR_p\IlmImf\ImfRle.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\OpenEXR_p\IlmImf\ImfSystemSpecific.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\OpenEXR_p\IlmImf\ImfZip.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\OpenEXR_p-build\CMakeFiles\349d9d34d0abe1cac91dcfeecadd1c13\b44ExpLogTable.h.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\OpenEXR_p-build\CMakeFiles\349d9d34d0abe1cac91dcfeecadd1c13\dwaLookups.h.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\OpenEXR_p\IlmImf\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{9C268997-140C-30D5-A724-54411EBE2B41}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{B1764006-23AC-35C1-AE13-4283C3665F44}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

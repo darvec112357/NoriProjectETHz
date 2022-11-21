@@ -1,0 +1,150 @@
+﻿  Creating directories for 'IlmBase_p'
+  Building Custom Rule C:/Users/Rongxing/Desktop/ETH/CG/nori/CMakeLists.txt
+  Performing download step (DIR copy) for 'IlmBase_p'
+  No update step for 'IlmBase_p'
+  No patch step for 'IlmBase_p'
+  Performing configure step for 'IlmBase_p'
+  -- Selecting Windows SDK version 10.0.19041.0 to target Windows 10.0.22621.
+  -- The C compiler identification is MSVC 19.29.30147.0
+  -- The CXX compiler identification is MSVC 19.29.30147.0
+  -- Detecting C compiler ABI info
+  -- Detecting C compiler ABI info - done
+  -- Check for working C compiler: C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.29.30133/bin/Hostx64/x64/cl.exe - skipped
+  -- Detecting C compile features
+  -- Detecting C compile features - done
+  -- Detecting CXX compiler ABI info
+  -- Detecting CXX compiler ABI info - done
+  -- Check for working CXX compiler: C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.29.30133/bin/Hostx64/x64/cl.exe - skipped
+  -- Detecting CXX compile features
+  -- Detecting CXX compile features - done
+  -- Configuring done
+  -- Generating done
+CUSTOMBUILD : CMake warning : 
+  -- Build files have been written to: C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/src/IlmBase_p-build
+    Manually-specified variables were not used by the project:
+  
+      CMAKE_BUILD_TYPE
+      CMAKE_C_FLAGS_DEBUG
+      CMAKE_C_FLAGS_MINSIZEREL
+      CMAKE_C_FLAGS_RELEASE
+      CMAKE_C_FLAGS_RELWITHDEBINFO
+  
+  
+  Performing build step for 'IlmBase_p'
+  Microsoft (R) Build Engine version 16.11.2+f32259642 for .NET Framework
+  Copyright (C) Microsoft Corporation. All rights reserved.
+  
+    Checking Build System
+    Building Custom Rule C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/src/IlmBase_p/Half/CMakeLists.txt
+    eLut.cpp
+    eLut.vcxproj -> C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\IlmBase_p-build\Half\Release\eLut.exe
+    Building Custom Rule C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/src/IlmBase_p/Half/CMakeLists.txt
+    toFloat.cpp
+    toFloat.vcxproj -> C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\IlmBase_p-build\Half\Release\toFloat.exe
+    Building Custom Rule C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/src/IlmBase_p/Half/CMakeLists.txt
+    half.cpp
+    Half.vcxproj -> C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\IlmBase_p-build\Half\Release\Half.lib
+    Building Custom Rule C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/src/IlmBase_p/Iex/CMakeLists.txt
+    IexBaseExc.cpp
+C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\IlmBase_p\Iex\IexBaseExc.cpp(145,14): warning C4996: 'getenv': This function or variable may be unsafe. Consider using _dupenv_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details. [C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\IlmBase_p-build\Iex\Iex.vcxproj]
+    IexThrowErrnoExc.cpp
+C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\IlmBase_p\Iex\IexThrowErrnoExc.cpp(59,14): warning C4996: 'getenv': This function or variable may be unsafe. Consider using _dupenv_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details. [C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\IlmBase_p-build\Iex\Iex.vcxproj]
+C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\IlmBase_p\Iex\IexThrowErrnoExc.cpp(63,26): warning C4996: 'strerror': This function or variable may be unsafe. Consider using strerror_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details. [C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\IlmBase_p-build\Iex\Iex.vcxproj]
+    Generating Code...
+    Iex.vcxproj -> C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\IlmBase_p-build\Iex\Release\Iex.lib
+    Building Custom Rule C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/src/IlmBase_p/IexMath/CMakeLists.txt
+    IexMathFloatExc.cpp
+    IexMathFpu.cpp
+    Generating Code...
+    IexMath.vcxproj -> C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\IlmBase_p-build\IexMath\Release\IexMath.lib
+    Building Custom Rule C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/src/IlmBase_p/IlmThread/CMakeLists.txt
+    IlmThread.cpp
+    IlmThreadMutex.cpp
+    IlmThreadMutexPosix.cpp
+    IlmThreadPool.cpp
+C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\IlmBase_p\IlmThread\IlmThreadPool.cpp(371,29): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data [C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\IlmBase_p-build\IlmThread\IlmThread.vcxproj]
+    IlmThreadPosix.cpp
+    IlmThreadSemaphore.cpp
+    IlmThreadSemaphorePosixCompat.cpp
+    IlmThreadSemaphorePosix.cpp
+    IlmThreadMutexWin32.cpp
+    IlmThreadSemaphoreWin32.cpp
+    IlmThreadWin32.cpp
+    Generating Code...
+    IlmThread.vcxproj -> C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\IlmBase_p-build\IlmThread\Release\IlmThread.lib
+    Building Custom Rule C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/src/IlmBase_p/Imath/CMakeLists.txt
+    ImathBox.cpp
+    ImathRandom.cpp
+    ImathColorAlgo.cpp
+    ImathShear.cpp
+    ImathFun.cpp
+    ImathVec.cpp
+    ImathMatrixAlgo.cpp
+    Generating Code...
+    Imath.vcxproj -> C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\IlmBase_p-build\Imath\Release\Imath.lib
+    Building Custom Rule C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/src/IlmBase_p/CMakeLists.txt
+  Performing install step for 'IlmBase_p'
+  -- Installing: C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/include/OpenEXR/IlmBaseConfig.h
+  -- Installing: C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/lib/pkgconfig/IlmBase.pc
+  -- Installing: C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/lib/Half.lib
+  -- Installing: C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/include/OpenEXR/half.h
+  -- Installing: C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/include/OpenEXR/halfFunction.h
+  -- Installing: C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/include/OpenEXR/halfExport.h
+  -- Installing: C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/include/OpenEXR/halfLimits.h
+  -- Installing: C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/lib/Iex.lib
+  -- Installing: C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/include/OpenEXR/IexBaseExc.h
+  -- Installing: C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/include/OpenEXR/IexMathExc.h
+  -- Installing: C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/include/OpenEXR/IexThrowErrnoExc.h
+  -- Installing: C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/include/OpenEXR/IexErrnoExc.h
+  -- Installing: C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/include/OpenEXR/IexMacros.h
+  -- Installing: C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/include/OpenEXR/Iex.h
+  -- Installing: C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/include/OpenEXR/IexNamespace.h
+  -- Installing: C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/include/OpenEXR/IexExport.h
+  -- Installing: C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/include/OpenEXR/IexForward.h
+  -- Installing: C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/lib/IexMath.lib
+  -- Installing: C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/include/OpenEXR/IexMathFloatExc.h
+  -- Installing: C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/include/OpenEXR/IexMathFpu.h
+  -- Installing: C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/include/OpenEXR/IexMathIeeeExc.h
+  -- Installing: C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/lib/Imath.lib
+  -- Installing: C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/include/OpenEXR/ImathBoxAlgo.h
+  -- Installing: C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/include/OpenEXR/ImathBox.h
+  -- Installing: C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/include/OpenEXR/ImathColorAlgo.h
+  -- Installing: C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/include/OpenEXR/ImathColor.h
+  -- Installing: C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/include/OpenEXR/ImathEuler.h
+  -- Installing: C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/include/OpenEXR/ImathExc.h
+  -- Installing: C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/include/OpenEXR/ImathExport.h
+  -- Installing: C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/include/OpenEXR/ImathForward.h
+  -- Installing: C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/include/OpenEXR/ImathFrame.h
+  -- Installing: C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/include/OpenEXR/ImathFrustum.h
+  -- Installing: C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/include/OpenEXR/ImathFrustumTest.h
+  -- Installing: C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/include/OpenEXR/ImathFun.h
+  -- Installing: C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/include/OpenEXR/ImathGL.h
+  -- Installing: C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/include/OpenEXR/ImathGLU.h
+  -- Installing: C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/include/OpenEXR/ImathHalfLimits.h
+  -- Installing: C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/include/OpenEXR/ImathInt64.h
+  -- Installing: C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/include/OpenEXR/ImathInterval.h
+  -- Installing: C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/include/OpenEXR/ImathLimits.h
+  -- Installing: C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/include/OpenEXR/ImathLineAlgo.h
+  -- Installing: C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/include/OpenEXR/ImathLine.h
+  -- Installing: C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/include/OpenEXR/ImathMath.h
+  -- Installing: C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/include/OpenEXR/ImathMatrixAlgo.h
+  -- Installing: C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/include/OpenEXR/ImathMatrix.h
+  -- Installing: C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/include/OpenEXR/ImathNamespace.h
+  -- Installing: C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/include/OpenEXR/ImathPlane.h
+  -- Installing: C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/include/OpenEXR/ImathPlatform.h
+  -- Installing: C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/include/OpenEXR/ImathQuat.h
+  -- Installing: C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/include/OpenEXR/ImathRandom.h
+  -- Installing: C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/include/OpenEXR/ImathRoots.h
+  -- Installing: C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/include/OpenEXR/ImathShear.h
+  -- Installing: C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/include/OpenEXR/ImathSphere.h
+  -- Installing: C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/include/OpenEXR/ImathVecAlgo.h
+  -- Installing: C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/include/OpenEXR/ImathVec.h
+  -- Installing: C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/lib/IlmThread.lib
+  -- Installing: C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/include/OpenEXR/IlmThreadPool.h
+  -- Installing: C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/include/OpenEXR/IlmThread.h
+  -- Installing: C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/include/OpenEXR/IlmThreadSemaphore.h
+  -- Installing: C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/include/OpenEXR/IlmThreadMutex.h
+  -- Installing: C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/include/OpenEXR/IlmThreadNamespace.h
+  -- Installing: C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/include/OpenEXR/IlmThreadExport.h
+  -- Installing: C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/include/OpenEXR/IlmThreadForward.h
+  Completed 'IlmBase_p'

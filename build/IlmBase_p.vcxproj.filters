@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\Rongxing\Desktop\ETH\CG\nori\build\CMakeFiles\8b0ea15cdae3d77984a221e53e5c9736\IlmBase_p-mkdir.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\Rongxing\Desktop\ETH\CG\nori\build\CMakeFiles\8b0ea15cdae3d77984a221e53e5c9736\IlmBase_p-download.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\Rongxing\Desktop\ETH\CG\nori\build\CMakeFiles\8b0ea15cdae3d77984a221e53e5c9736\IlmBase_p-update.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\Rongxing\Desktop\ETH\CG\nori\build\CMakeFiles\8b0ea15cdae3d77984a221e53e5c9736\IlmBase_p-patch.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\Rongxing\Desktop\ETH\CG\nori\build\CMakeFiles\8b0ea15cdae3d77984a221e53e5c9736\IlmBase_p-configure.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\Rongxing\Desktop\ETH\CG\nori\build\CMakeFiles\8b0ea15cdae3d77984a221e53e5c9736\IlmBase_p-build.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\Rongxing\Desktop\ETH\CG\nori\build\CMakeFiles\8b0ea15cdae3d77984a221e53e5c9736\IlmBase_p-install.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\Rongxing\Desktop\ETH\CG\nori\build\CMakeFiles\e8e355cd154dfbe159359221e7a18aed\IlmBase_p-complete.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\Rongxing\Desktop\ETH\CG\nori\build\CMakeFiles\05d1c1a7d5a6a4f48adad25ab4cf48ec\IlmBase_p.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\Rongxing\Desktop\ETH\CG\nori\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\Users\Rongxing\Desktop\ETH\CG\nori\build\CMakeFiles\IlmBase_p" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{963623F3-A26D-37FA-9565-CEEF55A14FFD}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

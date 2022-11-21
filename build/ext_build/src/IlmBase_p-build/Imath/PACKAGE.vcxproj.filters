@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\IlmBase_p-build\CMakeFiles\bb555a895740b5dfceb57a8803a5ecdc\PACKAGE_force.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{132E6C0F-A265-3B33-AD9F-E43ECFCFBAC9}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,8 @@
+C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/include/GLFW/glfw3.h
+C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/include/GLFW/glfw3native.h
+C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/lib/cmake/glfw3/glfw3Config.cmake
+C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/lib/cmake/glfw3/glfw3ConfigVersion.cmake
+C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/lib/cmake/glfw3/glfw3Targets.cmake
+C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/lib/cmake/glfw3/glfw3Targets-release.cmake
+C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/lib/pkgconfig/glfw3.pc
+C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/lib/glfw3.lib

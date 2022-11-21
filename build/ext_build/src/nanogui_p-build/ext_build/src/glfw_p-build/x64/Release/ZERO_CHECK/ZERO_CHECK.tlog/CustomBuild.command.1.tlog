@@ -1,0 +1,10 @@
+^C:\USERS\RONGXING\DESKTOP\ETH\CG\NORI\BUILD\EXT_BUILD\SRC\NANOGUI_P-BUILD\EXT_BUILD\SRC\GLFW_P-BUILD\CMAKEFILES\4D056A2D26554B0E4967ADBAFFA94055\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/src/nanogui_p-build/ext_build/src/glfw_p -BC:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/src/nanogui_p-build/ext_build/src/glfw_p-build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/src/nanogui_p-build/ext_build/src/glfw_p-build/GLFW.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

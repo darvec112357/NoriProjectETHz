@@ -1,0 +1,20 @@
+^C:\USERS\RONGXING\DESKTOP\ETH\CG\NORI\BUILD\EXT_BUILD\SRC\NANOGUI_P-BUILD\CMAKEFILES\8F04357D53477E9D7C46F55EBFA5FF1C\RESOURCES.CPP.RULE
+setlocal
+Release\bin2c.exe resources.cpp resources.h C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/src/nanogui_p/resources/Roboto-Bold.ttf C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/src/nanogui_p/resources/Roboto-Regular.ttf C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/src/nanogui_p/resources/entypo.ttf
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\RONGXING\DESKTOP\ETH\CG\NORI\BUILD\EXT_BUILD\SRC\NANOGUI_P\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/src/nanogui_p -BC:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/src/nanogui_p-build --check-stamp-file C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/src/nanogui_p-build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

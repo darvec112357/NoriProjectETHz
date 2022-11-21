@@ -1,0 +1,30 @@
+^C:\USERS\RONGXING\DESKTOP\ETH\CG\NORI\BUILD\EXT_BUILD\SRC\OPENEXR_P-BUILD\CMAKEFILES\349D9D34D0ABE1CAC91DCFEECADD1C13\B44EXPLOGTABLE.H.RULE
+setlocal
+Release\b44ExpLogTable > C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/src/OpenEXR_p-build/IlmImf/b44ExpLogTable.h
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\RONGXING\DESKTOP\ETH\CG\NORI\BUILD\EXT_BUILD\SRC\OPENEXR_P-BUILD\CMAKEFILES\349D9D34D0ABE1CAC91DCFEECADD1C13\DWALOOKUPS.H.RULE
+setlocal
+Release\dwaLookups > C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/src/OpenEXR_p-build/IlmImf/dwaLookups.h
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\RONGXING\DESKTOP\ETH\CG\NORI\BUILD\EXT_BUILD\SRC\OPENEXR_P\ILMIMF\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/src/OpenEXR_p -BC:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/src/OpenEXR_p-build --check-stamp-file C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/src/OpenEXR_p-build/IlmImf/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

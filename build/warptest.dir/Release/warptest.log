@@ -1,0 +1,24 @@
+﻿  Building Custom Rule C:/Users/Rongxing/Desktop/ETH/CG/nori/CMakeLists.txt
+  warp.cpp
+C:\Users\Rongxing\Desktop\ETH\CG\nori\src\warp.cpp(125,17): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\Rongxing\Desktop\ETH\CG\nori\src\warp.cpp(133,57): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
+  warptest.cpp
+C:\Users\Rongxing\Desktop\ETH\CG\nori\ext\hypothesis\cephes.h(333,22): warning C4459: declaration of 'big' hides global declaration
+C:\Users\Rongxing\Desktop\ETH\CG\nori\ext\hypothesis\cephes.h(35,22): message : see declaration of 'cephes::big'
+C:\Users\Rongxing\Desktop\ETH\CG\nori\src\warptest.cpp(308,1): warning C4305: 'initializing': truncation from 'double' to 'float'
+  microfacet.cpp
+  object.cpp
+  proplist.cpp
+  common.cpp
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\algorithm(2650,24): warning C4244: '=': conversion from 'int' to 'char', possible loss of data
+C:\Users\Rongxing\Desktop\ETH\CG\nori\src\common.cpp(66): message : see reference to function template instantiation '_OutIt std::transform<std::_String_const_iterator<std::_String_val<std::_Simple_types<_Elem>>>,std::_String_iterator<std::_String_val<std::_Simple_types<_Elem>>>,int(__cdecl *)(int)>(const _InIt,const _InIt,_OutIt,_Fn)' being compiled
+          with
+          [
+              _OutIt=std::_String_iterator<std::_String_val<std::_Simple_types<char>>>,
+              _Elem=char,
+              _InIt=std::_String_const_iterator<std::_String_val<std::_Simple_types<char>>>,
+              _Fn=int (__cdecl *)(int)
+          ]
+  Generating Code...
+     Creating library C:/Users/Rongxing/Desktop/ETH/CG/nori/build/Release/warptest.lib and object C:/Users/Rongxing/Desktop/ETH/CG/nori/build/Release/warptest.exp
+  warptest.vcxproj -> C:\Users\Rongxing\Desktop\ETH\CG\nori\build\Release\warptest.exe

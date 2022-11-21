@@ -1,0 +1,43 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "C:/Users/Rongxing/Desktop/ETH/CG/nori/build/CMakeFiles/OpenEXR_p"
+		},
+		{
+			"file" : "C:/Users/Rongxing/Desktop/ETH/CG/nori/build/CMakeFiles/05d1c1a7d5a6a4f48adad25ab4cf48ec/OpenEXR_p.rule"
+		},
+		{
+			"file" : "C:/Users/Rongxing/Desktop/ETH/CG/nori/build/CMakeFiles/e8e355cd154dfbe159359221e7a18aed/OpenEXR_p-complete.rule"
+		},
+		{
+			"file" : "C:/Users/Rongxing/Desktop/ETH/CG/nori/build/CMakeFiles/510ce549b7af167b8c48b6c75e9ac21c/OpenEXR_p-build.rule"
+		},
+		{
+			"file" : "C:/Users/Rongxing/Desktop/ETH/CG/nori/build/CMakeFiles/510ce549b7af167b8c48b6c75e9ac21c/OpenEXR_p-configure.rule"
+		},
+		{
+			"file" : "C:/Users/Rongxing/Desktop/ETH/CG/nori/build/CMakeFiles/510ce549b7af167b8c48b6c75e9ac21c/OpenEXR_p-download.rule"
+		},
+		{
+			"file" : "C:/Users/Rongxing/Desktop/ETH/CG/nori/build/CMakeFiles/510ce549b7af167b8c48b6c75e9ac21c/OpenEXR_p-install.rule"
+		},
+		{
+			"file" : "C:/Users/Rongxing/Desktop/ETH/CG/nori/build/CMakeFiles/510ce549b7af167b8c48b6c75e9ac21c/OpenEXR_p-mkdir.rule"
+		},
+		{
+			"file" : "C:/Users/Rongxing/Desktop/ETH/CG/nori/build/CMakeFiles/510ce549b7af167b8c48b6c75e9ac21c/OpenEXR_p-patch.rule"
+		},
+		{
+			"file" : "C:/Users/Rongxing/Desktop/ETH/CG/nori/build/CMakeFiles/510ce549b7af167b8c48b6c75e9ac21c/OpenEXR_p-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"OpenEXR_p"
+		],
+		"name" : "OpenEXR_p"
+	}
+}

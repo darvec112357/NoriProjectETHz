@@ -1,0 +1,11 @@
+C:/Users/Rongxing/Desktop/ETH/CG/nori/build/CMakeFiles/zlib_p.dir
+C:/Users/Rongxing/Desktop/ETH/CG/nori/build/CMakeFiles/tbb_p.dir
+C:/Users/Rongxing/Desktop/ETH/CG/nori/build/CMakeFiles/IlmBase_p.dir
+C:/Users/Rongxing/Desktop/ETH/CG/nori/build/CMakeFiles/OpenEXR_p.dir
+C:/Users/Rongxing/Desktop/ETH/CG/nori/build/CMakeFiles/nanogui_p.dir
+C:/Users/Rongxing/Desktop/ETH/CG/nori/build/CMakeFiles/pugixml.dir
+C:/Users/Rongxing/Desktop/ETH/CG/nori/build/CMakeFiles/nori.dir
+C:/Users/Rongxing/Desktop/ETH/CG/nori/build/CMakeFiles/warptest.dir
+C:/Users/Rongxing/Desktop/ETH/CG/nori/build/CMakeFiles/tonemapper.dir
+C:/Users/Rongxing/Desktop/ETH/CG/nori/build/CMakeFiles/ALL_BUILD.dir
+C:/Users/Rongxing/Desktop/ETH/CG/nori/build/CMakeFiles/ZERO_CHECK.dir

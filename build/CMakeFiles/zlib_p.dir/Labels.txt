@@ -1,0 +1,13 @@
+# Target labels
+ zlib_p
+# Source files and their labels
+C:/Users/Rongxing/Desktop/ETH/CG/nori/build/CMakeFiles/zlib_p
+C:/Users/Rongxing/Desktop/ETH/CG/nori/build/CMakeFiles/05d1c1a7d5a6a4f48adad25ab4cf48ec/zlib_p.rule
+C:/Users/Rongxing/Desktop/ETH/CG/nori/build/CMakeFiles/e8e355cd154dfbe159359221e7a18aed/zlib_p-complete.rule
+C:/Users/Rongxing/Desktop/ETH/CG/nori/build/CMakeFiles/b90196296a3e10a0a8f8b9d28516d618/zlib_p-build.rule
+C:/Users/Rongxing/Desktop/ETH/CG/nori/build/CMakeFiles/b90196296a3e10a0a8f8b9d28516d618/zlib_p-configure.rule
+C:/Users/Rongxing/Desktop/ETH/CG/nori/build/CMakeFiles/b90196296a3e10a0a8f8b9d28516d618/zlib_p-download.rule
+C:/Users/Rongxing/Desktop/ETH/CG/nori/build/CMakeFiles/b90196296a3e10a0a8f8b9d28516d618/zlib_p-install.rule
+C:/Users/Rongxing/Desktop/ETH/CG/nori/build/CMakeFiles/b90196296a3e10a0a8f8b9d28516d618/zlib_p-mkdir.rule
+C:/Users/Rongxing/Desktop/ETH/CG/nori/build/CMakeFiles/b90196296a3e10a0a8f8b9d28516d618/zlib_p-patch.rule
+C:/Users/Rongxing/Desktop/ETH/CG/nori/build/CMakeFiles/b90196296a3e10a0a8f8b9d28516d618/zlib_p-update.rule

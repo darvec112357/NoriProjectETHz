@@ -1,0 +1,13 @@
+prefix=C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist
+exec_prefix=C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist
+libdir=C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/lib
+sharedlibdir=C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/lib
+includedir=C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/include
+
+Name: zlib
+Description: zlib compression library
+Version: 1.2.8
+
+Requires:
+Libs: -L${libdir} -L${sharedlibdir} -lz
+Cflags: -I${includedir}

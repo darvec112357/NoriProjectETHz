@@ -1,0 +1,10 @@
+^C:\USERS\RONGXING\DESKTOP\ETH\CG\NORI\BUILD\CMAKEFILES\05D1C1A7D5A6A4F48ADAD25AB4CF48EC\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/Rongxing/Desktop/ETH/CG/nori -BC:/Users/Rongxing/Desktop/ETH/CG/nori/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Users/Rongxing/Desktop/ETH/CG/nori/build/nori.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
