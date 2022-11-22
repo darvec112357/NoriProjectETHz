@@ -2,34 +2,34 @@
 	"sources" : 
 	[
 		{
-			"file" : "C:/Users/Rongxing/Desktop/ETH/CG/nori/build/CMakeFiles/OpenEXR_p"
+			"file" : "/Users/apple/Desktop/ETHz/Year 1 Semester 1/Computer Graphics/nori/build/CMakeFiles/OpenEXR_p"
 		},
 		{
-			"file" : "C:/Users/Rongxing/Desktop/ETH/CG/nori/build/CMakeFiles/05d1c1a7d5a6a4f48adad25ab4cf48ec/OpenEXR_p.rule"
+			"file" : "/Users/apple/Desktop/ETHz/Year 1 Semester 1/Computer Graphics/nori/build/CMakeFiles/OpenEXR_p.rule"
 		},
 		{
-			"file" : "C:/Users/Rongxing/Desktop/ETH/CG/nori/build/CMakeFiles/e8e355cd154dfbe159359221e7a18aed/OpenEXR_p-complete.rule"
+			"file" : "/Users/apple/Desktop/ETHz/Year 1 Semester 1/Computer Graphics/nori/build/CMakeFiles/OpenEXR_p-complete.rule"
 		},
 		{
-			"file" : "C:/Users/Rongxing/Desktop/ETH/CG/nori/build/CMakeFiles/510ce549b7af167b8c48b6c75e9ac21c/OpenEXR_p-build.rule"
+			"file" : "/Users/apple/Desktop/ETHz/Year 1 Semester 1/Computer Graphics/nori/build/ext_build/src/OpenEXR_p-stamp/OpenEXR_p-build.rule"
 		},
 		{
-			"file" : "C:/Users/Rongxing/Desktop/ETH/CG/nori/build/CMakeFiles/510ce549b7af167b8c48b6c75e9ac21c/OpenEXR_p-configure.rule"
+			"file" : "/Users/apple/Desktop/ETHz/Year 1 Semester 1/Computer Graphics/nori/build/ext_build/src/OpenEXR_p-stamp/OpenEXR_p-configure.rule"
 		},
 		{
-			"file" : "C:/Users/Rongxing/Desktop/ETH/CG/nori/build/CMakeFiles/510ce549b7af167b8c48b6c75e9ac21c/OpenEXR_p-download.rule"
+			"file" : "/Users/apple/Desktop/ETHz/Year 1 Semester 1/Computer Graphics/nori/build/ext_build/src/OpenEXR_p-stamp/OpenEXR_p-download.rule"
 		},
 		{
-			"file" : "C:/Users/Rongxing/Desktop/ETH/CG/nori/build/CMakeFiles/510ce549b7af167b8c48b6c75e9ac21c/OpenEXR_p-install.rule"
+			"file" : "/Users/apple/Desktop/ETHz/Year 1 Semester 1/Computer Graphics/nori/build/ext_build/src/OpenEXR_p-stamp/OpenEXR_p-install.rule"
 		},
 		{
-			"file" : "C:/Users/Rongxing/Desktop/ETH/CG/nori/build/CMakeFiles/510ce549b7af167b8c48b6c75e9ac21c/OpenEXR_p-mkdir.rule"
+			"file" : "/Users/apple/Desktop/ETHz/Year 1 Semester 1/Computer Graphics/nori/build/ext_build/src/OpenEXR_p-stamp/OpenEXR_p-mkdir.rule"
 		},
 		{
-			"file" : "C:/Users/Rongxing/Desktop/ETH/CG/nori/build/CMakeFiles/510ce549b7af167b8c48b6c75e9ac21c/OpenEXR_p-patch.rule"
+			"file" : "/Users/apple/Desktop/ETHz/Year 1 Semester 1/Computer Graphics/nori/build/ext_build/src/OpenEXR_p-stamp/OpenEXR_p-patch.rule"
 		},
 		{
-			"file" : "C:/Users/Rongxing/Desktop/ETH/CG/nori/build/CMakeFiles/510ce549b7af167b8c48b6c75e9ac21c/OpenEXR_p-update.rule"
+			"file" : "/Users/apple/Desktop/ETHz/Year 1 Semester 1/Computer Graphics/nori/build/ext_build/src/OpenEXR_p-stamp/OpenEXR_p-update.rule"
 		}
 	],
 	"target" : 

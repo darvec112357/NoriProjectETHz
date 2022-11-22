@@ -1,8 +1,8 @@
-# Install script for directory: C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/src/OpenEXR_p
+# Install script for directory: /Users/apple/Desktop/ETHz/Year 1 Semester 1/Computer Graphics/nori/build/ext_build/src/OpenEXR_p
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist")
+  set(CMAKE_INSTALL_PREFIX "/Users/apple/Desktop/ETHz/Year 1 Semester 1/Computer Graphics/nori/build/ext_build/dist")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -32,21 +32,26 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
   set(CMAKE_CROSSCOMPILING "FALSE")
 endif()
 
+# Set default install directory permissions.
+if(NOT DEFINED CMAKE_OBJDUMP)
+  set(CMAKE_OBJDUMP "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/objdump")
+endif()
+
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/include/OpenEXR/OpenEXRConfig.h")
+   "/Users/apple/Desktop/ETHz/Year 1 Semester 1/Computer Graphics/nori/build/ext_build/dist/include/OpenEXR/OpenEXRConfig.h")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-  file(INSTALL DESTINATION "C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/include/OpenEXR" TYPE FILE FILES "C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/src/OpenEXR_p-build/config/OpenEXRConfig.h")
+  file(INSTALL DESTINATION "/Users/apple/Desktop/ETHz/Year 1 Semester 1/Computer Graphics/nori/build/ext_build/dist/include/OpenEXR" TYPE FILE FILES "/Users/apple/Desktop/ETHz/Year 1 Semester 1/Computer Graphics/nori/build/ext_build/src/OpenEXR_p-build/config/OpenEXRConfig.h")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/src/OpenEXR_p-build/IlmImf/cmake_install.cmake")
+  include("/Users/apple/Desktop/ETHz/Year 1 Semester 1/Computer Graphics/nori/build/ext_build/src/OpenEXR_p-build/IlmImf/cmake_install.cmake")
 
 endif()
 
@@ -58,5 +63,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/src/OpenEXR_p-build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/Users/apple/Desktop/ETHz/Year 1 Semester 1/Computer Graphics/nori/build/ext_build/src/OpenEXR_p-build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

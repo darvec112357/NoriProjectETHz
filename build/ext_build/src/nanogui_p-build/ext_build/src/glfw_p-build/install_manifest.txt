@@ -1,8 +1,8 @@
-C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/include/GLFW/glfw3.h
-C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/include/GLFW/glfw3native.h
-C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/lib/cmake/glfw3/glfw3Config.cmake
-C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/lib/cmake/glfw3/glfw3ConfigVersion.cmake
-C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/lib/cmake/glfw3/glfw3Targets.cmake
-C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/lib/cmake/glfw3/glfw3Targets-release.cmake
-C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/lib/pkgconfig/glfw3.pc
-C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist/lib/glfw3.lib
+/Users/apple/Desktop/ETHz/Year 1 Semester 1/Computer Graphics/nori/build/ext_build/dist/include/GLFW/glfw3.h
+/Users/apple/Desktop/ETHz/Year 1 Semester 1/Computer Graphics/nori/build/ext_build/dist/include/GLFW/glfw3native.h
+/Users/apple/Desktop/ETHz/Year 1 Semester 1/Computer Graphics/nori/build/ext_build/dist/lib/cmake/glfw3/glfw3Config.cmake
+/Users/apple/Desktop/ETHz/Year 1 Semester 1/Computer Graphics/nori/build/ext_build/dist/lib/cmake/glfw3/glfw3ConfigVersion.cmake
+/Users/apple/Desktop/ETHz/Year 1 Semester 1/Computer Graphics/nori/build/ext_build/dist/lib/cmake/glfw3/glfw3Targets.cmake
+/Users/apple/Desktop/ETHz/Year 1 Semester 1/Computer Graphics/nori/build/ext_build/dist/lib/cmake/glfw3/glfw3Targets-release.cmake
+/Users/apple/Desktop/ETHz/Year 1 Semester 1/Computer Graphics/nori/build/ext_build/dist/lib/pkgconfig/glfw3.pc
+/Users/apple/Desktop/ETHz/Year 1 Semester 1/Computer Graphics/nori/build/ext_build/dist/lib/libglfw3.a

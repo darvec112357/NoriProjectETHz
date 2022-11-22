@@ -1,6 +1,9 @@
-C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/src/tbb_p-build/CMakeFiles/tbb.dir
-C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/src/tbb_p-build/CMakeFiles/tbbmalloc.dir
-C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/src/tbb_p-build/CMakeFiles/tbbmalloc_proxy.dir
-C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/src/tbb_p-build/CMakeFiles/INSTALL.dir
-C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/src/tbb_p-build/CMakeFiles/ALL_BUILD.dir
-C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/src/tbb_p-build/CMakeFiles/ZERO_CHECK.dir
+/Users/apple/Desktop/ETHz/Year 1 Semester 1/Computer Graphics/nori/build/ext_build/src/tbb_p-build/CMakeFiles/tbb.dir
+/Users/apple/Desktop/ETHz/Year 1 Semester 1/Computer Graphics/nori/build/ext_build/src/tbb_p-build/CMakeFiles/tbbmalloc.dir
+/Users/apple/Desktop/ETHz/Year 1 Semester 1/Computer Graphics/nori/build/ext_build/src/tbb_p-build/CMakeFiles/tbbmalloc_proxy.dir
+/Users/apple/Desktop/ETHz/Year 1 Semester 1/Computer Graphics/nori/build/ext_build/src/tbb_p-build/CMakeFiles/edit_cache.dir
+/Users/apple/Desktop/ETHz/Year 1 Semester 1/Computer Graphics/nori/build/ext_build/src/tbb_p-build/CMakeFiles/rebuild_cache.dir
+/Users/apple/Desktop/ETHz/Year 1 Semester 1/Computer Graphics/nori/build/ext_build/src/tbb_p-build/CMakeFiles/list_install_components.dir
+/Users/apple/Desktop/ETHz/Year 1 Semester 1/Computer Graphics/nori/build/ext_build/src/tbb_p-build/CMakeFiles/install.dir
+/Users/apple/Desktop/ETHz/Year 1 Semester 1/Computer Graphics/nori/build/ext_build/src/tbb_p-build/CMakeFiles/install/local.dir
+/Users/apple/Desktop/ETHz/Year 1 Semester 1/Computer Graphics/nori/build/ext_build/src/tbb_p-build/CMakeFiles/install/strip.dir

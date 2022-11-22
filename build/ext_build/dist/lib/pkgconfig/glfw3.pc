@@ -1,4 +1,4 @@
-prefix=C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist
+prefix=/Users/apple/Desktop/ETHz/Year 1 Semester 1/Computer Graphics/nori/build/ext_build/dist
 exec_prefix=${prefix}
 includedir=${prefix}/include
 libdir=${exec_prefix}/lib
@@ -9,5 +9,5 @@ Version: 3.3.0
 URL: http://www.glfw.org/
 Requires.private: 
 Libs: -L${libdir} -lglfw3
-Libs.private:  -lgdi32
+Libs.private:  -framework Cocoa -framework IOKit -framework CoreFoundation -framework CoreVideo
 Cflags: -I${includedir}

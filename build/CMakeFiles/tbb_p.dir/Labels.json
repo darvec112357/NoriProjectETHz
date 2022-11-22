@@ -2,34 +2,34 @@
 	"sources" : 
 	[
 		{
-			"file" : "C:/Users/Rongxing/Desktop/ETH/CG/nori/build/CMakeFiles/tbb_p"
+			"file" : "/Users/apple/Desktop/ETHz/Year 1 Semester 1/Computer Graphics/nori/build/CMakeFiles/tbb_p"
 		},
 		{
-			"file" : "C:/Users/Rongxing/Desktop/ETH/CG/nori/build/CMakeFiles/05d1c1a7d5a6a4f48adad25ab4cf48ec/tbb_p.rule"
+			"file" : "/Users/apple/Desktop/ETHz/Year 1 Semester 1/Computer Graphics/nori/build/CMakeFiles/tbb_p.rule"
 		},
 		{
-			"file" : "C:/Users/Rongxing/Desktop/ETH/CG/nori/build/CMakeFiles/e8e355cd154dfbe159359221e7a18aed/tbb_p-complete.rule"
+			"file" : "/Users/apple/Desktop/ETHz/Year 1 Semester 1/Computer Graphics/nori/build/CMakeFiles/tbb_p-complete.rule"
 		},
 		{
-			"file" : "C:/Users/Rongxing/Desktop/ETH/CG/nori/build/CMakeFiles/c7c6d3312419e18c8e337a7bd877417b/tbb_p-build.rule"
+			"file" : "/Users/apple/Desktop/ETHz/Year 1 Semester 1/Computer Graphics/nori/build/ext_build/src/tbb_p-stamp/tbb_p-build.rule"
 		},
 		{
-			"file" : "C:/Users/Rongxing/Desktop/ETH/CG/nori/build/CMakeFiles/c7c6d3312419e18c8e337a7bd877417b/tbb_p-configure.rule"
+			"file" : "/Users/apple/Desktop/ETHz/Year 1 Semester 1/Computer Graphics/nori/build/ext_build/src/tbb_p-stamp/tbb_p-configure.rule"
 		},
 		{
-			"file" : "C:/Users/Rongxing/Desktop/ETH/CG/nori/build/CMakeFiles/c7c6d3312419e18c8e337a7bd877417b/tbb_p-download.rule"
+			"file" : "/Users/apple/Desktop/ETHz/Year 1 Semester 1/Computer Graphics/nori/build/ext_build/src/tbb_p-stamp/tbb_p-download.rule"
 		},
 		{
-			"file" : "C:/Users/Rongxing/Desktop/ETH/CG/nori/build/CMakeFiles/c7c6d3312419e18c8e337a7bd877417b/tbb_p-install.rule"
+			"file" : "/Users/apple/Desktop/ETHz/Year 1 Semester 1/Computer Graphics/nori/build/ext_build/src/tbb_p-stamp/tbb_p-install.rule"
 		},
 		{
-			"file" : "C:/Users/Rongxing/Desktop/ETH/CG/nori/build/CMakeFiles/c7c6d3312419e18c8e337a7bd877417b/tbb_p-mkdir.rule"
+			"file" : "/Users/apple/Desktop/ETHz/Year 1 Semester 1/Computer Graphics/nori/build/ext_build/src/tbb_p-stamp/tbb_p-mkdir.rule"
 		},
 		{
-			"file" : "C:/Users/Rongxing/Desktop/ETH/CG/nori/build/CMakeFiles/c7c6d3312419e18c8e337a7bd877417b/tbb_p-patch.rule"
+			"file" : "/Users/apple/Desktop/ETHz/Year 1 Semester 1/Computer Graphics/nori/build/ext_build/src/tbb_p-stamp/tbb_p-patch.rule"
 		},
 		{
-			"file" : "C:/Users/Rongxing/Desktop/ETH/CG/nori/build/CMakeFiles/c7c6d3312419e18c8e337a7bd877417b/tbb_p-update.rule"
+			"file" : "/Users/apple/Desktop/ETHz/Year 1 Semester 1/Computer Graphics/nori/build/ext_build/src/tbb_p-stamp/tbb_p-update.rule"
 		}
 	],
 	"target" : 

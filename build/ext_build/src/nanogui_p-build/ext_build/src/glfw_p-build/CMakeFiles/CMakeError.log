@@ -1,63 +1,11 @@
-Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
-Change Dir: C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/src/nanogui_p-build/ext_build/src/glfw_p-build/CMakeFiles/CMakeScratch/TryCompile-xknocw
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc 
+Build flags: 
+Id flags:  
 
-Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_e701a.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.11.2+f32259642 for .NET Framework
-Copyright (C) Microsoft Corporation. All rights reserved.
-
-  Microsoft (R) C/C++ Optimizing Compiler Version 19.29.30147 for x64
-  Copyright (C) Microsoft Corporation.  All rights reserved.
-  src.c
-  cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CMAKE_HAVE_LIBC_PTHREAD /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_e701a.dir\Debug\\" /Fd"cmTC_e701a.dir\Debug\vc142.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\nanogui_p-build\ext_build\src\glfw_p-build\CMakeFiles\CMakeScratch\TryCompile-xknocw\src.c"
-C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\nanogui_p-build\ext_build\src\glfw_p-build\CMakeFiles\CMakeScratch\TryCompile-xknocw\src.c(1,10): fatal error C1083: Cannot open include file: 'pthread.h': No such file or directory [C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\nanogui_p-build\ext_build\src\glfw_p-build\CMakeFiles\CMakeScratch\TryCompile-xknocw\cmTC_e701a.vcxproj]
-
-
-Source file was:
-#include <pthread.h>
-
-static void* test_func(void* data)
-{
-  return data;
-}
-
-int main(void)
-{
-  pthread_t thread;
-  pthread_create(&thread, NULL, test_func, NULL);
-  pthread_detach(thread);
-  pthread_cancel(thread);
-  pthread_join(thread, NULL);
-  pthread_atfork(NULL, NULL, NULL);
-  pthread_exit(NULL);
-
-  return 0;
-}
-
-
-Determining if the function pthread_create exists in the pthreads failed with the following output:
-Change Dir: C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/src/nanogui_p-build/ext_build/src/glfw_p-build/CMakeFiles/CMakeScratch/TryCompile-8dvj5r
-
-Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_20d8d.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.11.2+f32259642 for .NET Framework
-Copyright (C) Microsoft Corporation. All rights reserved.
-
-  Microsoft (R) C/C++ Optimizing Compiler Version 19.29.30147 for x64
-  Copyright (C) Microsoft Corporation.  All rights reserved.
-  CheckFunctionExists.c
-  cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_20d8d.dir\Debug\\" /Fd"cmTC_20d8d.dir\Debug\vc142.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\nanogui_p-build\ext_build\src\glfw_p-build\CMakeFiles\CMakeScratch\TryCompile-8dvj5r\CheckFunctionExists.c"
-LINK : fatal error LNK1104: cannot open file 'pthreads.lib' [C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\nanogui_p-build\ext_build\src\glfw_p-build\CMakeFiles\CMakeScratch\TryCompile-8dvj5r\cmTC_20d8d.vcxproj]
-
-
-
-Determining if the function pthread_create exists in the pthread failed with the following output:
-Change Dir: C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/src/nanogui_p-build/ext_build/src/glfw_p-build/CMakeFiles/CMakeScratch/TryCompile-18gzdm
-
-Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_8585f.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.11.2+f32259642 for .NET Framework
-Copyright (C) Microsoft Corporation. All rights reserved.
-
-  Microsoft (R) C/C++ Optimizing Compiler Version 19.29.30147 for x64
-  Copyright (C) Microsoft Corporation.  All rights reserved.
-  CheckFunctionExists.c
-  cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_8585f.dir\Debug\\" /Fd"cmTC_8585f.dir\Debug\vc142.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\nanogui_p-build\ext_build\src\glfw_p-build\CMakeFiles\CMakeScratch\TryCompile-18gzdm\CheckFunctionExists.c"
-LINK : fatal error LNK1104: cannot open file 'pthread.lib' [C:\Users\Rongxing\Desktop\ETH\CG\nori\build\ext_build\src\nanogui_p-build\ext_build\src\glfw_p-build\CMakeFiles\CMakeScratch\TryCompile-18gzdm\cmTC_8585f.vcxproj]
-
+The output was:
+1
+ld: library not found for -lSystem
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
 
 

@@ -4,19 +4,19 @@
 cmake_minimum_required(VERSION 3.5)
 
 file(MAKE_DIRECTORY
-  "C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/src/IlmBase_p"
-  "C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/src/IlmBase_p-build"
-  "C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build"
-  "C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/tmp"
-  "C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/src/IlmBase_p-stamp"
-  "C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/src"
-  "C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/src/IlmBase_p-stamp"
+  "/Users/apple/Desktop/ETHz/Year 1 Semester 1/Computer Graphics/nori/build/ext_build/src/IlmBase_p"
+  "/Users/apple/Desktop/ETHz/Year 1 Semester 1/Computer Graphics/nori/build/ext_build/src/IlmBase_p-build"
+  "/Users/apple/Desktop/ETHz/Year 1 Semester 1/Computer Graphics/nori/build/ext_build"
+  "/Users/apple/Desktop/ETHz/Year 1 Semester 1/Computer Graphics/nori/build/ext_build/tmp"
+  "/Users/apple/Desktop/ETHz/Year 1 Semester 1/Computer Graphics/nori/build/ext_build/src/IlmBase_p-stamp"
+  "/Users/apple/Desktop/ETHz/Year 1 Semester 1/Computer Graphics/nori/build/ext_build/src"
+  "/Users/apple/Desktop/ETHz/Year 1 Semester 1/Computer Graphics/nori/build/ext_build/src/IlmBase_p-stamp"
 )
 
-set(configSubDirs Debug;Release;MinSizeRel;RelWithDebInfo)
+set(configSubDirs )
 foreach(subDir IN LISTS configSubDirs)
-    file(MAKE_DIRECTORY "C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/src/IlmBase_p-stamp/${subDir}")
+    file(MAKE_DIRECTORY "/Users/apple/Desktop/ETHz/Year 1 Semester 1/Computer Graphics/nori/build/ext_build/src/IlmBase_p-stamp/${subDir}")
 endforeach()
 if(cfgdir)
-  file(MAKE_DIRECTORY "C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/src/IlmBase_p-stamp${cfgdir}") # cfgdir has leading slash
+  file(MAKE_DIRECTORY "/Users/apple/Desktop/ETHz/Year 1 Semester 1/Computer Graphics/nori/build/ext_build/src/IlmBase_p-stamp${cfgdir}") # cfgdir has leading slash
 endif()

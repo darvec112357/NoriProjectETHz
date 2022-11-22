@@ -1,0 +1,399 @@
+CMakeFiles/nori.dir/src/bitmap.cpp.o: \
+  /Users/apple/Desktop/ETHz/Year\ 1\ Semester\ 1/Computer\ Graphics/nori/src/bitmap.cpp \
+  /Users/apple/Desktop/ETHz/Year\ 1\ Semester\ 1/Computer\ Graphics/nori/include/nori/bitmap.h \
+  /Users/apple/Desktop/ETHz/Year\ 1\ Semester\ 1/Computer\ Graphics/nori/include/nori/color.h \
+  /Users/apple/Desktop/ETHz/Year\ 1\ Semester\ 1/Computer\ Graphics/nori/include/nori/common.h \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/iostream \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__config \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/pthread.h \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/ios \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/iosfwd \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/wchar.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/wchar.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/_types.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/sys/_types.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/sys/cdefs.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/sys/_symbol_aliasing.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/sys/_posix_availability.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/machine/_types.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/i386/_types.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/sys/_pthread/_pthread_types.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/Availability.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/AvailabilityVersions.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/AvailabilityInternal.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/sys/_types/_null.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/sys/_types/_size_t.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/sys/_types/_mbstate_t.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/machine/types.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/i386/types.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/sys/_types/_int8_t.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/sys/_types/_int16_t.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/sys/_types/_int32_t.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/sys/_types/_int64_t.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/sys/_types/_u_int8_t.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/sys/_types/_u_int16_t.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/sys/_types/_u_int32_t.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/sys/_types/_u_int64_t.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/sys/_types/_intptr_t.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/sys/_types/_uintptr_t.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/sys/_types/_ct_rune_t.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/sys/_types/_rune_t.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/sys/_types/_wchar_t.h \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/12.0.0/include/stdarg.h \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/stdio.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/stdio.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/_stdio.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/sys/_types/_va_list.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/sys/stdio.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/_ctermid.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/sys/_types/_off_t.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/sys/_types/_ssize_t.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/time.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/sys/_types/_clock_t.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/sys/_types/_time_t.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/sys/_types/_timespec.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/_wctype.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/__wctype.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/sys/_types/_wint_t.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/_types/_wctype_t.h \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/ctype.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/ctype.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/_ctype.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/runetype.h \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__locale \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/string \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/string_view \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__string \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/algorithm \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/initializer_list \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/cstddef \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__cxx_version \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/12.0.0/include/stddef.h \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/12.0.0/include/__stddef_max_align_t.h \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__nullptr \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/type_traits \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/cstring \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/string.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/string.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/strings.h \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/utility \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__tuple \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/cstdint \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/stdint.h \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/12.0.0/include/stdint.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/stdint.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/_types/_uint8_t.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/_types/_uint16_t.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/_types/_uint32_t.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/_types/_uint64_t.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/_types/_intmax_t.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/_types/_uintmax_t.h \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__debug \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/memory \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/typeinfo \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/exception \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/cstdlib \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/stdlib.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/stdlib.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/sys/wait.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/sys/_types/_pid_t.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/sys/_types/_id_t.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/sys/signal.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/sys/appleapiopts.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/machine/signal.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/i386/signal.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/machine/_mcontext.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/i386/_mcontext.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/mach/machine/_structs.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/mach/i386/_structs.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/sys/_pthread/_pthread_attr_t.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/sys/_types/_sigaltstack.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/sys/_types/_ucontext.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/sys/_types/_sigset_t.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/sys/_types/_uid_t.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/sys/resource.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/sys/_types/_timeval.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/machine/endian.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/i386/endian.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/sys/_endian.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/libkern/_OSByteOrder.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/libkern/i386/_OSByteOrder.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/alloca.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/malloc/_malloc.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/sys/_types/_dev_t.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/sys/_types/_mode_t.h \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/math.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/math.h \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/limits \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__undef_macros \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/new \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/iterator \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__functional_base \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/tuple \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/stdexcept \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/atomic \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/cassert \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/assert.h \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/functional \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/bit \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/cstdio \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/cwchar \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/cwctype \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/cctype \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/wctype.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/wctype.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/_types/_wctrans_t.h \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/mutex \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__mutex_base \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/chrono \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/ctime \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/ratio \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/climits \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/limits.h \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/12.0.0/include/limits.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/limits.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/machine/limits.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/i386/limits.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/i386/_limits.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/sys/syslimits.h \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/system_error \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__errc \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/cerrno \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/errno.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/errno.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/sys/errno.h \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__threading_support \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/pthread/sched.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/pthread/pthread_impl.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/sys/_pthread/_pthread_cond_t.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/sys/_pthread/_pthread_condattr_t.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/sys/_pthread/_pthread_key_t.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/sys/_pthread/_pthread_mutex_t.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/sys/_pthread/_pthread_mutexattr_t.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/sys/_pthread/_pthread_once_t.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/sys/_pthread/_pthread_rwlock_t.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/sys/_pthread/_pthread_rwlockattr_t.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/sys/_pthread/_pthread_t.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/pthread/qos.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/sys/qos.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/sys/_types/_mach_port_t.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/sched.h \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/locale.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/locale.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/_locale.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/xlocale.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/_xlocale.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/xlocale/_ctype.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/xlocale/__wctype.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/xlocale/_stdio.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/xlocale/_stdlib.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/xlocale/_string.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/xlocale/_time.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/xlocale/_wchar.h \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/stddef.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/xlocale/_wctype.h \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/streambuf \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/istream \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/ostream \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/locale \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/nl_types.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/sys/types.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/sys/_types/_u_char.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/sys/_types/_u_short.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/sys/_types/_u_int.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/sys/_types/_caddr_t.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/sys/_types/_blkcnt_t.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/sys/_types/_blksize_t.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/sys/_types/_gid_t.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/sys/_types/_in_addr_t.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/sys/_types/_in_port_t.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/sys/_types/_ino_t.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/sys/_types/_ino64_t.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/sys/_types/_key_t.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/sys/_types/_nlink_t.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/sys/_types/_useconds_t.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/sys/_types/_suseconds_t.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/sys/_types/_rsize_t.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/sys/_types/_errno_t.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/sys/_types/_fd_def.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/sys/_types/_fd_setsize.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/sys/_types/_fd_set.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/sys/_types/_fd_clr.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/sys/_types/_fd_zero.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/sys/_types/_fd_isset.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/sys/_types/_fd_copy.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/sys/_types/_fsblkcnt_t.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/sys/_types/_fsfilcnt_t.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/_types/_nl_item.h \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__bsd_locale_defaults.h \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/bitset \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__bit_reference \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/vector \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__split_buffer \
+  /Users/apple/Desktop/ETHz/Year\ 1\ Semester\ 1/Computer\ Graphics/nori/build/ext_build/dist/include/Eigen/Core \
+  /Users/apple/Desktop/ETHz/Year\ 1\ Semester\ 1/Computer\ Graphics/nori/build/ext_build/dist/include/Eigen/src/Core/util/DisableStupidWarnings.h \
+  /Users/apple/Desktop/ETHz/Year\ 1\ Semester\ 1/Computer\ Graphics/nori/build/ext_build/dist/include/Eigen/src/Core/util/Macros.h \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/complex \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/cmath \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/sstream \
+  /Users/apple/Desktop/ETHz/Year\ 1\ Semester\ 1/Computer\ Graphics/nori/build/ext_build/dist/include/Eigen/src/Core/util/MKL_support.h \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/12.0.0/include/emmintrin.h \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/12.0.0/include/xmmintrin.h \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/12.0.0/include/mmintrin.h \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/12.0.0/include/mm_malloc.h \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/12.0.0/include/pmmintrin.h \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/12.0.0/include/tmmintrin.h \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/12.0.0/include/smmintrin.h \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/12.0.0/include/popcntintrin.h \
+  /Users/apple/Desktop/ETHz/Year\ 1\ Semester\ 1/Computer\ Graphics/nori/build/ext_build/dist/include/Eigen/src/Core/util/Constants.h \
+  /Users/apple/Desktop/ETHz/Year\ 1\ Semester\ 1/Computer\ Graphics/nori/build/ext_build/dist/include/Eigen/src/Core/util/ForwardDeclarations.h \
+  /Users/apple/Desktop/ETHz/Year\ 1\ Semester\ 1/Computer\ Graphics/nori/build/ext_build/dist/include/Eigen/src/Core/util/Meta.h \
+  /Users/apple/Desktop/ETHz/Year\ 1\ Semester\ 1/Computer\ Graphics/nori/build/ext_build/dist/include/Eigen/src/Core/util/StaticAssert.h \
+  /Users/apple/Desktop/ETHz/Year\ 1\ Semester\ 1/Computer\ Graphics/nori/build/ext_build/dist/include/Eigen/src/Core/util/XprHelper.h \
+  /Users/apple/Desktop/ETHz/Year\ 1\ Semester\ 1/Computer\ Graphics/nori/build/ext_build/dist/include/Eigen/src/Core/util/Memory.h \
+  /Users/apple/Desktop/ETHz/Year\ 1\ Semester\ 1/Computer\ Graphics/nori/build/ext_build/dist/include/Eigen/src/Core/NumTraits.h \
+  /Users/apple/Desktop/ETHz/Year\ 1\ Semester\ 1/Computer\ Graphics/nori/build/ext_build/dist/include/Eigen/src/Core/MathFunctions.h \
+  /Users/apple/Desktop/ETHz/Year\ 1\ Semester\ 1/Computer\ Graphics/nori/build/ext_build/dist/include/Eigen/src/Core/GenericPacketMath.h \
+  /Users/apple/Desktop/ETHz/Year\ 1\ Semester\ 1/Computer\ Graphics/nori/build/ext_build/dist/include/Eigen/src/Core/arch/SSE/PacketMath.h \
+  /Users/apple/Desktop/ETHz/Year\ 1\ Semester\ 1/Computer\ Graphics/nori/build/ext_build/dist/include/Eigen/src/Core/arch/SSE/MathFunctions.h \
+  /Users/apple/Desktop/ETHz/Year\ 1\ Semester\ 1/Computer\ Graphics/nori/build/ext_build/dist/include/Eigen/src/Core/arch/SSE/Complex.h \
+  /Users/apple/Desktop/ETHz/Year\ 1\ Semester\ 1/Computer\ Graphics/nori/build/ext_build/dist/include/Eigen/src/Core/arch/Default/Settings.h \
+  /Users/apple/Desktop/ETHz/Year\ 1\ Semester\ 1/Computer\ Graphics/nori/build/ext_build/dist/include/Eigen/src/Core/functors/BinaryFunctors.h \
+  /Users/apple/Desktop/ETHz/Year\ 1\ Semester\ 1/Computer\ Graphics/nori/build/ext_build/dist/include/Eigen/src/Core/functors/UnaryFunctors.h \
+  /Users/apple/Desktop/ETHz/Year\ 1\ Semester\ 1/Computer\ Graphics/nori/build/ext_build/dist/include/Eigen/src/Core/functors/NullaryFunctors.h \
+  /Users/apple/Desktop/ETHz/Year\ 1\ Semester\ 1/Computer\ Graphics/nori/build/ext_build/dist/include/Eigen/src/Core/functors/StlFunctors.h \
+  /Users/apple/Desktop/ETHz/Year\ 1\ Semester\ 1/Computer\ Graphics/nori/build/ext_build/dist/include/Eigen/src/Core/DenseCoeffsBase.h \
+  /Users/apple/Desktop/ETHz/Year\ 1\ Semester\ 1/Computer\ Graphics/nori/build/ext_build/dist/include/Eigen/src/Core/DenseBase.h \
+  /Users/apple/Desktop/ETHz/Year\ 1\ Semester\ 1/Computer\ Graphics/nori/build/ext_build/dist/include/Eigen/src/Core/../plugins/BlockMethods.h \
+  /Users/apple/Desktop/ETHz/Year\ 1\ Semester\ 1/Computer\ Graphics/nori/build/ext_build/dist/include/Eigen/src/Core/MatrixBase.h \
+  /Users/apple/Desktop/ETHz/Year\ 1\ Semester\ 1/Computer\ Graphics/nori/build/ext_build/dist/include/Eigen/src/Core/../plugins/CommonCwiseUnaryOps.h \
+  /Users/apple/Desktop/ETHz/Year\ 1\ Semester\ 1/Computer\ Graphics/nori/build/ext_build/dist/include/Eigen/src/Core/../plugins/CommonCwiseBinaryOps.h \
+  /Users/apple/Desktop/ETHz/Year\ 1\ Semester\ 1/Computer\ Graphics/nori/build/ext_build/dist/include/Eigen/src/Core/../plugins/MatrixCwiseUnaryOps.h \
+  /Users/apple/Desktop/ETHz/Year\ 1\ Semester\ 1/Computer\ Graphics/nori/build/ext_build/dist/include/Eigen/src/Core/../plugins/MatrixCwiseBinaryOps.h \
+  /Users/apple/Desktop/ETHz/Year\ 1\ Semester\ 1/Computer\ Graphics/nori/build/ext_build/dist/include/Eigen/src/Core/EigenBase.h \
+  /Users/apple/Desktop/ETHz/Year\ 1\ Semester\ 1/Computer\ Graphics/nori/build/ext_build/dist/include/Eigen/src/Core/Assign.h \
+  /Users/apple/Desktop/ETHz/Year\ 1\ Semester\ 1/Computer\ Graphics/nori/build/ext_build/dist/include/Eigen/src/Core/ArrayBase.h \
+  /Users/apple/Desktop/ETHz/Year\ 1\ Semester\ 1/Computer\ Graphics/nori/build/ext_build/dist/include/Eigen/src/Core/../plugins/ArrayCwiseUnaryOps.h \
+  /Users/apple/Desktop/ETHz/Year\ 1\ Semester\ 1/Computer\ Graphics/nori/build/ext_build/dist/include/Eigen/src/Core/../plugins/ArrayCwiseBinaryOps.h \
+  /Users/apple/Desktop/ETHz/Year\ 1\ Semester\ 1/Computer\ Graphics/nori/build/ext_build/dist/include/Eigen/src/Core/util/BlasUtil.h \
+  /Users/apple/Desktop/ETHz/Year\ 1\ Semester\ 1/Computer\ Graphics/nori/build/ext_build/dist/include/Eigen/src/Core/DenseStorage.h \
+  /Users/apple/Desktop/ETHz/Year\ 1\ Semester\ 1/Computer\ Graphics/nori/build/ext_build/dist/include/Eigen/src/Core/NestByValue.h \
+  /Users/apple/Desktop/ETHz/Year\ 1\ Semester\ 1/Computer\ Graphics/nori/build/ext_build/dist/include/Eigen/src/Core/ForceAlignedAccess.h \
+  /Users/apple/Desktop/ETHz/Year\ 1\ Semester\ 1/Computer\ Graphics/nori/build/ext_build/dist/include/Eigen/src/Core/ReturnByValue.h \
+  /Users/apple/Desktop/ETHz/Year\ 1\ Semester\ 1/Computer\ Graphics/nori/build/ext_build/dist/include/Eigen/src/Core/NoAlias.h \
+  /Users/apple/Desktop/ETHz/Year\ 1\ Semester\ 1/Computer\ Graphics/nori/build/ext_build/dist/include/Eigen/src/Core/PlainObjectBase.h \
+  /Users/apple/Desktop/ETHz/Year\ 1\ Semester\ 1/Computer\ Graphics/nori/build/ext_build/dist/include/Eigen/src/Core/Matrix.h \
+  /Users/apple/Desktop/ETHz/Year\ 1\ Semester\ 1/Computer\ Graphics/nori/build/ext_build/dist/include/Eigen/src/Core/Array.h \
+  /Users/apple/Desktop/ETHz/Year\ 1\ Semester\ 1/Computer\ Graphics/nori/build/ext_build/dist/include/Eigen/src/Core/CwiseBinaryOp.h \
+  /Users/apple/Desktop/ETHz/Year\ 1\ Semester\ 1/Computer\ Graphics/nori/build/ext_build/dist/include/Eigen/src/Core/CwiseUnaryOp.h \
+  /Users/apple/Desktop/ETHz/Year\ 1\ Semester\ 1/Computer\ Graphics/nori/build/ext_build/dist/include/Eigen/src/Core/CwiseNullaryOp.h \
+  /Users/apple/Desktop/ETHz/Year\ 1\ Semester\ 1/Computer\ Graphics/nori/build/ext_build/dist/include/Eigen/src/Core/CwiseUnaryView.h \
+  /Users/apple/Desktop/ETHz/Year\ 1\ Semester\ 1/Computer\ Graphics/nori/build/ext_build/dist/include/Eigen/src/Core/SelfCwiseBinaryOp.h \
+  /Users/apple/Desktop/ETHz/Year\ 1\ Semester\ 1/Computer\ Graphics/nori/build/ext_build/dist/include/Eigen/src/Core/Dot.h \
+  /Users/apple/Desktop/ETHz/Year\ 1\ Semester\ 1/Computer\ Graphics/nori/build/ext_build/dist/include/Eigen/src/Core/StableNorm.h \
+  /Users/apple/Desktop/ETHz/Year\ 1\ Semester\ 1/Computer\ Graphics/nori/build/ext_build/dist/include/Eigen/src/Core/MapBase.h \
+  /Users/apple/Desktop/ETHz/Year\ 1\ Semester\ 1/Computer\ Graphics/nori/build/ext_build/dist/include/Eigen/src/Core/Stride.h \
+  /Users/apple/Desktop/ETHz/Year\ 1\ Semester\ 1/Computer\ Graphics/nori/build/ext_build/dist/include/Eigen/src/Core/Map.h \
+  /Users/apple/Desktop/ETHz/Year\ 1\ Semester\ 1/Computer\ Graphics/nori/build/ext_build/dist/include/Eigen/src/Core/Block.h \
+  /Users/apple/Desktop/ETHz/Year\ 1\ Semester\ 1/Computer\ Graphics/nori/build/ext_build/dist/include/Eigen/src/Core/VectorBlock.h \
+  /Users/apple/Desktop/ETHz/Year\ 1\ Semester\ 1/Computer\ Graphics/nori/build/ext_build/dist/include/Eigen/src/Core/Ref.h \
+  /Users/apple/Desktop/ETHz/Year\ 1\ Semester\ 1/Computer\ Graphics/nori/build/ext_build/dist/include/Eigen/src/Core/Transpose.h \
+  /Users/apple/Desktop/ETHz/Year\ 1\ Semester\ 1/Computer\ Graphics/nori/build/ext_build/dist/include/Eigen/src/Core/DiagonalMatrix.h \
+  /Users/apple/Desktop/ETHz/Year\ 1\ Semester\ 1/Computer\ Graphics/nori/build/ext_build/dist/include/Eigen/src/Core/Diagonal.h \
+  /Users/apple/Desktop/ETHz/Year\ 1\ Semester\ 1/Computer\ Graphics/nori/build/ext_build/dist/include/Eigen/src/Core/DiagonalProduct.h \
+  /Users/apple/Desktop/ETHz/Year\ 1\ Semester\ 1/Computer\ Graphics/nori/build/ext_build/dist/include/Eigen/src/Core/PermutationMatrix.h \
+  /Users/apple/Desktop/ETHz/Year\ 1\ Semester\ 1/Computer\ Graphics/nori/build/ext_build/dist/include/Eigen/src/Core/Transpositions.h \
+  /Users/apple/Desktop/ETHz/Year\ 1\ Semester\ 1/Computer\ Graphics/nori/build/ext_build/dist/include/Eigen/src/Core/Redux.h \
+  /Users/apple/Desktop/ETHz/Year\ 1\ Semester\ 1/Computer\ Graphics/nori/build/ext_build/dist/include/Eigen/src/Core/Visitor.h \
+  /Users/apple/Desktop/ETHz/Year\ 1\ Semester\ 1/Computer\ Graphics/nori/build/ext_build/dist/include/Eigen/src/Core/Fuzzy.h \
+  /Users/apple/Desktop/ETHz/Year\ 1\ Semester\ 1/Computer\ Graphics/nori/build/ext_build/dist/include/Eigen/src/Core/IO.h \
+  /Users/apple/Desktop/ETHz/Year\ 1\ Semester\ 1/Computer\ Graphics/nori/build/ext_build/dist/include/Eigen/src/Core/Swap.h \
+  /Users/apple/Desktop/ETHz/Year\ 1\ Semester\ 1/Computer\ Graphics/nori/build/ext_build/dist/include/Eigen/src/Core/CommaInitializer.h \
+  /Users/apple/Desktop/ETHz/Year\ 1\ Semester\ 1/Computer\ Graphics/nori/build/ext_build/dist/include/Eigen/src/Core/Flagged.h \
+  /Users/apple/Desktop/ETHz/Year\ 1\ Semester\ 1/Computer\ Graphics/nori/build/ext_build/dist/include/Eigen/src/Core/ProductBase.h \
+  /Users/apple/Desktop/ETHz/Year\ 1\ Semester\ 1/Computer\ Graphics/nori/build/ext_build/dist/include/Eigen/src/Core/GeneralProduct.h \
+  /Users/apple/Desktop/ETHz/Year\ 1\ Semester\ 1/Computer\ Graphics/nori/build/ext_build/dist/include/Eigen/src/Core/TriangularMatrix.h \
+  /Users/apple/Desktop/ETHz/Year\ 1\ Semester\ 1/Computer\ Graphics/nori/build/ext_build/dist/include/Eigen/src/Core/SelfAdjointView.h \
+  /Users/apple/Desktop/ETHz/Year\ 1\ Semester\ 1/Computer\ Graphics/nori/build/ext_build/dist/include/Eigen/src/Core/products/GeneralBlockPanelKernel.h \
+  /Users/apple/Desktop/ETHz/Year\ 1\ Semester\ 1/Computer\ Graphics/nori/build/ext_build/dist/include/Eigen/src/Core/products/Parallelizer.h \
+  /Users/apple/Desktop/ETHz/Year\ 1\ Semester\ 1/Computer\ Graphics/nori/build/ext_build/dist/include/Eigen/src/Core/products/CoeffBasedProduct.h \
+  /Users/apple/Desktop/ETHz/Year\ 1\ Semester\ 1/Computer\ Graphics/nori/build/ext_build/dist/include/Eigen/src/Core/products/GeneralMatrixVector.h \
+  /Users/apple/Desktop/ETHz/Year\ 1\ Semester\ 1/Computer\ Graphics/nori/build/ext_build/dist/include/Eigen/src/Core/products/GeneralMatrixMatrix.h \
+  /Users/apple/Desktop/ETHz/Year\ 1\ Semester\ 1/Computer\ Graphics/nori/build/ext_build/dist/include/Eigen/src/Core/SolveTriangular.h \
+  /Users/apple/Desktop/ETHz/Year\ 1\ Semester\ 1/Computer\ Graphics/nori/build/ext_build/dist/include/Eigen/src/Core/products/GeneralMatrixMatrixTriangular.h \
+  /Users/apple/Desktop/ETHz/Year\ 1\ Semester\ 1/Computer\ Graphics/nori/build/ext_build/dist/include/Eigen/src/Core/products/SelfadjointMatrixVector.h \
+  /Users/apple/Desktop/ETHz/Year\ 1\ Semester\ 1/Computer\ Graphics/nori/build/ext_build/dist/include/Eigen/src/Core/products/SelfadjointMatrixMatrix.h \
+  /Users/apple/Desktop/ETHz/Year\ 1\ Semester\ 1/Computer\ Graphics/nori/build/ext_build/dist/include/Eigen/src/Core/products/SelfadjointProduct.h \
+  /Users/apple/Desktop/ETHz/Year\ 1\ Semester\ 1/Computer\ Graphics/nori/build/ext_build/dist/include/Eigen/src/Core/products/SelfadjointRank2Update.h \
+  /Users/apple/Desktop/ETHz/Year\ 1\ Semester\ 1/Computer\ Graphics/nori/build/ext_build/dist/include/Eigen/src/Core/products/TriangularMatrixVector.h \
+  /Users/apple/Desktop/ETHz/Year\ 1\ Semester\ 1/Computer\ Graphics/nori/build/ext_build/dist/include/Eigen/src/Core/products/TriangularMatrixMatrix.h \
+  /Users/apple/Desktop/ETHz/Year\ 1\ Semester\ 1/Computer\ Graphics/nori/build/ext_build/dist/include/Eigen/src/Core/products/TriangularSolverMatrix.h \
+  /Users/apple/Desktop/ETHz/Year\ 1\ Semester\ 1/Computer\ Graphics/nori/build/ext_build/dist/include/Eigen/src/Core/products/TriangularSolverVector.h \
+  /Users/apple/Desktop/ETHz/Year\ 1\ Semester\ 1/Computer\ Graphics/nori/build/ext_build/dist/include/Eigen/src/Core/BandMatrix.h \
+  /Users/apple/Desktop/ETHz/Year\ 1\ Semester\ 1/Computer\ Graphics/nori/build/ext_build/dist/include/Eigen/src/Core/CoreIterators.h \
+  /Users/apple/Desktop/ETHz/Year\ 1\ Semester\ 1/Computer\ Graphics/nori/build/ext_build/dist/include/Eigen/src/Core/BooleanRedux.h \
+  /Users/apple/Desktop/ETHz/Year\ 1\ Semester\ 1/Computer\ Graphics/nori/build/ext_build/dist/include/Eigen/src/Core/Select.h \
+  /Users/apple/Desktop/ETHz/Year\ 1\ Semester\ 1/Computer\ Graphics/nori/build/ext_build/dist/include/Eigen/src/Core/VectorwiseOp.h \
+  /Users/apple/Desktop/ETHz/Year\ 1\ Semester\ 1/Computer\ Graphics/nori/build/ext_build/dist/include/Eigen/src/Core/Random.h \
+  /Users/apple/Desktop/ETHz/Year\ 1\ Semester\ 1/Computer\ Graphics/nori/build/ext_build/dist/include/Eigen/src/Core/Replicate.h \
+  /Users/apple/Desktop/ETHz/Year\ 1\ Semester\ 1/Computer\ Graphics/nori/build/ext_build/dist/include/Eigen/src/Core/Reverse.h \
+  /Users/apple/Desktop/ETHz/Year\ 1\ Semester\ 1/Computer\ Graphics/nori/build/ext_build/dist/include/Eigen/src/Core/ArrayWrapper.h \
+  /Users/apple/Desktop/ETHz/Year\ 1\ Semester\ 1/Computer\ Graphics/nori/build/ext_build/dist/include/Eigen/src/Core/GlobalFunctions.h \
+  /Users/apple/Desktop/ETHz/Year\ 1\ Semester\ 1/Computer\ Graphics/nori/build/ext_build/dist/include/Eigen/src/Core/util/ReenableStupidWarnings.h \
+  /Users/apple/Desktop/ETHz/Year\ 1\ Semester\ 1/Computer\ Graphics/nori/build/ext_build/dist/include/OpenEXR/ImathPlatform.h \
+  /Users/apple/Desktop/ETHz/Year\ 1\ Semester\ 1/Computer\ Graphics/nori/ext/tinyformat/tinyformat.h \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/array \
+  /Users/apple/Desktop/ETHz/Year\ 1\ Semester\ 1/Computer\ Graphics/nori/include/nori/vector.h \
+  /Users/apple/Desktop/ETHz/Year\ 1\ Semester\ 1/Computer\ Graphics/nori/build/ext_build/dist/include/OpenEXR/ImfInputFile.h \
+  /Users/apple/Desktop/ETHz/Year\ 1\ Semester\ 1/Computer\ Graphics/nori/build/ext_build/dist/include/OpenEXR/ImfHeader.h \
+  /Users/apple/Desktop/ETHz/Year\ 1\ Semester\ 1/Computer\ Graphics/nori/build/ext_build/dist/include/OpenEXR/ImfLineOrder.h \
+  /Users/apple/Desktop/ETHz/Year\ 1\ Semester\ 1/Computer\ Graphics/nori/build/ext_build/dist/include/OpenEXR/ImfNamespace.h \
+  /Users/apple/Desktop/ETHz/Year\ 1\ Semester\ 1/Computer\ Graphics/nori/build/ext_build/dist/include/OpenEXR/OpenEXRConfig.h \
+  /Users/apple/Desktop/ETHz/Year\ 1\ Semester\ 1/Computer\ Graphics/nori/build/ext_build/dist/include/OpenEXR/ImfCompression.h \
+  /Users/apple/Desktop/ETHz/Year\ 1\ Semester\ 1/Computer\ Graphics/nori/build/ext_build/dist/include/OpenEXR/ImfName.h \
+  /Users/apple/Desktop/ETHz/Year\ 1\ Semester\ 1/Computer\ Graphics/nori/build/ext_build/dist/include/OpenEXR/ImfTileDescription.h \
+  /Users/apple/Desktop/ETHz/Year\ 1\ Semester\ 1/Computer\ Graphics/nori/build/ext_build/dist/include/OpenEXR/ImfInt64.h \
+  /Users/apple/Desktop/ETHz/Year\ 1\ Semester\ 1/Computer\ Graphics/nori/build/ext_build/dist/include/OpenEXR/ImathInt64.h \
+  /Users/apple/Desktop/ETHz/Year\ 1\ Semester\ 1/Computer\ Graphics/nori/build/ext_build/dist/include/OpenEXR/ImathNamespace.h \
+  /Users/apple/Desktop/ETHz/Year\ 1\ Semester\ 1/Computer\ Graphics/nori/build/ext_build/dist/include/OpenEXR/IlmBaseConfig.h \
+  /Users/apple/Desktop/ETHz/Year\ 1\ Semester\ 1/Computer\ Graphics/nori/build/ext_build/dist/include/OpenEXR/ImathVec.h \
+  /Users/apple/Desktop/ETHz/Year\ 1\ Semester\ 1/Computer\ Graphics/nori/build/ext_build/dist/include/OpenEXR/ImathExc.h \
+  /Users/apple/Desktop/ETHz/Year\ 1\ Semester\ 1/Computer\ Graphics/nori/build/ext_build/dist/include/OpenEXR/IexBaseExc.h \
+  /Users/apple/Desktop/ETHz/Year\ 1\ Semester\ 1/Computer\ Graphics/nori/build/ext_build/dist/include/OpenEXR/IexNamespace.h \
+  /Users/apple/Desktop/ETHz/Year\ 1\ Semester\ 1/Computer\ Graphics/nori/build/ext_build/dist/include/OpenEXR/IexExport.h \
+  /Users/apple/Desktop/ETHz/Year\ 1\ Semester\ 1/Computer\ Graphics/nori/build/ext_build/dist/include/OpenEXR/ImathExport.h \
+  /Users/apple/Desktop/ETHz/Year\ 1\ Semester\ 1/Computer\ Graphics/nori/build/ext_build/dist/include/OpenEXR/ImathLimits.h \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/float.h \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/12.0.0/include/float.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/float.h \
+  /Users/apple/Desktop/ETHz/Year\ 1\ Semester\ 1/Computer\ Graphics/nori/build/ext_build/dist/include/OpenEXR/ImathMath.h \
+  /Users/apple/Desktop/ETHz/Year\ 1\ Semester\ 1/Computer\ Graphics/nori/build/ext_build/dist/include/OpenEXR/ImathBox.h \
+  /Users/apple/Desktop/ETHz/Year\ 1\ Semester\ 1/Computer\ Graphics/nori/build/ext_build/dist/include/OpenEXR/ImfForward.h \
+  /Users/apple/Desktop/ETHz/Year\ 1\ Semester\ 1/Computer\ Graphics/nori/build/ext_build/dist/include/OpenEXR/ImfExport.h \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/map \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__tree \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__node_handle \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/optional \
+  /Users/apple/Desktop/ETHz/Year\ 1\ Semester\ 1/Computer\ Graphics/nori/build/ext_build/dist/include/OpenEXR/ImfFrameBuffer.h \
+  /Users/apple/Desktop/ETHz/Year\ 1\ Semester\ 1/Computer\ Graphics/nori/build/ext_build/dist/include/OpenEXR/ImfPixelType.h \
+  /Users/apple/Desktop/ETHz/Year\ 1\ Semester\ 1/Computer\ Graphics/nori/build/ext_build/dist/include/OpenEXR/ImfTiledOutputFile.h \
+  /Users/apple/Desktop/ETHz/Year\ 1\ Semester\ 1/Computer\ Graphics/nori/build/ext_build/dist/include/OpenEXR/ImfThreading.h \
+  /Users/apple/Desktop/ETHz/Year\ 1\ Semester\ 1/Computer\ Graphics/nori/build/ext_build/dist/include/OpenEXR/ImfGenericOutputFile.h \
+  /Users/apple/Desktop/ETHz/Year\ 1\ Semester\ 1/Computer\ Graphics/nori/build/ext_build/dist/include/OpenEXR/ImfVersion.h \
+  /Users/apple/Desktop/ETHz/Year\ 1\ Semester\ 1/Computer\ Graphics/nori/build/ext_build/dist/include/OpenEXR/ImfIO.h \
+  /Users/apple/Desktop/ETHz/Year\ 1\ Semester\ 1/Computer\ Graphics/nori/build/ext_build/dist/include/OpenEXR/ImfXdr.h \
+  /Users/apple/Desktop/ETHz/Year\ 1\ Semester\ 1/Computer\ Graphics/nori/build/ext_build/dist/include/OpenEXR/IexMathExc.h \
+  /Users/apple/Desktop/ETHz/Year\ 1\ Semester\ 1/Computer\ Graphics/nori/build/ext_build/dist/include/OpenEXR/half.h \
+  /Users/apple/Desktop/ETHz/Year\ 1\ Semester\ 1/Computer\ Graphics/nori/build/ext_build/dist/include/OpenEXR/halfExport.h \
+  /Users/apple/Desktop/ETHz/Year\ 1\ Semester\ 1/Computer\ Graphics/nori/build/ext_build/dist/include/OpenEXR/ImfGenericInputFile.h \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/fstream \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/filesystem \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/stack \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/deque \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/iomanip \
+  /Users/apple/Desktop/ETHz/Year\ 1\ Semester\ 1/Computer\ Graphics/nori/build/ext_build/dist/include/OpenEXR/ImfOutputFile.h \
+  /Users/apple/Desktop/ETHz/Year\ 1\ Semester\ 1/Computer\ Graphics/nori/build/ext_build/dist/include/OpenEXR/ImfChannelList.h \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/set \
+  /Users/apple/Desktop/ETHz/Year\ 1\ Semester\ 1/Computer\ Graphics/nori/build/ext_build/dist/include/OpenEXR/ImfStringAttribute.h \
+  /Users/apple/Desktop/ETHz/Year\ 1\ Semester\ 1/Computer\ Graphics/nori/build/ext_build/dist/include/OpenEXR/ImfAttribute.h \
+  /Users/apple/Desktop/ETHz/Year\ 1\ Semester\ 1/Computer\ Graphics/nori/ext/stb_image_write.h

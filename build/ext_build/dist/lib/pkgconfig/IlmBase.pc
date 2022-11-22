@@ -1,4 +1,4 @@
-prefix=C:/Users/Rongxing/Desktop/ETH/CG/nori/build/ext_build/dist
+prefix=/Users/apple/Desktop/ETHz/Year 1 Semester 1/Computer Graphics/nori/build/ext_build/dist
 exec_prefix=${prefix}
 libdir=${exec_prefix}/lib
 includedir=${prefix}/include
