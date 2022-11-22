@@ -2,4 +2,4 @@
 CMakeConfig.txt
 ext
 include
-build/slurm-28.out
+build/slurm-***.out
