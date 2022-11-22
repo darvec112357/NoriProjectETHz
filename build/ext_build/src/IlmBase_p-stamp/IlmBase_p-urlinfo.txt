@@ -1,0 +1,3 @@
+repository='external project URL'
+module='/cluster/home/jiusun/NoriProjectETHz/ext/openexr/IlmBase'
+tag=''

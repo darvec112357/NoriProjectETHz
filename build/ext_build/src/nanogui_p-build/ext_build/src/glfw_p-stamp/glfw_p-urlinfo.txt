@@ -1,0 +1,3 @@
+repository='external project URL'
+module='/cluster/home/jiusun/NoriProjectETHz/build/ext_build/src/nanogui_p/ext/glfw'
+tag=''

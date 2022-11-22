@@ -1,0 +1,1 @@
+cmd='/usr/bin/cmake;-DCMAKE_BUILD_TYPE=Release;-DCMAKE_GENERATOR=Unix Makefiles;-Wno-dev;-DCMAKE_INSTALL_PREFIX=/cluster/home/jiusun/NoriProjectETHz/build/ext_build/dist;-DBUILD_SHARED_LIBS=OFF;-DNAMESPACE_VERSIONING=NO;-GUnix Makefiles;/cluster/home/jiusun/NoriProjectETHz/build/ext_build/src/IlmBase_p'

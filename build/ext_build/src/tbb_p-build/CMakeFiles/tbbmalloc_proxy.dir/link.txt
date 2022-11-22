@@ -1,0 +1,2 @@
+/usr/bin/ar cr libtbbmalloc_proxy.a  CMakeFiles/tbbmalloc_proxy.dir/src/tbbmalloc/proxy.cpp.o CMakeFiles/tbbmalloc_proxy.dir/src/tbbmalloc/tbb_function_replacement.cpp.o
+/usr/bin/ranlib libtbbmalloc_proxy.a

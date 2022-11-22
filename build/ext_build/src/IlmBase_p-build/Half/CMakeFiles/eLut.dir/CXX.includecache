@@ -1,0 +1,14 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/cluster/home/jiusun/NoriProjectETHz/build/ext_build/src/IlmBase_p/Half/eLut.cpp
+iostream
+-
+iomanip
+-
+

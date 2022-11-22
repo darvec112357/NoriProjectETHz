@@ -1,0 +1,2 @@
+/usr/bin/ar cr ext_build/dist/lib/libpugixml.a  CMakeFiles/pugixml.dir/ext/pugixml/src/pugixml.cpp.o
+/usr/bin/ranlib ext_build/dist/lib/libpugixml.a

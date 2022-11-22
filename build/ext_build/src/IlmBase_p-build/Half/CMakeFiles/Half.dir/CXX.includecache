@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/cluster/home/jiusun/NoriProjectETHz/build/ext_build/src/IlmBase_p/Half/half.cpp
+assert.h
+-
+half.h
+/cluster/home/jiusun/NoriProjectETHz/build/ext_build/src/IlmBase_p/Half/half.h
+toFloat.h
+/cluster/home/jiusun/NoriProjectETHz/build/ext_build/src/IlmBase_p/Half/toFloat.h
+eLut.h
+/cluster/home/jiusun/NoriProjectETHz/build/ext_build/src/IlmBase_p/Half/eLut.h
+
+/cluster/home/jiusun/NoriProjectETHz/build/ext_build/src/IlmBase_p/Half/half.h
+halfExport.h
+/cluster/home/jiusun/NoriProjectETHz/build/ext_build/src/IlmBase_p/Half/halfExport.h
+iostream
+-
+
+/cluster/home/jiusun/NoriProjectETHz/build/ext_build/src/IlmBase_p/Half/halfExport.h
+
+Half/eLut.h
+
+Half/toFloat.h
+

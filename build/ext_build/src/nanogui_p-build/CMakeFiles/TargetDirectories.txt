@@ -1,0 +1,4 @@
+/cluster/home/jiusun/NoriProjectETHz/build/ext_build/src/nanogui_p-build/CMakeFiles/bin2c.dir
+/cluster/home/jiusun/NoriProjectETHz/build/ext_build/src/nanogui_p-build/CMakeFiles/example.dir
+/cluster/home/jiusun/NoriProjectETHz/build/ext_build/src/nanogui_p-build/CMakeFiles/glfw_p.dir
+/cluster/home/jiusun/NoriProjectETHz/build/ext_build/src/nanogui_p-build/CMakeFiles/nanogui.dir
