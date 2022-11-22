@@ -52,95 +52,138 @@ public:
 		if (m_photonRadius == 0)
 			m_photonRadius = scene->getBoundingBox().getExtents().norm() / 500.0f;
 
+	
+
+		/* How to add a photon?
+		 * m_photonMap->push_back(Photon(
+		 *	Point3f(0, 0, 0),  // Position
+		 *	Vector3f(0, 0, 1), // Direction
+		 *	Color3f(1, 2, 3)   // Power
+		 * ));
+		 */
+
 		// put your code to trace photons here
-        int count = 0;
-        while (count < m_photonCount) {
-            em_count++;
-            Ray3f traced_ray;
-            Color3f result = Color3f(0.0f);
-            const Emitter* em = scene->getRandomEmitter(sampler->next1D());
-            result = em->samplePhoton(traced_ray, sampler->next2D(), sampler->next2D());
-            result *= scene->getLights().size();
-            while (count < m_photonCount) {
+        emitted_count = 0;
+        int photoncount = 0;
+        while(photoncount <= m_photonCount){
+            emitted_count++;
+            Ray3f Ray;
+            const Emitter* emitter = scene->getRandomEmitter(sampler->next1D());
+            Color3f power = emitter->samplePhoton(Ray, sampler->next2D(), sampler->next2D()) * scene->getLights().size();
+
+            while(true){
+
                 Intersection its;
-                if (!scene->rayIntersect(traced_ray, its))
-                    break;
-                Frame localFrame = its.shFrame.n;
+                if (!scene->rayIntersect(Ray, its)) {
+                    break;  
+                }
 
                 if (its.mesh->getBSDF()->isDiffuse()) {
-                    m_photonMap->push_back(Photon(its.p, -traced_ray.d, result));
-                    count++;
+                    m_photonMap->push_back(Photon(its.p, - Ray.d, power));
+                    photoncount++;
                 }
 
-                float success_prob = std::min(result.maxCoeff(), .99f);
-                if (sampler->next1D() > success_prob) {
+                float successProbability = std::min(power.maxCoeff(), 0.99f);
+
+                if (sampler->next1D() > successProbability) {
                     break;
                 }
-                result /= success_prob;
 
-                BSDFQueryRecord BQR_mats = BSDFQueryRecord(localFrame.toLocal(-traced_ray.d));
-                BQR_mats.uv = its.uv;
-                Color3f BSDF_mats = its.mesh->getBSDF()->sample(BQR_mats, sampler->next2D());
-                result *= BSDF_mats;
-                traced_ray = Ray3f(its.p, localFrame.toWorld(BQR_mats.wo));
+                power /= successProbability;
+
+                // new iteration
+                Frame local_frame = Frame(its.shFrame.n);
+                Point2f sp = sampler->next2D();
+                BSDFQueryRecord bRec = BSDFQueryRecord(local_frame.toLocal(-Ray.d));
+                bRec.uv = its.uv;
+                Color3f bsdf = its.mesh->getBSDF()->sample(bRec, sp);
+
+                power *= bsdf;
+
+                Ray = Ray3f(its.p, local_frame.toWorld(bRec.wo));
             }
         }
-
 
 		/* Build the photon map */
         m_photonMap->build();
     }
 
     virtual Color3f Li(const Scene *scene, Sampler *sampler, const Ray3f &_ray) const override {
+    	
+		/* How to find photons?
+		 * std::vector<uint32_t> results;
+		 * m_photonMap->search(Point3f(0, 0, 0), // lookup position
+		 *                     m_photonRadius,   // search radius
+		 *                     results);
+		 *
+		 * for (uint32_t i : results) {
+		 *    const Photon &photon = (*m_photonMap)[i];
+		 *    cout << "Found photon!" << endl;
+		 *    cout << " Position  : " << photon.getPosition().toString() << endl;
+		 *    cout << " Power     : " << photon.getPower().toString() << endl;
+		 *    cout << " Direction : " << photon.getDirection().toString() << endl;
+		 * }
+		 */
+
 		// put your code for path tracing with photon gathering here
-        Color3f t = Color3f(1.0f);
-        Ray3f traced_ray = _ray;
-        Color3f result = Color3f(0.0f);
-        while (true) {
+
+        Color3f radiance_result = Color3f(0.0f);
+        Color3f t = Color3f(1.0f); //throughput
+        Ray3f pathRay = _ray;
+
+        while(true){
+
             Intersection its;
-            if (!scene->rayIntersect(traced_ray, its))
+            if (!scene->rayIntersect(pathRay, its))
                 break;
-            if (its.mesh->isEmitter()) {
-                EmitterQueryRecord EQR_le = EmitterQueryRecord(traced_ray.o, its.p, its.shFrame.n);
-                Color3f Le = its.mesh->getEmitter()->eval(EQR_le);
-                Le *= t;
-                result += Le;
-            }
-            Frame localFrame = its.shFrame.n;
+
+            if (its.mesh->isEmitter()){
+			    EmitterQueryRecord eRec = EmitterQueryRecord(pathRay.o, its.p, its.shFrame.n);
+			    radiance_result += its.mesh->getEmitter()->eval(eRec) * t;
+		    }
 
             if (its.mesh->getBSDF()->isDiffuse()) {
+
+                Color3f photon_density = Color3f(0.0f);
                 std::vector<uint32_t> results;
+                Frame local_frame = Frame(its.shFrame.n);
                 m_photonMap->search(its.p, m_photonRadius, results);
-                Color3f photonDensityEstimation = Color3f(0.0f);
-                for (uint32_t i : results) {
-                    const Photon& photon = (*m_photonMap)[i];
-                    Vector3f incident_direction = localFrame.toLocal(-traced_ray.d);
-                    Vector3f outgoing_direction = localFrame.toLocal(photon.getDirection());
 
-                    BSDFQueryRecord BQR_ems = BSDFQueryRecord(incident_direction, outgoing_direction, ESolidAngle);
-                    BQR_ems.uv = its.uv;
-                    Color3f BSDF_ems = its.mesh->getBSDF()->eval(BQR_ems);
-                    BSDF_ems *= photon.getPower();
-                    photonDensityEstimation += BSDF_ems;
+                for(int r : results){
+                    const Photon photon = (*m_photonMap)[r];
+                    BSDFQueryRecord bRec = BSDFQueryRecord(local_frame.toLocal(-pathRay.d), local_frame.toLocal(photon.getDirection()), ESolidAngle);
+                    bRec.uv = its.uv;
+                    Color3f bsdf = its.mesh->getBSDF()->eval(bRec);
+                    photon_density += bsdf * photon.getPower();
                 }
-                photonDensityEstimation *= t;
-                photonDensityEstimation /= (M_PI * m_photonRadius * m_photonRadius * em_count);
-                result += photonDensityEstimation;
-                break;
-            }
-            float success_prob = std::min(t.maxCoeff(), .99f);
-            if (sampler->next1D() > success_prob) {
-                break;
-            }
-            t /= success_prob;
 
-            BSDFQueryRecord BQR_mats = BSDFQueryRecord(localFrame.toLocal(-traced_ray.d));
-            BQR_mats.uv = its.uv;
-            Color3f BSDF_mats = its.mesh->getBSDF()->sample(BQR_mats, sampler->next2D());
-            t *= BSDF_mats;
-            traced_ray = Ray3f(its.p, localFrame.toWorld(BQR_mats.wo));
+                photon_density /= M_PI * pow(m_photonRadius, 2) * emitted_count;
+                radiance_result += t * photon_density;
+                break;
+
+            }
+
+            float successProbability = std::min(t.maxCoeff(), 0.99f);
+
+            if (sampler->next1D() > successProbability) {
+                break;
+            }
+
+            t /= successProbability;
+
+            //new iteration
+            Frame local_frame = Frame(its.shFrame.n);
+            Point2f sp = sampler->next2D();
+            BSDFQueryRecord bRec = BSDFQueryRecord(local_frame.toLocal(-pathRay.d));
+            bRec.uv = its.uv;
+            Color3f bsdf = its.mesh->getBSDF()->sample(bRec, sp);
+
+            t *= bsdf;
+
+            pathRay = Ray3f(its.p, local_frame.toWorld(bRec.wo));
         }
-		return result;
+
+		return radiance_result;
     }
 
     virtual std::string toString() const override {
@@ -159,7 +202,7 @@ private:
      * NOT the number of emitted photons. You will need to keep track of those yourself.
      */ 
     int m_photonCount;
-    int em_count=0;
+    int emitted_count;
     float m_photonRadius;
     std::unique_ptr<PhotonMap> m_photonMap;
 };

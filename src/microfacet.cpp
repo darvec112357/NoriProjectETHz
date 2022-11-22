@@ -19,7 +19,6 @@
 #include <nori/bsdf.h>
 #include <nori/frame.h>
 #include <nori/warp.h>
-#include <nori/common.h>
 
 NORI_NAMESPACE_BEGIN
 
@@ -83,21 +82,24 @@ public:
 
     /// Evaluate the BRDF for the given pair of directions
     virtual Color3f eval(const BSDFQueryRecord &bRec) const override {
-        if (bRec.measure != ESolidAngle
+
+         if (bRec.measure != ESolidAngle
             || Frame::cosTheta(bRec.wi) <= 0
             || Frame::cosTheta(bRec.wo) <= 0)
             return Color3f(0.0f);
-        Vector3f wi = bRec.wi;
-        Vector3f wo = bRec.wo;
-        Vector3f wh = (wi + wo) / (wi + wo).norm();
-        //std::cout << "wo:"<< wo << std::endl;
-        float sum = m_ks * evalBeckmann(wh) * smithBeckmannG1(wi, wh) * smithBeckmannG1(wo, wh) *
-            fresnel(wh.dot(wi), m_extIOR, m_intIOR) / (4 * Frame::cosTheta(wo) * Frame::cosTheta(wi));
-        Color3f res = m_kd;
-        res.r() = res.r() / M_PI + sum;
-        res.g() = res.g() / M_PI + sum;
-        res.b() = res.b() / M_PI + sum;
-        return res;
+        
+        Normal3f wh = (bRec.wi+bRec.wo)/(bRec.wi+bRec.wo).norm();
+        float D_wh = evalBeckmann(wh);
+        float F = fresnel(wh.dot(bRec.wi), m_extIOR, m_intIOR);
+        float G = smithBeckmannG1(bRec.wi, wh)*smithBeckmannG1(bRec.wo, wh);
+
+        float s = (m_ks * D_wh * F * G) /(4 * Frame::cosTheta(bRec.wi) * Frame::cosTheta(bRec.wo));
+        
+    	return Color3f(
+            m_kd.r() / M_PI + s,
+            m_kd.g() / M_PI + s,
+            m_kd.b() / M_PI + s
+        );
     }
 
     /// Evaluate the sampling density of \ref sample() wrt. solid angles
@@ -106,42 +108,34 @@ public:
             || Frame::cosTheta(bRec.wi) <= 0
             || Frame::cosTheta(bRec.wo) <= 0)
             return 0.0f;
-        Vector3f wi = bRec.wi;
-        Vector3f wo = bRec.wo;
-        Vector3f wh = (wi + wo) / (wi + wo).norm();
-        float res = 0;
-        res = m_ks * evalBeckmann(wh) * Frame::cosTheta(wh) / (4 * (wh.dot(wo)))+
-            (1 - m_ks) * Frame::cosTheta(wo) / M_PI;
-        return res;
+        
+    	Normal3f wh = (bRec.wi+bRec.wo)/(bRec.wi+bRec.wo).norm();
+        return m_ks * evalBeckmann(wh) * Frame::cosTheta(wh) / (4*wh.dot(bRec.wo)) + (1-m_ks) * Frame::cosTheta(bRec.wo) / M_PI;
     }
 
     /// Sample the BRDF
     virtual Color3f sample(BSDFQueryRecord &bRec, const Point2f &_sample) const override {
-        if (Frame::cosTheta(bRec.wi) <= 0)
-            return Color3f(0.0f);
-        Vector3f wi = bRec.wi;
-        Vector3f wh = Vector3f(0, 0, 0);
-        float ran = _sample.x();
-        if (m_ks>ran) {
-            Point2f newsample = Point2f(_sample.x() / m_ks, _sample.y());
-            wh = Warp::squareToBeckmann(newsample, m_alpha);
-            bRec.wo = wh * 2 * (wi.dot(wh)) - wi;
-        }
-        else {
-            Point2f newsample = Point2f((1-_sample.x()) / (1-m_ks), _sample.y());
-            
-            bRec.wo = Warp::squareToCosineHemisphere(newsample);
-            
-        }
+
         bRec.measure = ESolidAngle;
-        if (Frame::cosTheta(bRec.wo) <= 0){
-            return Color3f(0.0);
+        if(Frame::cosTheta(bRec.wi)<0)
+            return Color3f(0.0f);
+        
+    	if(_sample.x() < m_ks){
+            Point2f sample = Point2f(_sample.x()/m_ks, _sample.y());
+            Normal3f wh = Warp::squareToBeckmann(sample,m_alpha);
+            bRec.wo = 2 * (wh.dot(bRec.wi)) * wh - bRec.wi;
+        }else{
+            Point2f sample = Point2f((1 - _sample.x())/(1-m_ks), _sample.y());
+            bRec.wo = Warp::squareToCosineHemisphere(sample);
         }
-        float coswi = abs(Frame::cosTheta(bRec.wo));
-        Color3f res = eval(bRec);
-        return Color3f(res.r()*coswi / pdf(bRec),                 
-            res.g() *coswi/ pdf(bRec), 
-            res.b() *coswi/ pdf(bRec));
+        if(Frame::cosTheta(bRec.wo)<=0)
+            return Color3f(0.0f);
+
+        return Color3f(
+            Frame::cosTheta(bRec.wo)*eval(bRec).r()/pdf(bRec),
+            Frame::cosTheta(bRec.wo)*eval(bRec).g()/pdf(bRec),
+            Frame::cosTheta(bRec.wo)*eval(bRec).b()/pdf(bRec)
+        );
     }
 
     virtual std::string toString() const override {
