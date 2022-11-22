@@ -13,20 +13,20 @@
 	<!--199.38762 199.42264 0.61237 199.29289-->
 	<camera type="perspective">
 		<transform name="toWorld">
-			<lookat target="329, -50, 50" origin="330 -50 50" up="-1, 0, 0.1"/>
+			<lookat target="-39.7, -149.046, 120" origin="-40 -150 120" up="0.3, 0.954, 0.1"/>
 		</transform>
 
 		<!-- Field of view: 30 degrees -->
-		<float name="fov" value="90"/>
+		<float name="fov" value="110"/>
 
 		<!-- 768 x 768 pixels -->
-		<integer name="width" value="960"/>
-		<integer name="height" value="960"/>
+		<integer name="width" value="1280"/>
+		<integer name="height" value="720"/>
 	</camera>
 
 	<!-- Load the Ajax bust (a freely available scan from the Jotero forum) -->
 	<mesh type="obj">
-		<string name="filename" value="minas_tirith.obj"/>
+		<string name="filename" value="1.obj"/>
 
 		<bsdf type="diffuse"/>
 	</mesh>
