@@ -2,6 +2,6 @@
 CMakeConfig.txt
 ext
 include
-build/slurm-***.out
+/\.out$/
 src/render.cpp
 src/main.cpp
