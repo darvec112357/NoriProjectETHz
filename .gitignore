@@ -3,3 +3,5 @@ CMakeConfig.txt
 ext
 include
 build/slurm-***.out
+src/render.cpp
+src/main.cpp
