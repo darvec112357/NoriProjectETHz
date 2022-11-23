@@ -4,3 +4,13 @@ For the ETHz's Computer Graphics 2022 coursework, we were tasked with rendering 
 
 
 ## Repository Structure
+
+This repository is specifically built for rendering EXR files on ETHz's euler clusters. Please do not make any changes on the **src/main.cpp** and **src/render.cpp**!
+
+Each time when you want to submit a job to the cluster, run
+
+```bash
+bash run.bash
+```
+
+in the terminal.
