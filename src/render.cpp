@@ -139,7 +139,7 @@ void RenderThread::renderScene(const std::string & filename) {
             cout << "Rendering .. ";
             cout.flush();
             Timer timer;
-
+ 
             auto numSamples = m_scene->getSampler()->getSampleCount();
             std::cout << numSamples << std::endl;
             auto numBlocks = blockGenerator.getBlockCount();
