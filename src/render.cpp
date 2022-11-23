@@ -150,7 +150,7 @@ void RenderThread::renderScene(const std::string & filename) {
             for (uint32_t k = 0; k < numSamples ; ++k) {
                 std::cout << k << std::endl;
                 m_progress = k/float(numSamples);
-                std::cout << m_render_status << std::endl;
+                // std::cout << m_render_status << std::endl;
                 /*if(m_render_status == 2)
                     break;*/
 
