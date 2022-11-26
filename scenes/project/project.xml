@@ -27,20 +27,20 @@
 
 	<emitter type="spot">
 		<point name="origin" value = "-200,200,300"/>
-		<color name="power" value="255,255,255"/>
+		<color name="power" value="255,0,0"/>
 		<point name="lookat" value = "0 50 250"/>
 		<float name="TotalWidth" value="19"/>
 		<float name="FalloffStart" value="14"/>
 	</emitter>
 
 	<mesh type="sphere">
-        <point name="center" value="0,100,100"/>
-        <float name="radius" value="1000"/>
+        <point name="center" value="0,0,0"/>
+        <float name="radius" value="10000"/>
         
 
         <emitter type="environment">
             <float name="strength" value ="0.5"/>
-            <string name="filename" value="C:\Users\Rongxing\Desktop\ETH\CG\nori\scenes\project\sunset.exr"/>
+            <string name="filename" value="C:\Users\Rongxing\Desktop\ETH\CG\nori\scenes\project\mountain.exr"/>
         </emitter>
     </mesh>
 
