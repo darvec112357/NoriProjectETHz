@@ -38,6 +38,8 @@ FILE(REMOVE_RECURSE
   "CMakeFiles/nori.dir/src/direct_mis.cpp.o"
   "CMakeFiles/nori.dir/src/path_mats.cpp.o"
   "CMakeFiles/nori.dir/src/path_mis.cpp.o"
+  "CMakeFiles/nori.dir/src/spotlight.cpp.o"
+  "CMakeFiles/nori.dir/src/environment.cpp.o"
   "nori.pdb"
   "nori"
 )

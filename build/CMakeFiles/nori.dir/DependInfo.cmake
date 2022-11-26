@@ -19,6 +19,7 @@ SET(CMAKE_DEPENDS_CHECK_CXX
   "/cluster/home/jiusun/NoriProjectETHz/src/direct_ems.cpp" "/cluster/home/jiusun/NoriProjectETHz/build/CMakeFiles/nori.dir/src/direct_ems.cpp.o"
   "/cluster/home/jiusun/NoriProjectETHz/src/direct_mats.cpp" "/cluster/home/jiusun/NoriProjectETHz/build/CMakeFiles/nori.dir/src/direct_mats.cpp.o"
   "/cluster/home/jiusun/NoriProjectETHz/src/direct_mis.cpp" "/cluster/home/jiusun/NoriProjectETHz/build/CMakeFiles/nori.dir/src/direct_mis.cpp.o"
+  "/cluster/home/jiusun/NoriProjectETHz/src/environment.cpp" "/cluster/home/jiusun/NoriProjectETHz/build/CMakeFiles/nori.dir/src/environment.cpp.o"
   "/cluster/home/jiusun/NoriProjectETHz/src/gui.cpp" "/cluster/home/jiusun/NoriProjectETHz/build/CMakeFiles/nori.dir/src/gui.cpp.o"
   "/cluster/home/jiusun/NoriProjectETHz/src/independent.cpp" "/cluster/home/jiusun/NoriProjectETHz/build/CMakeFiles/nori.dir/src/independent.cpp.o"
   "/cluster/home/jiusun/NoriProjectETHz/src/main.cpp" "/cluster/home/jiusun/NoriProjectETHz/build/CMakeFiles/nori.dir/src/main.cpp.o"
@@ -41,6 +42,7 @@ SET(CMAKE_DEPENDS_CHECK_CXX
   "/cluster/home/jiusun/NoriProjectETHz/src/scene.cpp" "/cluster/home/jiusun/NoriProjectETHz/build/CMakeFiles/nori.dir/src/scene.cpp.o"
   "/cluster/home/jiusun/NoriProjectETHz/src/shape.cpp" "/cluster/home/jiusun/NoriProjectETHz/build/CMakeFiles/nori.dir/src/shape.cpp.o"
   "/cluster/home/jiusun/NoriProjectETHz/src/sphere.cpp" "/cluster/home/jiusun/NoriProjectETHz/build/CMakeFiles/nori.dir/src/sphere.cpp.o"
+  "/cluster/home/jiusun/NoriProjectETHz/src/spotlight.cpp" "/cluster/home/jiusun/NoriProjectETHz/build/CMakeFiles/nori.dir/src/spotlight.cpp.o"
   "/cluster/home/jiusun/NoriProjectETHz/src/ttest.cpp" "/cluster/home/jiusun/NoriProjectETHz/build/CMakeFiles/nori.dir/src/ttest.cpp.o"
   "/cluster/home/jiusun/NoriProjectETHz/src/warp.cpp" "/cluster/home/jiusun/NoriProjectETHz/build/CMakeFiles/nori.dir/src/warp.cpp.o"
   )

@@ -949,6 +949,52 @@ CMakeFiles/nori.dir/src/path_mis.cpp.o.provides: CMakeFiles/nori.dir/src/path_mi
 
 CMakeFiles/nori.dir/src/path_mis.cpp.o.provides.build: CMakeFiles/nori.dir/src/path_mis.cpp.o
 
+CMakeFiles/nori.dir/src/spotlight.cpp.o: CMakeFiles/nori.dir/flags.make
+CMakeFiles/nori.dir/src/spotlight.cpp.o: ../src/spotlight.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /cluster/home/jiusun/NoriProjectETHz/build/CMakeFiles $(CMAKE_PROGRESS_40)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/nori.dir/src/spotlight.cpp.o"
+	/usr/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/nori.dir/src/spotlight.cpp.o -c /cluster/home/jiusun/NoriProjectETHz/src/spotlight.cpp
+
+CMakeFiles/nori.dir/src/spotlight.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/nori.dir/src/spotlight.cpp.i"
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -E /cluster/home/jiusun/NoriProjectETHz/src/spotlight.cpp > CMakeFiles/nori.dir/src/spotlight.cpp.i
+
+CMakeFiles/nori.dir/src/spotlight.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/nori.dir/src/spotlight.cpp.s"
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -S /cluster/home/jiusun/NoriProjectETHz/src/spotlight.cpp -o CMakeFiles/nori.dir/src/spotlight.cpp.s
+
+CMakeFiles/nori.dir/src/spotlight.cpp.o.requires:
+.PHONY : CMakeFiles/nori.dir/src/spotlight.cpp.o.requires
+
+CMakeFiles/nori.dir/src/spotlight.cpp.o.provides: CMakeFiles/nori.dir/src/spotlight.cpp.o.requires
+	$(MAKE) -f CMakeFiles/nori.dir/build.make CMakeFiles/nori.dir/src/spotlight.cpp.o.provides.build
+.PHONY : CMakeFiles/nori.dir/src/spotlight.cpp.o.provides
+
+CMakeFiles/nori.dir/src/spotlight.cpp.o.provides.build: CMakeFiles/nori.dir/src/spotlight.cpp.o
+
+CMakeFiles/nori.dir/src/environment.cpp.o: CMakeFiles/nori.dir/flags.make
+CMakeFiles/nori.dir/src/environment.cpp.o: ../src/environment.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /cluster/home/jiusun/NoriProjectETHz/build/CMakeFiles $(CMAKE_PROGRESS_41)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/nori.dir/src/environment.cpp.o"
+	/usr/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/nori.dir/src/environment.cpp.o -c /cluster/home/jiusun/NoriProjectETHz/src/environment.cpp
+
+CMakeFiles/nori.dir/src/environment.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/nori.dir/src/environment.cpp.i"
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -E /cluster/home/jiusun/NoriProjectETHz/src/environment.cpp > CMakeFiles/nori.dir/src/environment.cpp.i
+
+CMakeFiles/nori.dir/src/environment.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/nori.dir/src/environment.cpp.s"
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -S /cluster/home/jiusun/NoriProjectETHz/src/environment.cpp -o CMakeFiles/nori.dir/src/environment.cpp.s
+
+CMakeFiles/nori.dir/src/environment.cpp.o.requires:
+.PHONY : CMakeFiles/nori.dir/src/environment.cpp.o.requires
+
+CMakeFiles/nori.dir/src/environment.cpp.o.provides: CMakeFiles/nori.dir/src/environment.cpp.o.requires
+	$(MAKE) -f CMakeFiles/nori.dir/build.make CMakeFiles/nori.dir/src/environment.cpp.o.provides.build
+.PHONY : CMakeFiles/nori.dir/src/environment.cpp.o.provides
+
+CMakeFiles/nori.dir/src/environment.cpp.o.provides.build: CMakeFiles/nori.dir/src/environment.cpp.o
+
 # Object files for target nori
 nori_OBJECTS = \
 "CMakeFiles/nori.dir/src/bitmap.cpp.o" \
@@ -989,7 +1035,9 @@ nori_OBJECTS = \
 "CMakeFiles/nori.dir/src/direct_mats.cpp.o" \
 "CMakeFiles/nori.dir/src/direct_mis.cpp.o" \
 "CMakeFiles/nori.dir/src/path_mats.cpp.o" \
-"CMakeFiles/nori.dir/src/path_mis.cpp.o"
+"CMakeFiles/nori.dir/src/path_mis.cpp.o" \
+"CMakeFiles/nori.dir/src/spotlight.cpp.o" \
+"CMakeFiles/nori.dir/src/environment.cpp.o"
 
 # External object files for target nori
 nori_EXTERNAL_OBJECTS =
@@ -1033,6 +1081,8 @@ nori: CMakeFiles/nori.dir/src/direct_mats.cpp.o
 nori: CMakeFiles/nori.dir/src/direct_mis.cpp.o
 nori: CMakeFiles/nori.dir/src/path_mats.cpp.o
 nori: CMakeFiles/nori.dir/src/path_mis.cpp.o
+nori: CMakeFiles/nori.dir/src/spotlight.cpp.o
+nori: CMakeFiles/nori.dir/src/environment.cpp.o
 nori: CMakeFiles/nori.dir/build.make
 nori: ext_build/dist/lib/libpugixml.a
 nori: CMakeFiles/nori.dir/link.txt
@@ -1082,6 +1132,8 @@ CMakeFiles/nori.dir/requires: CMakeFiles/nori.dir/src/direct_mats.cpp.o.requires
 CMakeFiles/nori.dir/requires: CMakeFiles/nori.dir/src/direct_mis.cpp.o.requires
 CMakeFiles/nori.dir/requires: CMakeFiles/nori.dir/src/path_mats.cpp.o.requires
 CMakeFiles/nori.dir/requires: CMakeFiles/nori.dir/src/path_mis.cpp.o.requires
+CMakeFiles/nori.dir/requires: CMakeFiles/nori.dir/src/spotlight.cpp.o.requires
+CMakeFiles/nori.dir/requires: CMakeFiles/nori.dir/src/environment.cpp.o.requires
 .PHONY : CMakeFiles/nori.dir/requires
 
 CMakeFiles/nori.dir/clean:
