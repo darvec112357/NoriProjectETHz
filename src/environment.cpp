@@ -2,7 +2,7 @@
 #include <nori/warp.h>
 #include <nori/shape.h>
 #include <nori/bitmap.h>
-#include "utils.cpp"
+#include <nori/color.h>
 
 NORI_NAMESPACE_BEGIN
 
@@ -27,7 +27,17 @@ public:
         // Precompute (marginal) pdf and cdf
         preCompute();
     }
+    static float mix(const float a, const float b, const float t) {
+        return (1 - t) * a + t * b;
+    }
+    static Color3f mix(const Color3f& a, const Color3f& b, const float t) {
+        return (1 - t) * a + t * b;
+    }
 
+    // Bilinear interpolation
+    static Color3f bilinear(const Color3f& q11, const Color3f& q12, const Color3f& q21, const Color3f& q22, const float& tu, const float& tv) {
+        return mix(mix(q11, q21, tu), mix(q12, q22, tu), tv);
+    }
     void preCompute() {
 
         // Luminance * sinTheta
@@ -121,8 +131,11 @@ public:
         Ray3f ray(eRec.ref, eRec.wi, Epsilon, std::numeric_limits<double>::infinity());
 
         // Calculate self intersection, set maxt accordingly
+        uint32_t index;
+        float u;
+        float v;
         float t;
-        m_shape->rayIntersect(eRec.shadowRay, t);
+        m_shape->rayIntersect(index,eRec.shadowRay, u,v,t);
         eRec.shadowRay.maxt = t - Epsilon;
 
         auto pdfValue = pdf(eRec);
