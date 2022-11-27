@@ -42,9 +42,9 @@ public:
     }
 
     virtual Color3f eval(const EmitterQueryRecord & lRec) const override {
-        float pdfVal = Warp::squareToUniformSphereCapPdf(Vector3f(0, 0, 1), cosTotalWidth);
-        float cosThetaLight = abs(lRec.n.dot(-lRec.wi));
-        return pdfVal / cosThetaLight;
+        float cosTheta = lRec.n.dot(-lRec.wi);
+        float fA = fallout(cosTheta);
+        return power * fA / (2.0f * M_PI) * (1.0f - 0.5f * (cosFalloffStart + cosTotalWidth));
     }
 
     virtual Color3f sample(EmitterQueryRecord & lRec, const Point2f & sample) const override {
@@ -58,7 +58,9 @@ public:
     }
 
     virtual float pdf(const EmitterQueryRecord &lRec) const override {        
-        return lRec.pdf;
+        float pdfVal = Warp::squareToUniformSphereCapPdf(Vector3f(0, 0, 1), cosTotalWidth);
+        float cosThetaLight = abs(lRec.n.dot(-lRec.wi));
+        return pdfVal * (lRec.p - lRec.ref).squaredNorm() / cosThetaLight;
     }
 
     virtual float fallout(float costheta) const{
