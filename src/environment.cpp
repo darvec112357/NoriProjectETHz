@@ -209,7 +209,7 @@ protected:
     float m_strength = 1;
 };
 
-NORI_REGISTER_CLASS(EnvMap, "envmap")
+NORI_REGISTER_CLASS(EnvMap, "environment")
 NORI_NAMESPACE_END
 
 
