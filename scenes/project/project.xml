@@ -26,7 +26,7 @@
 	</camera>
 
 	<emitter type="spot">
-		<point name="origin" value = "-200,200,300"/>
+		<point name="origin" value = "0,200,300"/>
 		<color name="power" value="255,255,255"/>
 		<point name="lookat" value = "0 50 250"/>
 		<float name="TotalWidth" value="19"/>
