@@ -12,8 +12,8 @@
 	<!--199.38762 199.42264 0.61237 199.29289-->
 	<camera type="perspective">
 		<transform name="toWorld">
-			<lookat target="-149.7, -1199.046, 160" 
-			origin="-150 -1200 160" 
+			<lookat target="-149.7, -999.046, 160" 
+			origin="-150 -1000 160" 
 			up="0.3, 0.954, 0.1"/>
 		</transform>
 
