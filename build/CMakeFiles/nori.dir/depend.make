@@ -2340,7 +2340,6 @@ CMakeFiles/nori.dir/src/direct_mis.cpp.o: ext_build/dist/include/Eigen/src/plugi
 CMakeFiles/nori.dir/src/direct_mis.cpp.o: ext_build/dist/include/OpenEXR/ImathPlatform.h
 
 CMakeFiles/nori.dir/src/environment.cpp.o: ../ext/tinyformat/tinyformat.h
-CMakeFiles/nori.dir/src/environment.cpp.o: ../include/nori/bbox.h
 CMakeFiles/nori.dir/src/environment.cpp.o: ../include/nori/bitmap.h
 CMakeFiles/nori.dir/src/environment.cpp.o: ../include/nori/color.h
 CMakeFiles/nori.dir/src/environment.cpp.o: ../include/nori/common.h
@@ -2349,11 +2348,8 @@ CMakeFiles/nori.dir/src/environment.cpp.o: ../include/nori/frame.h
 CMakeFiles/nori.dir/src/environment.cpp.o: ../include/nori/object.h
 CMakeFiles/nori.dir/src/environment.cpp.o: ../include/nori/proplist.h
 CMakeFiles/nori.dir/src/environment.cpp.o: ../include/nori/ray.h
-CMakeFiles/nori.dir/src/environment.cpp.o: ../include/nori/sampler.h
-CMakeFiles/nori.dir/src/environment.cpp.o: ../include/nori/shape.h
 CMakeFiles/nori.dir/src/environment.cpp.o: ../include/nori/transform.h
 CMakeFiles/nori.dir/src/environment.cpp.o: ../include/nori/vector.h
-CMakeFiles/nori.dir/src/environment.cpp.o: ../include/nori/warp.h
 CMakeFiles/nori.dir/src/environment.cpp.o: ../src/environment.cpp
 CMakeFiles/nori.dir/src/environment.cpp.o: ext_build/dist/include/Eigen/Core
 CMakeFiles/nori.dir/src/environment.cpp.o: ext_build/dist/include/Eigen/src/Core/Array.h

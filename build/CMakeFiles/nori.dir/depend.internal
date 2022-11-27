@@ -2341,7 +2341,6 @@ CMakeFiles/nori.dir/src/direct_mis.cpp.o
  ext_build/dist/include/OpenEXR/ImathPlatform.h
 CMakeFiles/nori.dir/src/environment.cpp.o
  ../ext/tinyformat/tinyformat.h
- ../include/nori/bbox.h
  ../include/nori/bitmap.h
  ../include/nori/color.h
  ../include/nori/common.h
@@ -2350,11 +2349,8 @@ CMakeFiles/nori.dir/src/environment.cpp.o
  ../include/nori/object.h
  ../include/nori/proplist.h
  ../include/nori/ray.h
- ../include/nori/sampler.h
- ../include/nori/shape.h
  ../include/nori/transform.h
  ../include/nori/vector.h
- ../include/nori/warp.h
  /cluster/home/jiusun/NoriProjectETHz/src/environment.cpp
  ext_build/dist/include/Eigen/Core
  ext_build/dist/include/Eigen/src/Core/Array.h
