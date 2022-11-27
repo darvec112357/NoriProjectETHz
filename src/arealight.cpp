@@ -34,79 +34,72 @@ public:
                 "  radiance = %s,\n"
                 "]",
                 m_radiance.toString());
-    } 
+    }
 
     virtual Color3f eval(const EmitterQueryRecord & lRec) const override {
         if(!m_shape)
             throw NoriException("There is no shape attached to this Area light!");
-        if (lRec.n.dot(-lRec.wi) >= 0)
+
+        if (lRec.n.dot(lRec.wi) < 0) {
             return m_radiance;
+        }
         return Color3f(0.0f);
     }
 
     virtual Color3f sample(EmitterQueryRecord & lRec, const Point2f & sample) const override {
         if(!m_shape)
             throw NoriException("There is no shape attached to this Area light!");
-
-        ShapeQueryRecord sRec = ShapeQueryRecord(lRec.ref);
-        m_shape->sampleSurface(sRec, sample);
-
-        lRec.n = sRec.n;
-        lRec.pdf = sRec.pdf;
-        lRec.p = sRec.p;
-        lRec.wi = (lRec.p - lRec.ref)/((lRec.p - lRec.ref).norm());
-        lRec.shadowRay = Ray3f(lRec.ref, lRec.wi, Epsilon, (lRec.p - lRec.ref).norm() - Epsilon);
-
-        if (pdf(lRec) > 0.0f){
-            Color3f lr = eval(lRec);
-            lr /= pdf(lRec);
-            return lr;
+        ShapeQueryRecord SQR = ShapeQueryRecord(lRec.ref);
+        m_shape->sampleSurface(SQR, sample);
+        lRec.p = SQR.p;
+        lRec.pdf = SQR.pdf;
+        lRec.n = SQR.n;
+		float distance = (lRec.p - lRec.ref).norm();
+        lRec.wi = (lRec.p - lRec.ref) / distance;
+		lRec.shadowRay = Ray3f(lRec.ref, lRec.wi, Epsilon, distance - Epsilon);
+        float p = pdf(lRec);
+		Color3f L = eval(lRec); //L is radiance. 
+        if (p > 0) {
+            return Color3f(L.r() / p, L.g() / p, L.b() / p);
         }
-            
-        return Color3f(0.0f);
-        
+
+		return Color3f(0.0f);
     }
 
     virtual float pdf(const EmitterQueryRecord &lRec) const override {
         if(!m_shape)
             throw NoriException("There is no shape attached to this Area light!");
-
-        if (lRec.n.dot(-lRec.wi) <= 0)
-            return 0.0f;
-
-        ShapeQueryRecord sRec = ShapeQueryRecord(lRec.ref, lRec.p);
-		float pdf = m_shape->pdfSurface(sRec);
         
-        float cos = abs((lRec.wi.dot(lRec.n)));
-        float distance = (lRec.p - lRec.ref).norm();
-
-        if ((distance * distance) / cos > __FLT_MAX__)
-            return pdf * __FLT_MAX__;
-        
-        return (pdf * distance * distance) / cos;
+        if (lRec.n.dot(lRec.wi) < 0) {
+            ShapeQueryRecord SQR = ShapeQueryRecord(lRec.ref, lRec.p);
+            float pdf = m_shape->pdfSurface(SQR);
+            float coswi = abs(lRec.n.dot(lRec.wi));
+            float square_distance = (lRec.p - lRec.ref).squaredNorm();
+            float temp = square_distance / coswi;
+            if (temp > FLT_MAX)
+                temp = FLT_MAX;
+            return pdf * temp;
+        }
+        return 0;
     }
 
 
     virtual Color3f samplePhoton(Ray3f &ray, const Point2f &sample1, const Point2f &sample2) const override {
-
-        ShapeQueryRecord sRec;
-        m_shape->sampleSurface(sRec, sample1);
+        ShapeQueryRecord SQR;
+        m_shape->sampleSurface(SQR, sample1);
+        Vector3f direction = Warp::squareToCosineHemisphere(sample2);
+        Frame frame = SQR.n;
+        direction = frame.toWorld(direction);
+        ray = Ray3f(SQR.p, direction);
         
-        Vector3f d = Frame(sRec.n).toWorld(Warp::squareToCosineHemisphere(sample2));
-        ray = Ray3f(sRec.p, d);
-
-        if (sRec.pdf == 0) {
-            return Color3f(0.0f);
+        float pdf = SQR.pdf;
+        if (pdf > 0) {
+            EmitterQueryRecord EQR = EmitterQueryRecord(SQR.p + direction, SQR.p, SQR.n);
+            Color3f Le = eval(EQR);
+            Le *= (M_PI / pdf);
+            return Le;
         }
-
-        EmitterQueryRecord eRec(sRec.p + d, sRec.p, sRec.n);
-        Color3f Le = eval(eRec);
-
-        Le *= M_PI;
-        Le /= sRec.pdf;
-
-        return Le;
-
+        return Color3f(0.0f);
     }
 
 
