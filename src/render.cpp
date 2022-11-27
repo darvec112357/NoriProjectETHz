@@ -139,22 +139,17 @@ void RenderThread::renderScene(const std::string & filename) {
             cout << "Rendering .. ";
             cout.flush();
             Timer timer;
- 
+
             auto numSamples = m_scene->getSampler()->getSampleCount();
-            std::cout << numSamples << std::endl;
             auto numBlocks = blockGenerator.getBlockCount();
 
             tbb::concurrent_vector< std::unique_ptr<Sampler> > samplers;
             samplers.resize(numBlocks);
 
             for (uint32_t k = 0; k < numSamples ; ++k) {
-                std::cout << k << std::endl;
                 m_progress = k/float(numSamples);
-                // std::cout << m_render_status << std::endl;
-                /*
                 if(m_render_status == 2)
                     break;
-                 */
 
                 tbb::blocked_range<int> range(0, numBlocks);
 
@@ -211,7 +206,6 @@ void RenderThread::renderScene(const std::string & filename) {
 
     }
     else {
-        std::cout << 'aaa' << std::endl;
         delete root;
     }
 

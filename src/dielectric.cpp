@@ -43,23 +43,23 @@ public:
     }
 
     virtual Color3f sample(BSDFQueryRecord &bRec, const Point2f &sample) const override {
-        Vector3f wi = bRec.wi;
-        Vector3f n = Vector3f(0, 0, 1);
-        float coswi = Frame::cosTheta(wi);
-        float f = fresnel(coswi, m_extIOR, m_intIOR);
-        if (f > sample.x()) {
-            bRec.wo = Vector3f(-wi.x(), -wi.y(), wi.z());
+        
+        float cosTheta = Frame::cosTheta(bRec.wi);
+        float f = fresnel(cosTheta, m_extIOR, m_intIOR);
+
+        if(f >= sample.x()){
+            bRec.wo = Vector3f(-bRec.wi.x(), -bRec.wi.y(), bRec.wi.z());
             bRec.eta = 1;
-        }
-        else {
-            float eta = m_extIOR / m_intIOR;
-            if (coswi < 0) {
-                n = -n;
-                eta = m_intIOR / m_extIOR;
+        }else{
+            Vector3f n;
+            if(cosTheta>0){
+                bRec.eta = m_extIOR / m_intIOR;
+                n = Vector3f(0, 0, 1);
+            }else{
+                bRec.eta = m_intIOR / m_extIOR;
+                n = Vector3f(0, 0, -1);
             }
-            bRec.wo = (-eta * (wi - wi.dot(n) * n) - n * sqrt(1 - pow(eta,2) * 
-                        (1 - pow(wi.dot(n),2)))).normalized();
-            bRec.eta = eta;
+            bRec.wo = ( - bRec.eta * (bRec.wi - bRec.wi.dot(n) * n) - n * sqrt(1 - pow(bRec.eta, 2) * (1 - pow(bRec.wi.dot(n), 2)))).normalized();
         }
         bRec.measure = EDiscrete;
         return Color3f(1.0f);

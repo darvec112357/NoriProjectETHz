@@ -1,116 +1,117 @@
 #include <nori/integrator.h>
 #include <nori/scene.h>
 #include <nori/emitter.h>
-#include <nori/warp.h>
 #include <nori/bsdf.h>
+#include <nori/warp.h>
+#include <nori/common.h>
 
 NORI_NAMESPACE_BEGIN
 
-class PathMIS : public Integrator {
+class PathMultipleImportanceSampling : public Integrator{
+
 public:
-    PathMIS(const PropertyList& props) {}
+    PathMultipleImportanceSampling(const PropertyList &props) {
+        /* No parameters this time */ 
+    }
 
-    Color3f Li(const Scene* scene, Sampler* sampler, const Ray3f& ray) const {
-        Vector3f wi = ray.d;
-        Color3f result = Color3f(0.f);
-        Color3f t = Color3f(1.0f);
-        Ray3f traced_ray = ray;
+    Color3f Li(const Scene *scene, Sampler *sampler, const Ray3f &ray) const {
 
-        float pdf_ems = 1;
-        float pdf_mats = 1;
-        float w_mats = 1;
-        float ratio = 0;
-        while (true) {
+        Color3f radiance_result = Color3f(0.0f);
+        Color3f t = Color3f(1.0f); //throughput
+        float wMat = 1.0f;
+        Ray3f pathRay = ray;
+
+        while(true){
+            
             Intersection its;
-
-            if (!scene->rayIntersect(traced_ray, its))
-                return result;
-
-            Frame localFrame = its.shFrame.n;
-            Vector3f normal = its.shFrame.n / its.shFrame.n.norm();
-            normal = localFrame.toLocal(normal);
-
-            
-            if (its.mesh->isEmitter()) {
-                EmitterQueryRecord EQR_le = EmitterQueryRecord(traced_ray.o, its.p, its.shFrame.n);
-                Color3f Le = its.mesh->getEmitter()->eval(EQR_le);
-                Le *= w_mats;
-                Le *= t;
-                result += Le;
-            }
-            
-            float success_prob = std::min(t.maxCoeff(), .99f);
-            if (sampler->next1D() > success_prob) {
+            if (!scene->rayIntersect(pathRay, its))
                 break;
-            }
-            t /= success_prob;
 
-            std::vector<Emitter*> lights = scene->getLights();
-            EmitterQueryRecord EQR_ems = EmitterQueryRecord(its.p);
-            Color3f result_ems = Color3f(0.0f);
+            Color3f Le = Color3f(0.0f);
+            if (its.mesh->isEmitter()){
+			    EmitterQueryRecord eRec = EmitterQueryRecord(pathRay.o, its.p, its.shFrame.n);
+                Le = its.mesh->getEmitter()->eval(eRec);
+                Le *= t;
+                Le *= wMat;
+		    }
+
+            radiance_result += Le;
+
+            float successProbability = std::min(t.maxCoeff(), 0.99f);
             
-            for (int i = 0; i < lights.size(); i++)
-            {
+            if(sampler->next1D() > successProbability)
+                break;
+            
+            t /= successProbability;
+
+            //EMS sampling
+            EmitterQueryRecord eRec = EmitterQueryRecord(its.p);
+            std::vector<Emitter*> lights = scene->getLights();
+            Frame local_frame = Frame(its.shFrame.n);
+
+            for (int i = 0; i < lights.size(); i++){
                 Emitter* emitter = lights[i];
 
-                Point2f samplePoint = sampler->next2D();
-                Color3f L_in = emitter->sample(EQR_ems, samplePoint);
-                pdf_ems = emitter->pdf(EQR_ems);
-                Intersection itsShadow;
-                if (scene->rayIntersect(EQR_ems.shadowRay, itsShadow))
+                Point2f sp = sampler->next2D();
+
+                Color3f lr = emitter->sample(eRec, sp);
+
+                Intersection its_shadow;
+                if (scene->rayIntersect(eRec.shadowRay, its_shadow))
                     continue;
 
-                Vector3f incident_direction = localFrame.toLocal(-traced_ray.d);
-                Vector3f wi1 = localFrame.toLocal(EQR_ems.wi);
+                BSDFQueryRecord bRec = BSDFQueryRecord(local_frame.toLocal(- pathRay.d), local_frame.toLocal(eRec.wi), ESolidAngle);
+                bRec.uv = its.uv;
+                float cos = its.shFrame.n.dot(eRec.wi);
 
-                BSDFQueryRecord BQR_ems = BSDFQueryRecord(incident_direction, wi1, ESolidAngle);
-                BQR_ems.uv = its.uv;
-                Color3f BSDF_ems = its.mesh->getBSDF()->eval(BQR_ems);
-                pdf_mats = its.mesh->getBSDF()->pdf(BQR_ems);
+                float ems = emitter->pdf(eRec);
+                float mats = its.mesh->getBSDF()->pdf(bRec);
 
-                float coswi = abs(wi1.dot(normal));
-                if (pdf_ems + pdf_mats > 0 && BQR_ems.measure != EDiscrete) {
-                    float ratio = pdf_ems / (pdf_ems + pdf_mats);
-                    Color3f adder=Color3f(L_in.r() * BSDF_ems.r() * coswi * ratio,
-                        L_in.g() * BSDF_ems.g() * coswi * ratio,
-                        L_in.b() * BSDF_ems.b() * coswi * ratio);
-                    adder *= t;
-                    result_ems += adder;
-                }
+                if(ems + mats > 0){
+                    float weight = ems/(ems + mats);
+                    radiance_result += Color3f(
+                        its.mesh->getBSDF()->eval(bRec).r() * cos * lr.r() * weight * t.r(),
+                        its.mesh->getBSDF()->eval(bRec).g() * cos * lr.g() * weight * t.g(),
+                        its.mesh->getBSDF()->eval(bRec).b() * cos * lr.b() * weight * t.b()
+                    );
+                }                       
             }
-            result += result_ems;
 
-            BSDFQueryRecord BQR_mats = BSDFQueryRecord(localFrame.toLocal(-traced_ray.d));
-            BQR_mats.uv = its.uv;
-            Color3f BSDF_mats = its.mesh->getBSDF()->sample(BQR_mats, sampler->next2D());
+            //new iteration
 
-            traced_ray = Ray3f(its.p, localFrame.toWorld(BQR_mats.wo));
-            t *= BSDF_mats;
-            if (BQR_mats.measure == EDiscrete) {
-                w_mats = 1;
-            }
-            else {
-                Intersection its2;
-                if (scene->rayIntersect(traced_ray, its2) && its2.mesh->isEmitter()) {
-                    EmitterQueryRecord EQR_mats = EmitterQueryRecord(its.p, its2.p, its2.shFrame.n);
-                    pdf_ems = its2.mesh->getEmitter()->pdf(EQR_mats);
-                    //assert(pdf_ems != 0);
-                    pdf_mats = its.mesh->getBSDF()->pdf(BQR_mats);
-                    if (pdf_ems + pdf_mats > 0) {
-                        w_mats = pdf_mats / (pdf_ems + pdf_mats);
+            Point2f sp = Point2f(sampler->next1D(), sampler->next1D());
+            BSDFQueryRecord bRec = BSDFQueryRecord(local_frame.toLocal(-pathRay.d));
+            bRec.uv = its.uv;
+            Color3f bsdf = its.mesh->getBSDF()->sample(bRec, sp);
+            t *= bsdf;
+            pathRay = Ray3f(its.p, local_frame.toWorld(bRec.wo));
+
+            if(bRec.measure == EDiscrete){
+                wMat = 1.0f;
+            }else{
+                Intersection its_n;
+                if (scene->rayIntersect(pathRay, its_n)) {
+                    if (its_n.mesh->isEmitter()) {
+                        EmitterQueryRecord eRec(its.p, its_n.p, its_n.shFrame.n);
+                        float mat = its.mesh->getBSDF()->pdf(bRec);
+                        float ems = its_n.mesh->getEmitter()->pdf(eRec);
+                        if (ems + mat > 0)
+                            wMat = mat / (ems + mat);
                     }
                 }
             }
-            
         }
 
-        return result;
+        return radiance_result;
+
     }
 
     std::string toString() const {
-        return "PathMIS[]";
+        return "PathMultipleImportanceSampling[]";
     }
+
 };
 
-NORI_REGISTER_CLASS(PathMIS, "path_mis");
+NORI_REGISTER_CLASS(PathMultipleImportanceSampling, "path_mis")
+
 NORI_NAMESPACE_END

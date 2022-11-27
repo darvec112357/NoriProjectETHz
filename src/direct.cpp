@@ -1,7 +1,8 @@
 #include <nori/integrator.h>
 #include <nori/scene.h>
+#include <nori/emitter.h>
 #include <nori/bsdf.h>
-
+#include <nori/warp.h>
 
 NORI_NAMESPACE_BEGIN
 
@@ -12,52 +13,42 @@ public:
     }
 
     Color3f Li(const Scene *scene, Sampler *sampler, const Ray3f &ray) const {
-        Color3f result = Color3f(0.0f);
 
         Intersection its;
-        if (!scene->rayIntersect(ray, its)) return Color3f(0.0f);
-        Normal3f n = its.shFrame.n;
-        Frame local = Frame(n);
-        
-        EmitterQueryRecord lRec = EmitterQueryRecord(its.p);
+        if (!scene->rayIntersect(ray, its))
+            return Color3f(0.0f);
 
-        std::vector<Emitter*> lights=scene->getLights();
+        Color3f radiance_result = Color3f(0.0f);
+        EmitterQueryRecord eRec = EmitterQueryRecord(its.p);
+        std::vector<Emitter*> pointlights = scene->getLights(); 
 
-        Vector3f wo = local.toLocal(Vector3f(-ray.d.x(), -ray.d.y(), -ray.d.z()));
-
-        for (int i = 0; i < lights.size(); i++) {
-            Color3f radiance = lights[i]->sample(lRec, Point2f(0, 0));
-            Intersection its2;
-            if (scene->rayIntersect(lRec.shadowRay, its2)) {
+        for (int i = 0; i< pointlights.size(); i++){
+            
+            Color3f lr = pointlights[i]->sample(eRec, Point2f(0.0f, 0.0f));
+            Frame local_frame = Frame(its.shFrame.n);
+            Intersection its_shadow;
+            if (scene->rayIntersect(eRec.shadowRay, its_shadow)){
                 continue;
             }
-            
-            
-            BSDFQueryRecord bRec = BSDFQueryRecord(local.toLocal(lRec.wi), wo, ESolidAngle);
+            BSDFQueryRecord bRec = BSDFQueryRecord(local_frame.toLocal(eRec.wi), local_frame.toLocal(- ray.d), ESolidAngle);
             bRec.uv = its.uv;
-
-            Color3f bsdf = its.mesh->getBSDF()->eval(bRec);
-
-            
-            float cosine = abs(n.dot(lRec.wi) / (lRec.wi.norm() * n.norm()));
-
-            /*std::cout << "cosine:" << cosine << std::endl;
-            std::cout << "wo:" << wo.x() << "\t" << wo.y() << "\t" << wo.z() << std::endl;
-            std::cout << "wi:" << lRec.wi.x() << "\t" << lRec.wi.y() << "\t" << lRec.wi.z() << std::endl;
-            std::cout << "bsdf:" << bsdf.r() << "\t" << bsdf.g() << "\t" << bsdf.b() << std::endl;*/
-            result = Color3f(result.r() + bsdf.r() * radiance.r() * cosine, result.g() + bsdf.g() * radiance.g() * cosine, result.b() + bsdf.b() * radiance.b() * cosine);
+            float cos = abs(its.shFrame.n.dot(eRec.wi));
+            radiance_result += Color3f(its.mesh->getBSDF()->eval(bRec).r() * cos * lr.r(),
+                                    its.mesh->getBSDF()->eval(bRec).g() * cos * lr.g(),
+                                    its.mesh->getBSDF()->eval(bRec).b() * cos * lr.b());
         }
+    
         
 
-        return result;
-        
+        return radiance_result;
+    
     }
 
     std::string toString() const {
         return "DirectIntegrator[]";
     }
+protected:
 
-    
 };
 
 NORI_REGISTER_CLASS(DirectIntegrator, "direct");

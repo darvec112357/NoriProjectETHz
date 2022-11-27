@@ -1,56 +1,64 @@
 #include <nori/integrator.h>
 #include <nori/scene.h>
 #include <nori/emitter.h>
-#include <nori/warp.h>
 #include <nori/bsdf.h>
+#include <nori/warp.h>
+#include <nori/common.h>
 
 NORI_NAMESPACE_BEGIN
 
-class PathMATS : public Integrator {
+class PathMicrofacetIntegrator : public Integrator{
+
 public:
-    PathMATS(const PropertyList& props) {}
+    PathMicrofacetIntegrator(const PropertyList &props) {
+        /* No parameters this time */
+    }
 
-    Color3f Li(const Scene* scene, Sampler* sampler, const Ray3f& ray) const {
-        Color3f result = Color3f(0.f);
-        Color3f t = Color3f(1.0f);
-        Ray3f traced_ray = ray;
-        while (true) {
+    Color3f Li(const Scene *scene, Sampler *sampler, const Ray3f &ray) const {
+
+        Color3f radiance_result = Color3f(0.0f);
+        Color3f t = Color3f(1.0f); //throughput
+        Ray3f pathRay = ray;
+
+        while(true){
+            
             Intersection its;
-            
-            if (!scene->rayIntersect(traced_ray, its))
-                return result;
-
-            if (its.mesh->isEmitter()) {
-                EmitterQueryRecord EQR_le = EmitterQueryRecord(traced_ray.o, its.p, its.shFrame.n);
-                Color3f Le = its.mesh->getEmitter()->eval(EQR_le);
-                Le *= t;
-                result += Le;
-            }
-
-            Frame localFrame = its.shFrame.n;
-            Vector3f normal = its.shFrame.n / its.shFrame.n.norm();
-            normal = localFrame.toLocal(normal);
-
-            BSDFQueryRecord BQR = BSDFQueryRecord(localFrame.toLocal(-traced_ray.d));
-            BQR.uv = its.uv;
-            Color3f BSDF = its.mesh->getBSDF()->sample(BQR, sampler->next2D());
-            t *= BSDF;
-            float success_prob = std::min(t.maxCoeff(), .99f);
-            if (sampler->next1D() > success_prob) {
+            if (!scene->rayIntersect(pathRay, its))
                 break;
-            }
-            t /= success_prob;
+
+            if (its.mesh->isEmitter()){
+			    EmitterQueryRecord eRec = EmitterQueryRecord(pathRay.o, its.p, its.shFrame.n);
+			    radiance_result += its.mesh->getEmitter()->eval(eRec) * t;
+		    }
+
+            float successProbability = std::min(t.maxCoeff(), 0.99f);
             
-            traced_ray = Ray3f(its.p, localFrame.toWorld(BQR.wo));
+            if(sampler->next1D() > successProbability)
+                break;
+            t /= successProbability;
+
+            Frame local_frame = Frame(its.shFrame.n);
+            Point2f sp = sampler->next2D();
+            BSDFQueryRecord bRec = BSDFQueryRecord(local_frame.toLocal(-pathRay.d));
+            bRec.uv = its.uv;
+            Color3f bsdf = its.mesh->getBSDF()->sample(bRec, sp);
+
+            t *= bsdf;
+            
+            pathRay = Ray3f(its.p, local_frame.toWorld(bRec.wo));
+            
         }
-        
-        return result;
+
+        return radiance_result;
+
     }
 
     std::string toString() const {
-        return "PathMATS[]";
+        return "PathMicrofacetIntegrator[]";
     }
+
 };
 
-NORI_REGISTER_CLASS(PathMATS, "path_mats");
+NORI_REGISTER_CLASS(PathMicrofacetIntegrator, "path_mats")
+
 NORI_NAMESPACE_END

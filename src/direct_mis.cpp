@@ -1,105 +1,96 @@
 #include <nori/integrator.h>
 #include <nori/scene.h>
 #include <nori/emitter.h>
-#include <nori/warp.h>
 #include <nori/bsdf.h>
+#include <nori/warp.h>
 
 NORI_NAMESPACE_BEGIN
 
-class DirectMIS : public Integrator {
+class MultipleImportanceSampling : public Integrator{
 public:
-    DirectMIS(const PropertyList& props) {}
+    MultipleImportanceSampling(const PropertyList &props) {
+        /* No parameters this time */
+    }
 
-    Color3f Li(const Scene* scene, Sampler* sampler, const Ray3f& ray) const {
+    Color3f Li(const Scene *scene, Sampler *sampler, const Ray3f &ray) const {
+
+        Color3f radiance_result = Color3f(0.0f);
+
         Intersection its;
         if (!scene->rayIntersect(ray, its))
-            return Color3f(0.0f);
+            return radiance_result;
 
-        Color3f le = Color3f(0.f);
-        EmitterQueryRecord EQR_le = EmitterQueryRecord(ray.o, its.p, its.shFrame.n);
-        if (its.mesh->isEmitter()) {
-            le = its.mesh->getEmitter()->eval(EQR_le);
-        }
+        if (its.mesh->isEmitter()){
+            EmitterQueryRecord eRec = EmitterQueryRecord(ray.o, its.p, its.shFrame.n);
+			radiance_result += its.mesh->getEmitter()->eval(eRec);
+		}
 
-        Color3f result_ems = Color3f(0.0f);
-
-        Frame localFrame = its.shFrame.n;
-        Vector3f normal = its.shFrame.n / its.shFrame.n.norm();
-        normal = localFrame.toLocal(normal);
-        Vector3f wo = Vector3f(-ray.d.x(), -ray.d.y(), -ray.d.z());
-        wo = localFrame.toLocal(wo);
-
-        float pdf_ems = 0;
-        float pdf_mats = 0;
+        EmitterQueryRecord eRec = EmitterQueryRecord(its.p);
         std::vector<Emitter*> lights = scene->getLights();
-        EmitterQueryRecord EQR = EmitterQueryRecord(its.p);
-        for (int i = 0; i < lights.size(); i++)
-        {
+        Frame local_frame = Frame(its.shFrame.n);
+        
+        for (int i = 0; i < lights.size(); i++){
             Emitter* emitter = lights[i];
 
-            Point2f samplePoint = sampler->next2D();
-            Color3f L_in = emitter->sample(EQR, samplePoint);
-            pdf_ems= emitter->pdf(EQR);
-            Intersection itsShadow;
-            if (scene->rayIntersect(EQR.shadowRay, itsShadow))
+            Point2f sp = Point2f(sampler->next1D(), sampler->next1D());
+
+            Color3f lr = emitter->sample(eRec, sp);
+
+            Intersection its_shadow;
+            if (scene->rayIntersect(eRec.shadowRay, its_shadow))
                 continue;
 
-            Vector3f wi1 = localFrame.toLocal(EQR.wi);
+            BSDFQueryRecord bRec = BSDFQueryRecord(local_frame.toLocal(- ray.d), local_frame.toLocal(eRec.wi), ESolidAngle);
+            bRec.uv = its.uv;
+            float cos = its.shFrame.n.dot(eRec.wi);
 
-            BSDFQueryRecord BQR = BSDFQueryRecord(wo, wi1, ESolidAngle);
-            BQR.uv = its.uv;
-            Color3f BSDF_ems = its.mesh->getBSDF()->eval(BQR);
-            pdf_mats = its.mesh->getBSDF()->pdf(BQR);
+            float ems = emitter->pdf(eRec);
+            float mats = its.mesh->getBSDF()->pdf(bRec);
 
-            float coswi = abs(wi1.dot(normal));
-            if (pdf_ems + pdf_mats > 0) {
-                float ratio = pdf_ems / (pdf_ems + pdf_mats);
-                result_ems = Color3f(result_ems.r() + L_in.r() * BSDF_ems.r() * coswi * ratio,
-                    result_ems.g() + L_in.g() * BSDF_ems.g() * coswi * ratio,
-                    result_ems.b() + L_in.b() * BSDF_ems.b() * coswi * ratio);
-            }
+            if(ems + mats == 0)
+                continue;
             
+            float weight = ems/(ems + mats);
+            radiance_result += its.mesh->getBSDF()->eval(bRec) * cos * lr * weight;                         
         }
 
-        Color3f result_mats = Color3f(0.0f);
-
+        Point2f sp = Point2f(sampler->next1D(), sampler->next1D());
+        BSDFQueryRecord bRec = BSDFQueryRecord(local_frame.toLocal(-ray.d));
+        bRec.uv = its.uv;
+        Color3f bsdf = its.mesh->getBSDF()->sample(bRec, sp);
         
-        BSDFQueryRecord BQR_mats = BSDFQueryRecord(wo);
-        BQR_mats.uv = its.uv;
-        Color3f BSDF_mats = its.mesh->getBSDF()->sample(BQR_mats, sampler->next2D());
-        pdf_mats = its.mesh->getBSDF()->pdf(BQR_mats);
+        Vector3f wi = local_frame.toWorld(bRec.wo);
+        Ray3f rayIn = Ray3f(its.p, wi);
 
-        Vector3f wi = BQR_mats.wo;
-        Ray3f ray2 = Ray3f(its.p, localFrame.toWorld(wi));
-        Intersection its2;
-        if (scene->rayIntersect(ray2, its2)) {
-            if (its2.mesh->isEmitter())
-            {
-                EmitterQueryRecord EQR_mats = EmitterQueryRecord(its.p, its2.p, its2.shFrame.n);
-                Color3f li = its2.mesh->getEmitter()->eval(EQR_mats);
-                pdf_ems = its2.mesh->getEmitter()->pdf(EQR_mats);
-                if (pdf_ems + pdf_mats > 0) {
-                    float ratio = pdf_mats / (pdf_ems + pdf_mats);
-                    result_mats = Color3f(result_mats.r() + li.r() * BSDF_mats.r() * ratio,
-                        result_mats.g() + li.g() * BSDF_mats.g() * ratio,
-                        result_mats.b() + li.b() * BSDF_mats.b() * ratio);
-                }
-                
-            }
+        Intersection its_shadow;
+        if (!scene->rayIntersect(rayIn, its_shadow))
+            return radiance_result;
+        
+        if (its_shadow.mesh->isEmitter()){
+            EmitterQueryRecord eRec = EmitterQueryRecord(its.p);
+            eRec.wi = wi;
+            eRec.n = its_shadow.shFrame.n;
+            eRec.p = its_shadow.p;
 
+            float ems = its_shadow.mesh->getEmitter()->pdf(eRec);
+			float mats = its.mesh->getBSDF()->pdf(bRec);
+
+            if (ems + mats == 0)
+                return radiance_result;
+
+            float weight = mats/(ems + mats);
+            radiance_result += its_shadow.mesh->getEmitter()->eval(eRec) * bsdf * weight;
         }
-        
-        Color3f result = Color3f(le.r() + result_ems.r() + result_mats.r(),
-            le.g() + result_ems.g() + result_mats.g(),
-            le.b() + result_ems.b() + result_mats.b());
-        return result;
-    
+
+        return radiance_result;
     }
 
     std::string toString() const {
-        return "DirectMIS[]";
+        return "MultipleImportanceSampling[]";
     }
 };
 
-NORI_REGISTER_CLASS(DirectMIS, "direct_mis");
+
+NORI_REGISTER_CLASS(MultipleImportanceSampling, "direct_mis")
+
 NORI_NAMESPACE_END
