@@ -26,9 +26,9 @@
 	</camera>
 
 	<emitter type="spot">
-		<point name="origin" value = "0,300,200"/>
-		<color name="power" value="255,255,255"/>
-		<point name="lookat" value = "0 50 250"/>
+		<point name="origin" value = "0,-300,100"/>
+		<color name="power" value="25500,25500,25500"/>
+		<point name="lookat" value = "0 50 150"/>
 		<float name="TotalWidth" value="19"/>
 		<float name="FalloffStart" value="14"/>
 	</emitter>
