@@ -76,8 +76,8 @@ public:
             float coswi = abs(lRec.n.dot(lRec.wi));
             float square_distance = (lRec.p - lRec.ref).squaredNorm();
             float temp = square_distance / coswi;
-            if (temp > FLT_MAX)
-                temp = FLT_MAX;
+            if (temp > __FLT_MAX__)
+                temp = __FLT_MAX__;
             return pdf * temp;
         }
         return 0;
@@ -88,7 +88,7 @@ public:
         ShapeQueryRecord SQR;
         m_shape->sampleSurface(SQR, sample1);
         Vector3f direction = Warp::squareToCosineHemisphere(sample2);
-        Frame frame = SQR.n;
+        Frame frame = Frame(SQR.n);
         direction = frame.toWorld(direction);
         ray = Ray3f(SQR.p, direction);
         
