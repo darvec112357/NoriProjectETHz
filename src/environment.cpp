@@ -1,190 +1,232 @@
-#include <nori/emitter.h>
-#include <nori/warp.h>
-#include <nori/shape.h>
+//
+// Created by Alessia Paccagnella on 28/11/2019.
+//
+
 #include <nori/bitmap.h>
-#include <nori/color.h>
+#include <nori/emitter.h>
+#include <nori/frame.h>
+
 
 NORI_NAMESPACE_BEGIN
 
-class EnvironmentEmitter : public Emitter {
+typedef Eigen::Array<float, Eigen::Dynamic, Eigen::Dynamic, Eigen::RowMajor> matrix;
 
-private:
-    Bitmap m_envMap;
-    int m_rows;
-    int m_cols;
-    Eigen::VectorXf m_pdfTheta;
-    Eigen::VectorXf m_cdfTheta;
-    Eigen::MatrixXf m_conditionalPdfPhi;
-    Eigen::MatrixXf m_conditionalCdfPhi;
-
+class EnvMap: public Emitter {
 public:
-    explicit EnvironmentEmitter(const PropertyList& props) {
-        auto envMapPath = props.getString("envMapPath");
-        m_envMap = Bitmap(envMapPath);
-        m_rows = m_envMap.rows();
-        m_cols = m_envMap.cols();
 
-        // Precompute (marginal) pdf and cdf
-        preCompute();
-    }
-    static float mix(const float a, const float b, const float t) {
-        return (1 - t) * a + t * b;
-    }
-    static Color3f mix(const Color3f& a, const Color3f& b, const float t) {
-        return (1 - t) * a + t * b;
-    }
+        EnvMap(const PropertyList &propList) {
 
-    // Bilinear interpolation
-    static Color3f bilinear(const Color3f& q11, const Color3f& q12, const Color3f& q21, const Color3f& q22, const float& tu, const float& tv) {
-        return mix(mix(q11, q21, tu), mix(q12, q22, tu), tv);
-    }
-    void preCompute() {
-
-        // Luminance * sinTheta
-        Eigen::MatrixXf luminance(m_rows, m_cols);
-        for (int i = 0; i < m_rows; ++i) {
-            for (int j = 0; j < m_cols; ++j) {
-                auto theta = M_PI * i / (m_rows - 1);
-                luminance(i, j) = m_envMap(i, j).getLuminance() * sin(theta);
+            if (propList.has("strength")) {
+                m_strength = propList.getFloat("strength");
             }
-        }
+            // loads the exr file, then create the imageMap with the Bitmap function
+            std::string filename = propList.getString("filename");
+            imageMap = Bitmap(filename);
+            mcols = imageMap.cols();
+            mrows = imageMap.rows();
 
-        // Compute marginals for theta
-        m_pdfTheta = Eigen::VectorXf(m_rows);
-        for (int i = 0; i < m_rows; ++i) {
-            m_pdfTheta(i) = luminance.row(i).sum();
-        }
-        m_pdfTheta /= m_pdfTheta.sum();
-        computeCdf(m_pdfTheta, m_cdfTheta);
+            luminance = matrix(mrows, mcols);
+            mpdf = matrix(mrows, mcols);
+            mcdf = matrix(mrows, mcols + 1);
+            pmarginal = matrix(1, mrows);
+            cmarginal = matrix(1, mrows + 1);
 
-        // Compute conditional marginals for phi
-        m_conditionalPdfPhi = Eigen::MatrixXf(m_rows, m_cols);
-        m_conditionalCdfPhi = Eigen::MatrixXf(m_rows, m_cols + 1);
-        for (int i = 0; i < m_rows; ++i) {
-            m_conditionalPdfPhi.row(i) = luminance.row(i) / luminance.row(i).sum();
-            Eigen::VectorXf cdf;
-            computeCdf(m_conditionalPdfPhi.row(i).transpose(), cdf);
-            m_conditionalCdfPhi.row(i) = cdf.transpose();
-        }
-    }
-
-    static void computeCdf(const Eigen::VectorXf& pdf, Eigen::VectorXf& cdf) {
-        int n = pdf.size();
-        cdf = Eigen::VectorXf(n + 1);
-        cdf(0) = 0;
-        for (int i = 1; i < n; ++i) {
-            cdf(i) = cdf(i - 1) + pdf(i - 1);
-        }
-        cdf(n) = 1;
-    }
-
-    static int sampleDiscrete(const Eigen::VectorXf& cdf, const double& sample) {
-        int n = cdf.size();
-        int a = 0;
-        int b = n - 1;
-        int index = -1;
-        while (a <= b) {
-            int m = (a + b + 1) / 2;
-            if (cdf(m) <= sample) {
-                index = m;
-                a = m + 1;
+            for (int i = 0; i < mrows; i++) {
+                for (int j = 0; j < mcols; j++) {
+                    luminance(i,j) = sqrt(0.3* imageMap(i,j).r() + 0.6*imageMap(i,j).g() + 0.1*imageMap(i,j).b()) + Epsilon / 10000000;
+                }
             }
-            else {
-                b = m - 1;
+
+            //precomputing the pdf and cdf values
+            matrix sum(1, mrows);
+            for (int i = 0; i < mpdf.rows(); ++i) {
+                sum(0, i) = precompute1D(i, luminance, mpdf, mcdf);
             }
-        }
-        return index;
-    }
-
-    Color3f eval(const EmitterQueryRecord& eRec) const override {
-        auto thetaPhi = sphericalCoordinates(eRec.wi);
-
-        float u, v;
-        std::tie(u, v) = get_uv(eRec);
-
-        // Perform a bilinear interpolation
-        int i1 = clamp(int(floor(u)), 0, m_rows - 1);
-        int i2 = clamp(int(floor(u)) + 1, 0, m_rows - 1);
-        int j1 = clamp(int(floor(v)), 0, m_cols - 1);
-        int j2 = clamp(int(floor(v)) + 1, 0, m_cols - 1);
-
-        auto q11 = m_envMap(i1, j1);
-        auto q12 = m_envMap(i1, j2);
-        auto q21 = m_envMap(i2, j1);
-        auto q22 = m_envMap(i2, j2);
-
-        auto tu = u - i1;
-        auto tv = v - j1;
-
-        return bilinear(q11, q12, q21, q22, tu, tv);
-    }
-
-    Color3f sample(EmitterQueryRecord& eRec, const Point2f& sample) const override {
-
-        auto i = sampleDiscrete(m_cdfTheta, sample.x());
-        auto j = sampleDiscrete(m_conditionalCdfPhi.row(i).transpose(), sample.y());
-
-        auto theta = M_PI * i / (m_rows - 1);
-        auto phi = 2 * M_PI * j / (m_cols - 1);
-
-        eRec.wi = sphericalDirection(theta, phi);
-        Ray3f ray(eRec.ref, eRec.wi, Epsilon, std::numeric_limits<double>::infinity());
-
-        // Calculate self intersection, set maxt accordingly
-        uint32_t index;
-        float u;
-        float v;
-        float t;
-        m_shape->rayIntersect(index,eRec.shadowRay, u,v,t);
-        eRec.shadowRay.maxt = t - Epsilon;
-
-        auto pdfValue = pdf(eRec);
-        if (pdfValue == 0) {
-            return 0;
+            precompute1D(0, sum, pmarginal, cmarginal);  //precompute the marginal pdf and cdf
         }
 
-        auto J = (m_cols - 1) * (m_rows - 1) / (2 * M_PI * M_PI * Frame::sinTheta(eRec.wi));
-        return eval(eRec) / (J * pdfValue);
-    }
-
-    float pdf(const EmitterQueryRecord& eRec) const override {
-        int i, j;
-        std::tie(i, j) = get_ij(eRec);
-
-        if (m_pdfTheta(i) == 0) {
-            return 0;
+        virtual std::string toString() const override {
+            return tfm::format(
+                    "EnvironmentMap"
+            );
         }
-        return m_pdfTheta(i) * m_conditionalPdfPhi(i, j);
-    }
 
-    std::tuple<float, float> get_uv(const EmitterQueryRecord& eRec) const {
-        auto thetaPhi = sphericalCoordinates(eRec.wi);
-        auto theta = thetaPhi.x();
-        auto phi = thetaPhi.y();
 
-        auto u = theta * (m_rows - 1) * INV_PI;
-        auto v = phi * 0.5 * (m_cols - 1) * INV_PI;
+        //From the paper
+        void sample1D(int rowNumber, const matrix &pf, const matrix &Pf , const float &sample , float &x, float &prob) const {
+            //Binary search
+            int i;
+            for (i = 0; i < Pf.cols(); i++) {
+                if ((sample >= Pf(rowNumber, i)) && (sample < Pf(rowNumber, i+1))) // Pf[i]<=unif<Pf[i+1]
+                    break;
+            }
+            float t = (Pf(rowNumber, i+1) - sample) / (Pf(rowNumber, i+1) - Pf(rowNumber, i));
+            x = (1-t) * i + t * (i+1);
+            prob = pf(rowNumber, i);
+        }
 
-        return { u, v };
-    }
+        //From the paper
+        float precompute1D(int row, const matrix &f, matrix &pf, matrix &Pf) const {
+            float I = 0;
+            int i;
+            for(i= 0; i < f.cols(); i++)
+                I = i+f(row, i);
+            if (I == 0)
+                return I;
+            for(int j = 0; j < f.cols(); j++)
+                pf(row, j) = f(row, j)/I;
+            Pf(row, 0) = 0;
+            for(i = 1; i < f.cols(); i++)
+                Pf(row,i) = Pf(row, i-1) + pf(i-1);
+            Pf(row,i) = 1;
+            return I;
+        }
 
-    std::tuple<int, int> get_ij(const EmitterQueryRecord& eRec) const {
+        //returns the spherical coordinates from uv coordinates of a 2d pixel
+        Vector3f pixelToDirection(const Point2f &pixel) const{
+            //from u and v, calculate spherical coordinates
+            float theta = pixel[0] * M_PI /(mrows - 1);
+            float phi = pixel[1] * 2 * M_PI / (mcols - 1);
+            //spherical coordinates
+            return Vector3f(sin(theta) * cos(phi), sin(theta)*sin(phi), cos(theta)).normalized();
+        }
 
-        float u, v;
-        std::tie(u, v) = get_uv(eRec);
 
-        auto i = int(round(u));
-        auto j = int(round(v));
+        //returns the 2d coordinates of the pixel from 3d spherical coordinates
+        Point2f directionToPixel(const Vector3f &vec) const {
+            //take the spherical coordinates phi and theta
+            Point2f coordinates = sphericalCoordinates(vec);
+            float theta = coordinates.x();
+            float phi = coordinates.y();
 
-        return { i, j };
-    }
+            //calculate u and v from spherical coordinates
+            float u = theta * (mrows -1) / M_PI ;
+            float v = phi  * 0.5 * (mcols - 1) / M_PI ;
 
-    std::string toString() const override {
-        return tfm::format(
-            "EnvironmentEmitter[]"
-        );
-    }
+            if(std::isnan(u) || std::isnan(v)) {
+                return Point2f(0,0);
+            }
+
+            //return the indexes
+            return Point2f(u,v);
+
+        }
+
+
+        //formular for bilinear interpolation
+        Color3f bilinearInterpolation(float dx21, float dy21, Color3f Q11, Color3f Q21, Color3f Q12, Color3f Q22, float dx01, float dy01, float dx20, float dy20) const {
+            // check if the denominator is zero or not
+            if (dx21 == 0.f || dy21 == 0.f) return 0.f;
+            //wikipedia formula extended
+            return ((1.0 / (dx21 * dy21)) * (Q11 * dx20 * dy20 + Q21 * dx01 * dy20 + Q12 * dx20 * dy01 + Q22 * dx01 * dy01));
+        }
+
+
+
+Color3f eval(const EmitterQueryRecord & lRec) const override {
+            Point2f uv = directionToPixel(lRec.wi.normalized());
+
+            //prepare for bilinear interpolation
+            float x = uv[0]; //u
+            float y = uv[1]; //v
+            int x1 = floor(x); //floor of u
+            int y1 = floor(y); //floor of y
+            int x2 = x1 + 1; //superior value
+            int y2 = y1 + 1; //superior value
+            Color3f Q11 = 0.f;
+            if (x1 >= 0 && x1 < mrows && y1 >= 0 && y1 < mcols)
+                Q11 = imageMap(x1, y1); //value left down
+            Color3f Q12 = 0.f;
+            if (x1 >= 0 && x1 < mrows && y2 >= 0 && y2 < mcols)
+                Q12 = imageMap(x1, y2); //value left up
+            Color3f Q21 = 0.f;
+            if (x2 >= 0 && x2 < mrows && y1 >= 0 && y1 < mcols)
+                Q21 = imageMap(x2, y1); //value right down
+            Color3f Q22 = 0.f;
+            if (x2 >= 0 && x2 < mrows && y2 >= 0 && y2 < mcols)
+                Q22 = imageMap(x2, y2); //value right up
+            int dx21 = x2 - x1; //difference between superior and inferior value (single step)
+            int dy21 = y2 - y1; //difference between superior and inferior value (single step)
+            float dx20 = x2 - x;
+            float dx01 = x - x1;
+            float dy01 = y - y1;
+            float dy20 = y2 - y;
+
+            //bilinear interpolation
+            return m_strength * bilinearInterpolation(dx21, dy21, Q11, Q12, Q21, Q22, dy01, dx01, dy20, dx20);
+        }
+
+
+        virtual Color3f sample(EmitterQueryRecord & lRec, const Point2f & sample) const override {
+            //from the paper we know that the jacobian is
+            float jacobian = (mcols - 1) * (mrows - 1) / (2 * std::pow(M_PI, 2) * Frame::sinTheta(lRec.wi));
+            float u, v;
+            float pdfu, pdfv;
+            //sample the pixel, for u = 0 and v with u , marginal and conditional
+            sample1D(0, pmarginal, cmarginal, sample.x(), u, pdfu);
+            sample1D(u, mpdf, mcdf, sample.y(), v, pdfv);
+            Point2f pixel = Point2f(u, v);
+            Vector3f w = pixelToDirection(pixel);
+            //set the lRec parameters
+            lRec.wi = w;
+            lRec.shadowRay = Ray3f(lRec.ref, lRec.wi, Epsilon, 100000);
+            pdfv = pdf(lRec) * jacobian;
+            //return Color
+            return eval(lRec) / pdfv;
+        }
+
+
+        virtual float pdf(const EmitterQueryRecord &lRec) const override {
+            Point2f pixel = directionToPixel(lRec.wi.normalized());
+            int i = floor(pixel.x());
+            int j = floor(pixel.y());
+            if (i >= mrows) i = mrows - 1;
+            if (j >= mcols) j = mcols - 1;
+            if (i < 0) i = 0;
+            if (j < 0) j = 0;
+            //pdf = pdfmarginal * pdf
+            return (pmarginal(0, i) * mpdf(i,j));
+        }
+
+
+protected:
+    Bitmap imageMap;
+    //number of cols of the map
+    int mcols;
+    //number of rows of the map
+    int mrows;
+    //luminance matrix
+    matrix luminance;
+    //pdf matrix
+    matrix mpdf;
+    //cdf matrix
+    matrix mcdf;
+    //pdf marginal matrix
+    matrix pmarginal;
+    //cdf marginal matrix
+    matrix cmarginal;
+
+    float m_strength = 1;
 };
 
-NORI_REGISTER_CLASS(EnvironmentEmitter, "environment")
+NORI_REGISTER_CLASS(EnvMap, "envmap")
 NORI_NAMESPACE_END
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
