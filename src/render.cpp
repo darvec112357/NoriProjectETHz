@@ -141,16 +141,19 @@ void RenderThread::renderScene(const std::string & filename) {
             Timer timer;
 
             auto numSamples = m_scene->getSampler()->getSampleCount();
-            std::cout << numSamples << std::endl;
             auto numBlocks = blockGenerator.getBlockCount();
 
             tbb::concurrent_vector< std::unique_ptr<Sampler> > samplers;
             samplers.resize(numBlocks);
 
+            ImageBlock varBlock(camera->getOutputSize(), camera->getReconstructionFilter());
+            Bitmap sBitmap(camera->getOutputSize());
+            Bitmap ssBitmap(camera->getOutputSize());
+
             for (uint32_t k = 0; k < numSamples ; ++k) {
-                std::cout << k << std::endl;
+                varBlock.clear();
+
                 m_progress = k/float(numSamples);
-                std::cout << m_render_status << std::endl;
                 /*if(m_render_status == 2)
                     break;*/
 
@@ -175,9 +178,11 @@ void RenderThread::renderScene(const std::string & filename) {
 
                         // Render all contained pixels
                         renderBlock(m_scene, samplers.at(blockId).get(), block);
+                        
 
                         // The image block has been processed. Now add it to the "big" block that represents the entire image
                         m_block.put(block);
+                        varBlock.put(block);
                     }
                 };
 
@@ -186,6 +191,15 @@ void RenderThread::renderScene(const std::string & filename) {
 
                 /// Default: parallel rendering
                 tbb::parallel_for(range, map);
+                varBlock.lock();
+                Bitmap curBitmap(*varBlock.toBitmap());
+                varBlock.unlock();
+                for (int i = 0; i < curBitmap.rows(); ++i) {
+                    for (int j = 0; j < curBitmap.cols(); ++j) {
+                        ssBitmap(i, j) += pow(curBitmap(i, j), 2);
+                        sBitmap(i, j) += curBitmap(i, j);
+                    }
+                }
 
                 blockGenerator.reset();
             }
@@ -201,6 +215,15 @@ void RenderThread::renderScene(const std::string & filename) {
             /* Save using the OpenEXR format */
             bitmap->save(outputName);
 
+            //variance
+            Bitmap varBitmap(camera->getOutputSize()); //bitmap for variance of the size of the output img
+            for (int i = 0; i < varBitmap.rows(); ++i) {
+                for (int j = 0; j < varBitmap.cols(); ++j) {
+                    varBitmap(i, j) = (ssBitmap(i, j) - pow(sBitmap(i, j), 2) / numSamples) / ((numSamples - 1) * numSamples);
+                }
+            }
+            varBitmap.save(outputName.substr(0, outputName.size() - 4) + "_var.exr");
+
             delete m_scene;
             m_scene = nullptr;
 
@@ -209,7 +232,6 @@ void RenderThread::renderScene(const std::string & filename) {
 
     }
     else {
-        std::cout << 'aaa' << std::endl;
         delete root;
     }
 

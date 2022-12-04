@@ -12,8 +12,8 @@
 	<!--199.38762 199.42264 0.61237 199.29289-->
 	<camera type="perspective">
 		<transform name="toWorld">
-			<lookat target="-149.7, -899.046, 160" 
-			origin="-150 -900 160" 
+			<lookat target="-149.7, -999.046, 160" 
+			origin="-150 -1000 160" 
 			up="0.3, 0.954, 0.1"/>
 		</transform>
 
@@ -26,9 +26,9 @@
 	</camera>
 
 	<emitter type="spot">
-		<point name="origin" value = "0,-300,100"/>
-		<color name="power" value="25500,25500,25500"/>
-		<point name="lookat" value = "0 50 150"/>
+		<point name="origin" value = "-200,200,300"/>
+		<color name="power" value="255,255,255"/>
+		<point name="lookat" value = "0 50 250"/>
 		<float name="TotalWidth" value="19"/>
 		<float name="FalloffStart" value="14"/>
 	</emitter>
@@ -40,8 +40,8 @@
 
         <emitter type="environment">
             <float name="strength" value ="0.5"/>
-            <string name="filename" value="/cluster/home/jiusun/NoriProjectETHz/scenes/project/cloudy.exr"/>
-			<!--string name="filename" value="C:\Users\Rongxing\Desktop\ETH\CG\nori\scenes\project\cloudy.exr"/-->
+            <!-- <string name="filename" value="/cluster/home/jiusun/NoriProjectETHz/scenes/project/cloudy.exr"/> -->
+			<string name="filename" value="C:\Users\Rongxing\Desktop\ETH\CG\nori\scenes\project\cloudy.exr"/>
         </emitter>
     </mesh>
 
