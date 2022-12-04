@@ -1,6 +1,6 @@
 function Nldenoise(f, r, k)
      %inputs, dat and datvar
-    file_name = 'C:/Users/Rongxing/Desktop/ETH/CG/nori/scenes/pa4/cbox/cbox_path_mats';
+    file_name = 'C:/Users/Rongxing/Desktop/ETH/CG/nori/scenes/project/validations/Denoising/cbox_path_mis';
     dat = exrread(strcat(file_name, '.exr'));
     datvar = exrread(strcat(file_name, '_var.exr'));
     flt = zeros(size(dat));

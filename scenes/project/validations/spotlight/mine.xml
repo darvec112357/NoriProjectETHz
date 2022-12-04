@@ -1,9 +1,10 @@
 
 <scene>
-    <sampler type="independent">
-        <integer name="sampleCount" value="512"/>
-    </sampler>
 	<integrator type="path_mis"/>
+
+	<sampler type="independent">
+		<integer name="sampleCount" value="512"/>
+	</sampler>
 
 	<camera type="perspective">
 		<float name="fov" value="27.7856"/>
@@ -11,53 +12,42 @@
 		<transform name="toWorld">
 			<lookat target="0, 0.893051, 4.41198" origin="0, 0.919769, 5.41159" up="0, 1, 0"/>
 		</transform>
-        
-        <integer name="height" value="600"/>
+		<integer name="height" value="600"/>
         <integer name="width" value="800"/>
+
         
         
-    </sensor>
+    </camera>
     
 	<mesh type="obj">
 		<string name="filename" value="meshes/walls.obj"/>
 
 		<bsdf type="diffuse">
-			<rgb name="reflectance" value="0.725 0.71 0.68"/>
+			<color name="albedo" value="0.725 0.71 0.68"/>
 		</bsdf>
 	</mesh>
 
-	<shape type="obj">
+	<mesh type="obj">
 		<string name="filename" value="meshes/rightwall.obj"/>
 
 		<bsdf type="diffuse">
-			<rgb name="reflectance" value="0.161 0.133 0.427"/>
+			<color name="albedo" value="0.161 0.133 0.427"/>
 		</bsdf>
-	</shape>
+	</mesh>
 
-	<shape type="obj">
+	<mesh type="obj">
 		<string name="filename" value="meshes/leftwall.obj"/>
 
 		<bsdf type="diffuse">
-			<rgb name="reflectance" value="0.630 0.065 0.05"/>
+			<color name="albedo" value="0.630 0.065 0.05"/>
 		</bsdf>
-	</shape>
-    
-	<!-- <shape type="obj">
-		<transform name="toWorld">
-			<rotate angle="0" y="1" />
-			<translate value="0, 1.5, 0"/>
-			<scale value="0.3, 0.3, 0.3"/>
-		</transform>
-		<string name="filename" value="cat.obj" />
-	</shape> -->
+	</mesh>
 
     <emitter type="spot">
-        <transform name="toWorld">
-            <lookat target="0, 0.5, 0"
-                    origin="0, 1.5, 1"/>
-        </transform>
-        <spectrum name="intensity" value = "3.9788735772973834"/>
-        <float name="cutoffAngle" value="30"/>
-        <float name="beamWidth" value="20"/>
+        <point name="origin" value = "0, 1, 1"/>
+		<color name="power" value="2550,2550,2550"/>
+		<point name="lookat" value = "0, 0.9, 0"/>
+		<float name="TotalWidth" value="20"/>
+		<float name="FalloffStart" value="15"/>
     </emitter>
 </scene>

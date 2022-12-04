@@ -1,22 +1,22 @@
 
 <scene version="3.0.0">
-	<integrator type="path">
-    </integrator>
-
+    
+	<integrator type="path"/>
 
 	<sensor type="perspective">
 		<float name="fov" value="27.7856"/>
         
-		<transform name="toWorld">
+		<transform name="to_world">
 			<lookat target="0, 0.893051, 4.41198" origin="0, 0.919769, 5.41159" up="0, 1, 0"/>
 		</transform>
+        
         <film type="hdrfilm">
             <integer name="height" value="600"/>
             <integer name="width" value="800"/>
         </film>
 
         <sampler type="independent">
-            <integer name="sampleCount" value="512"/>
+            <integer name="sample_count" value="512"/>
         </sampler>
         
     </sensor>
@@ -44,23 +44,14 @@
 			<rgb name="reflectance" value="0.630 0.065 0.05"/>
 		</bsdf>
 	</shape>
-    
-	<!-- <shape type="obj">
-		<transform name="toWorld">
-			<rotate angle="0" y="1" />
-			<translate value="0, 1.5, 0"/>
-			<scale value="0.3, 0.3, 0.3"/>
-		</transform>
-		<string name="filename" value="cat.obj" />
-	</shape> -->
 
     <emitter type="spot">
-        <transform name="toWorld">
-            <lookat target="0, 0.5, 0"
-                    origin="0, 1.5, 1"/>
+        <transform name="to_world">
+            <lookat target="0, 0.9, 0"
+                    origin="0, 1, 1"/>
         </transform>
-        <spectrum name="intensity" value = "3.9788735772973834"/>
-        <float name="cutoffAngle" value="30"/>
-        <float name="beamWidth" value="20"/>
+        <rgb name="intensity" value = "2550,2550,2550"/>
+        <float name="cutoff_angle" value="20"/>
+        <float name="beam_width" value="15"/>
     </emitter>
 </scene>
