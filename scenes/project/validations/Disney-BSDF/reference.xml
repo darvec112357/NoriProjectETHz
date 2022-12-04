@@ -1,0 +1,76 @@
+
+<scene version="3.0.0">
+    
+	<integrator type="path"/>
+
+	<sensor type="perspective">
+		<float name="fov" value="27.7856"/>
+        
+		<transform name="to_world">
+			<lookat target="0, 0.893051, 4.41198" origin="0, 0.919769, 5.41159" up="0, 1, 0"/>
+		</transform>
+        
+        <film type="hdrfilm">
+            <integer name="height" value="600"/>
+            <integer name="width" value="800"/>
+        </film>
+
+        <sampler type="independent">
+            <integer name="sample_count" value="512"/>
+        </sampler>
+        
+    </sensor>
+    
+	<shape type="obj">
+		<string name="filename" value="meshes/walls.obj"/>
+
+		<bsdf type="diffuse">
+			<rgb name="reflectance" value="0.725 0.71 0.68"/>
+		</bsdf>
+	</shape>
+
+	<shape type="obj">
+		<string name="filename" value="meshes/rightwall.obj"/>
+
+		<bsdf type="diffuse">
+			<rgb name="reflectance" value="0.161 0.133 0.427"/>
+		</bsdf>
+	</shape>
+
+	<shape type="obj">
+		<string name="filename" value="meshes/leftwall.obj"/>
+
+		<bsdf type="diffuse">
+			<rgb name="reflectance" value="0.630 0.065 0.05"/>
+		</bsdf>
+	</shape>
+
+	<shape type="sphere">
+		<point name="center" value="0.0 0.332100 0.376700" />
+		<float name="radius" value="0.3263" />
+
+		<bsdf type="principled">
+			<rgb name="base_color" value="1.0,1.0,1.0"/>
+			<!-- <float name="metallic" value="1.0" /> -->
+			<!-- <float name="specular" value="1.0" /> -->
+			<float name="roughness" value="1.0" />
+			<!-- <float name="spec_tint" value="0.4" />
+			<float name="anisotropic" value="0.5" /> -->
+			<!-- <float name="sheen" value="1.0" /> -->
+			<!-- <float name="sheen_tint" value="0.2" /> -->
+			<!-- <float name="clearcoat" value="1.0" /> -->
+			<!-- <float name="clearcoat_gloss" value="0.3" />
+			<float name="spec_trans" value="0.4" /> -->
+		</bsdf>
+	</shape>
+
+    <shape type="obj">
+		<string name="filename" value="meshes/light.obj"/>
+
+		<emitter type="area">
+			 <rgb name="radiance" value="15,15,15"/>
+		</emitter>
+	</shape>
+
+
+</scene>
