@@ -31,13 +31,13 @@ public:
         m_metallic = propList.getFloat("metallic", 0.0f);
 
         /* Specular */
-        m_specular = propList.getFloat("specular", 0.5f);
+        m_specular = propList.getFloat("specular", 0.0f);
 
         /* SpecularTint */
         m_specularTint = propList.getFloat("specularTint", 0.0f);
 
         /* Roughness */
-        m_roughness = propList.getFloat("roughness", 0.5f);
+        m_roughness = propList.getFloat("roughness", 0.0f);
 
         /* Anisotropic */
         m_anisotropic = propList.getFloat("anisotropic", 0.0f);
@@ -46,13 +46,13 @@ public:
         m_sheen = propList.getFloat("sheen", 0.0f);
 
         /* SheenTint */
-        m_sheenTint = propList.getFloat("sheenTint", 0.5f);
+        m_sheenTint = propList.getFloat("sheenTint", 0.0f);
 
         /* Clearcoat */
         m_clearcoat = propList.getFloat("clearcoat", 0.0f);
 
         /* ClearcoatGloss */
-        m_clearcoatGloss = propList.getFloat("clearcoatGloss", 1.0f);
+        m_clearcoatGloss = propList.getFloat("clearcoatGloss", 0.0f);
 
         /* Parameters to discribe roughness and anisotropy */
         m_a = sqrt(1 - 0.9 * m_anisotropic);

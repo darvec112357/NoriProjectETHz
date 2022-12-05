@@ -1,0 +1,53 @@
+<scene>
+	<!-- Independent sample generator, user-selected samples per pixel -->
+	<sampler type="independent">
+		<integer name="sampleCount" value="1024"/>
+	</sampler>
+
+	<integrator type="direct_mis">
+		<!--float name="length" value="10"/-->
+	</integrator>
+
+	<!-- Render the scene as viewed by a perspective camera -->
+	<!--199.38762 199.42264 0.61237 199.29289-->
+	<camera type="perspective">
+		<transform name="toWorld">
+			<lookat target="-149.7, -999.046, 160" 
+			origin="-150 -1000 160" 
+			up="0.3, 0.954, 0.1"/>
+		</transform>
+
+		<!-- Field of view: 30 degrees -->
+		<float name="fov" value="30"/>
+
+		<!-- 768 x 768 pixels -->
+		<integer name="width" value="1280"/>
+		<integer name="height" value="720"/>
+	</camera>
+
+	<mesh type="sphere">
+        <point name="center" value="0,100,100"/>
+        <float name="radius" value="3000"/>
+        
+
+        <emitter type="environment">
+            <float name="strength" value ="0.5"/>
+            <string name="filename" value="/cluster/home/jiusun/NoriProjectETHz/scenes/project/cloudy.exr"/>
+			<!-- <string name="filename" value="C:\Users\Rongxing\Desktop\ETH\CG\nori\scenes\project\cloudy.exr"/> -->
+			<!-- <string name="filename" value="/Users/apple/Downloads/NoriProjectETHz/scenes/project/cloudy.exr"/> -->
+        </emitter>
+    </mesh>
+
+	<mesh type="obj">
+		<string name="filename" value="CityLayOut.obj"/>
+
+		<bsdf type="diffuse">
+            <texture type="imagetexture" name="albedo">
+                <string name="ImageName" value="BrickOld.png"/>
+                <vector name="scale" value="0.7,1"/>
+            </texture>
+        </bsdf>
+	</mesh>
+
+
+</scene>
