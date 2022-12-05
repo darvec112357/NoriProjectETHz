@@ -995,6 +995,75 @@ CMakeFiles/nori.dir/src/environment.cpp.o.provides: CMakeFiles/nori.dir/src/envi
 
 CMakeFiles/nori.dir/src/environment.cpp.o.provides.build: CMakeFiles/nori.dir/src/environment.cpp.o
 
+CMakeFiles/nori.dir/src/disney.cpp.o: CMakeFiles/nori.dir/flags.make
+CMakeFiles/nori.dir/src/disney.cpp.o: ../src/disney.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /cluster/home/jiusun/NoriProjectETHz/build/CMakeFiles $(CMAKE_PROGRESS_42)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/nori.dir/src/disney.cpp.o"
+	/usr/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/nori.dir/src/disney.cpp.o -c /cluster/home/jiusun/NoriProjectETHz/src/disney.cpp
+
+CMakeFiles/nori.dir/src/disney.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/nori.dir/src/disney.cpp.i"
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -E /cluster/home/jiusun/NoriProjectETHz/src/disney.cpp > CMakeFiles/nori.dir/src/disney.cpp.i
+
+CMakeFiles/nori.dir/src/disney.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/nori.dir/src/disney.cpp.s"
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -S /cluster/home/jiusun/NoriProjectETHz/src/disney.cpp -o CMakeFiles/nori.dir/src/disney.cpp.s
+
+CMakeFiles/nori.dir/src/disney.cpp.o.requires:
+.PHONY : CMakeFiles/nori.dir/src/disney.cpp.o.requires
+
+CMakeFiles/nori.dir/src/disney.cpp.o.provides: CMakeFiles/nori.dir/src/disney.cpp.o.requires
+	$(MAKE) -f CMakeFiles/nori.dir/build.make CMakeFiles/nori.dir/src/disney.cpp.o.provides.build
+.PHONY : CMakeFiles/nori.dir/src/disney.cpp.o.provides
+
+CMakeFiles/nori.dir/src/disney.cpp.o.provides.build: CMakeFiles/nori.dir/src/disney.cpp.o
+
+CMakeFiles/nori.dir/src/imagetexture.cpp.o: CMakeFiles/nori.dir/flags.make
+CMakeFiles/nori.dir/src/imagetexture.cpp.o: ../src/imagetexture.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /cluster/home/jiusun/NoriProjectETHz/build/CMakeFiles $(CMAKE_PROGRESS_43)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/nori.dir/src/imagetexture.cpp.o"
+	/usr/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/nori.dir/src/imagetexture.cpp.o -c /cluster/home/jiusun/NoriProjectETHz/src/imagetexture.cpp
+
+CMakeFiles/nori.dir/src/imagetexture.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/nori.dir/src/imagetexture.cpp.i"
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -E /cluster/home/jiusun/NoriProjectETHz/src/imagetexture.cpp > CMakeFiles/nori.dir/src/imagetexture.cpp.i
+
+CMakeFiles/nori.dir/src/imagetexture.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/nori.dir/src/imagetexture.cpp.s"
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -S /cluster/home/jiusun/NoriProjectETHz/src/imagetexture.cpp -o CMakeFiles/nori.dir/src/imagetexture.cpp.s
+
+CMakeFiles/nori.dir/src/imagetexture.cpp.o.requires:
+.PHONY : CMakeFiles/nori.dir/src/imagetexture.cpp.o.requires
+
+CMakeFiles/nori.dir/src/imagetexture.cpp.o.provides: CMakeFiles/nori.dir/src/imagetexture.cpp.o.requires
+	$(MAKE) -f CMakeFiles/nori.dir/build.make CMakeFiles/nori.dir/src/imagetexture.cpp.o.provides.build
+.PHONY : CMakeFiles/nori.dir/src/imagetexture.cpp.o.provides
+
+CMakeFiles/nori.dir/src/imagetexture.cpp.o.provides.build: CMakeFiles/nori.dir/src/imagetexture.cpp.o
+
+CMakeFiles/nori.dir/src/lodepng.cpp.o: CMakeFiles/nori.dir/flags.make
+CMakeFiles/nori.dir/src/lodepng.cpp.o: ../src/lodepng.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /cluster/home/jiusun/NoriProjectETHz/build/CMakeFiles $(CMAKE_PROGRESS_44)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/nori.dir/src/lodepng.cpp.o"
+	/usr/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/nori.dir/src/lodepng.cpp.o -c /cluster/home/jiusun/NoriProjectETHz/src/lodepng.cpp
+
+CMakeFiles/nori.dir/src/lodepng.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/nori.dir/src/lodepng.cpp.i"
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -E /cluster/home/jiusun/NoriProjectETHz/src/lodepng.cpp > CMakeFiles/nori.dir/src/lodepng.cpp.i
+
+CMakeFiles/nori.dir/src/lodepng.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/nori.dir/src/lodepng.cpp.s"
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -S /cluster/home/jiusun/NoriProjectETHz/src/lodepng.cpp -o CMakeFiles/nori.dir/src/lodepng.cpp.s
+
+CMakeFiles/nori.dir/src/lodepng.cpp.o.requires:
+.PHONY : CMakeFiles/nori.dir/src/lodepng.cpp.o.requires
+
+CMakeFiles/nori.dir/src/lodepng.cpp.o.provides: CMakeFiles/nori.dir/src/lodepng.cpp.o.requires
+	$(MAKE) -f CMakeFiles/nori.dir/build.make CMakeFiles/nori.dir/src/lodepng.cpp.o.provides.build
+.PHONY : CMakeFiles/nori.dir/src/lodepng.cpp.o.provides
+
+CMakeFiles/nori.dir/src/lodepng.cpp.o.provides.build: CMakeFiles/nori.dir/src/lodepng.cpp.o
+
 # Object files for target nori
 nori_OBJECTS = \
 "CMakeFiles/nori.dir/src/bitmap.cpp.o" \
@@ -1037,7 +1106,10 @@ nori_OBJECTS = \
 "CMakeFiles/nori.dir/src/path_mats.cpp.o" \
 "CMakeFiles/nori.dir/src/path_mis.cpp.o" \
 "CMakeFiles/nori.dir/src/spotlight.cpp.o" \
-"CMakeFiles/nori.dir/src/environment.cpp.o"
+"CMakeFiles/nori.dir/src/environment.cpp.o" \
+"CMakeFiles/nori.dir/src/disney.cpp.o" \
+"CMakeFiles/nori.dir/src/imagetexture.cpp.o" \
+"CMakeFiles/nori.dir/src/lodepng.cpp.o"
 
 # External object files for target nori
 nori_EXTERNAL_OBJECTS =
@@ -1083,6 +1155,9 @@ nori: CMakeFiles/nori.dir/src/path_mats.cpp.o
 nori: CMakeFiles/nori.dir/src/path_mis.cpp.o
 nori: CMakeFiles/nori.dir/src/spotlight.cpp.o
 nori: CMakeFiles/nori.dir/src/environment.cpp.o
+nori: CMakeFiles/nori.dir/src/disney.cpp.o
+nori: CMakeFiles/nori.dir/src/imagetexture.cpp.o
+nori: CMakeFiles/nori.dir/src/lodepng.cpp.o
 nori: CMakeFiles/nori.dir/build.make
 nori: ext_build/dist/lib/libpugixml.a
 nori: CMakeFiles/nori.dir/link.txt
@@ -1134,6 +1209,9 @@ CMakeFiles/nori.dir/requires: CMakeFiles/nori.dir/src/path_mats.cpp.o.requires
 CMakeFiles/nori.dir/requires: CMakeFiles/nori.dir/src/path_mis.cpp.o.requires
 CMakeFiles/nori.dir/requires: CMakeFiles/nori.dir/src/spotlight.cpp.o.requires
 CMakeFiles/nori.dir/requires: CMakeFiles/nori.dir/src/environment.cpp.o.requires
+CMakeFiles/nori.dir/requires: CMakeFiles/nori.dir/src/disney.cpp.o.requires
+CMakeFiles/nori.dir/requires: CMakeFiles/nori.dir/src/imagetexture.cpp.o.requires
+CMakeFiles/nori.dir/requires: CMakeFiles/nori.dir/src/lodepng.cpp.o.requires
 .PHONY : CMakeFiles/nori.dir/requires
 
 CMakeFiles/nori.dir/clean:

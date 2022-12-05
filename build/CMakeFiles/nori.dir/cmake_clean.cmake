@@ -40,6 +40,9 @@ FILE(REMOVE_RECURSE
   "CMakeFiles/nori.dir/src/path_mis.cpp.o"
   "CMakeFiles/nori.dir/src/spotlight.cpp.o"
   "CMakeFiles/nori.dir/src/environment.cpp.o"
+  "CMakeFiles/nori.dir/src/disney.cpp.o"
+  "CMakeFiles/nori.dir/src/imagetexture.cpp.o"
+  "CMakeFiles/nori.dir/src/lodepng.cpp.o"
   "nori.pdb"
   "nori"
 )
