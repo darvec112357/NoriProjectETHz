@@ -44,7 +44,7 @@
 		<bsdf type="diffuse">
             <texture type="imagetexture" name="albedo">
                 <string name="ImageName" value="BrickOld.png"/>
-                <vector name="scale" value="0.07,0.1"/>
+                <vector name="scale" value="0.7,0.1"/>
             </texture>
         </bsdf>
 	</mesh>
