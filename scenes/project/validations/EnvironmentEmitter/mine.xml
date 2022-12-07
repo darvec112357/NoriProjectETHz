@@ -1,8 +1,6 @@
 <scene>
-    <!-- Integrator -->
     <integrator type="path_mis"/>
 
-    <!-- Perspective camera -->
     <camera type="perspective">
         <transform name="toWorld">
             <scale value="-1,1,1"/>
@@ -10,46 +8,29 @@
         </transform>
         <float name="fov" value="100"/>
 
-        <integer name="height" value="600"/>  <!-- have to choose proper values -->
+        <integer name="height" value="600"/> 
         <integer name="width" value="800"/>
     </camera>
 
-
-
-    <!-- Sample generator, number of samples per pixel -->
     <sampler type="independent">
-        <integer name="sampleCount" value="32"/>
+        <integer name="sampleCount" value="64"/>
     </sampler>
 
 
     <mesh type="sphere">
-        <point name="center" value="0,0,1"/>
-        <float name="radius" value="30"/>
+        <point name="center" value="0,0,0"/>
+        <float name="radius" value="300"/>
 
         <emitter type="environment">
-            <string name="filename" value="C:\Users\Rongxing\Desktop\ETH\CG\nori\scenes\project\validations\EnvironmentEmitter\cloudy.exr"/>    <!-- have to choose proper path, ../scenes/project/envmaps/envmap.exr"-->
+            <string name="filename" value="C:\Users\Rongxing\Desktop\ETH\CG\nori\scenes\project\validations\EnvironmentEmitter\park.exr"/>
         </emitter>
     </mesh>
 
-    <!-- <mesh type="sphere">
-        <point name="center" value="0,0,1"/>
-        <float name="radius" value="3"/>
-        <bsdf type="dielectric">
-            <float name="extIOR" value="1.0"/>
-            <float name="intIOR" value="1.0"/>
-        </bsdf>
-    </mesh> -->
     <mesh type="sphere">
         <point name="center" value="0,0,1"/>
-        <float name="radius" value="4"/> 
-
-        <bsdf type="mirror"/>
-
+        <float name="radius" value="2"/>
+        <bsdf type="mirror">
+        </bsdf>
     </mesh>
 
 </scene>
-
-
-
-
-
