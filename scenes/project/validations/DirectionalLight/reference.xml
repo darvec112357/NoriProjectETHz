@@ -1,0 +1,90 @@
+<!-- Table scene, Copyright (c) 2012 by Olesya Jakob -->
+
+<scene version="3.0.0">
+	<integrator type="path">
+	</integrator>
+
+	<!-- Render the scene as viewed by a perspective camera -->
+	<sensor type="perspective">
+		<transform name="to_world">
+			<lookat target="31.6866, -67.2776, 36.1392" 
+				origin="32.1259, -68.0505, 36.597" 
+				up="-0.22886, 0.39656, 0.889024"/>
+		</transform>
+
+		<float name="fov" value="35"/>
+
+		<film type="hdrfilm">
+            <integer name="height" value="600"/>
+            <integer name="width" value="800"/>
+        </film>
+
+		<sampler type="independent">
+			<integer name="sample_count" value="512"/>
+		</sampler>
+	</sensor>
+
+	<emitter type="directional">
+		<rgb name="irradiance" value="3,3,2.5"/>
+		<vector name="direction" value="0.0, 0.0, -1.0"/>
+	</emitter>
+
+	<emitter type="directional">
+		<rgb name="irradiance" value="1,1,1.6"/>
+		<vector name="direction" value="0.0, -1.0, -1.0"/>
+	</emitter>
+
+	<!-- Water<->Air interface -->
+	<shape type="obj">
+		<string name="filename" value="meshes/mesh_2.obj"/>
+		<transform name="to_world">
+			<translate value="-1,0,0"/>
+		</transform>
+
+		<bsdf type="dielectric">
+			<float name="ext_ior" value="1"/>
+			<float name="int_ior" value="1.33"/>
+		</bsdf>
+	</shape>
+
+	<!-- Glass<->Air interface -->
+	<shape type="obj">
+		<string name="filename" value="meshes/mesh_3.obj"/>
+		<transform name="to_world">
+			<translate value="-1,0,0"/>
+		</transform>
+
+		<bsdf type="dielectric">
+			<float name="ext_ior" value="1"/>
+			<float name="int_ior" value="1.5"/>
+		</bsdf>
+	</shape>
+
+	<!-- Glass<->Water interface -->
+	<shape type="obj">
+		<string name="filename" value="meshes/mesh_4.obj"/>
+		<transform name="to_world">
+			<translate value="-1,0,0"/>
+		</transform>
+
+		<bsdf type="dielectric">
+			<float name="ext_ior" value="1.5"/>
+			<float name="int_ior" value="1.33"/>
+		</bsdf>
+	</shape>
+
+	<!-- Diffuse floor -->
+	<shape type="obj">
+		<string name="filename" value="meshes/mesh_1.obj"/>
+
+		<bsdf type="diffuse">
+			<rgb name="reflectance" value=".5,.5,.5"/>
+		</bsdf>
+
+		<transform name="to_world">
+			<scale value="0.2,0.35,0.5"/>
+			<translate value="-35,25,0"/>
+		</transform>
+
+	</shape>
+</scene>

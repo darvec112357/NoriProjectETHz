@@ -90,6 +90,7 @@ add_executable(nori
   src/disney.cpp
   src/imagetexture.cpp
   src/lodepng.cpp
+  src/directional_light.cpp
 )
 
 # The following lines build the warping test application
