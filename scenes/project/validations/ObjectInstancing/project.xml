@@ -32,9 +32,9 @@
 
         <emitter type="environment">
             <float name="strength" value ="0.5"/>
-            <!-- <string name="filename" value="/cluster/home/jiusun/NoriProjectETHz/scenes/project/cloudy.exr"/> -->
+            <string name="filename" value="/cluster/home/jiusun/NoriProjectETHz/scenes/project/cloudy.exr"/>
 			<!-- <string name="filename" value="C:\Users\Rongxing\Desktop\ETH\CG\nori\scenes\project\cloudy.exr"/> -->
-			<string name="filename" value="/Users/apple/Downloads/NoriProjectETHz_local/scenes/project/cloudy.exr"/>
+			<!-- <string name="filename" value="/Users/apple/Downloads/NoriProjectETHz_local/scenes/project/cloudy.exr"/> -->
         </emitter>
     </mesh>
 
@@ -50,7 +50,7 @@
         </bsdf>
 	</mesh>
 
-	<mesh type="obj">
+	<!-- <mesh type="obj">
 		<string name="filename" value="mountain.obj"/>
 
 		<bsdf type="diffuse">
@@ -66,7 +66,7 @@
 				axis="0.0, 0.0, 0.0"/>
 			<translate value="350, 50, 0"/>
 		</transform>
-	</mesh>
+	</mesh> -->
 
 
 </scene>
