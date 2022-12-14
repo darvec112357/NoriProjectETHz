@@ -598,29 +598,53 @@ src/direct_mis.cpp.s:
 	$(MAKE) -f CMakeFiles/nori.dir/build.make CMakeFiles/nori.dir/src/direct_mis.cpp.s
 .PHONY : src/direct_mis.cpp.s
 
-src/disney.o: src/disney.cpp.o
-.PHONY : src/disney.o
+src/directional_light.o: src/directional_light.cpp.o
+.PHONY : src/directional_light.o
 
 # target to build an object file
-src/disney.cpp.o:
-	$(MAKE) -f CMakeFiles/nori.dir/build.make CMakeFiles/nori.dir/src/disney.cpp.o
-.PHONY : src/disney.cpp.o
+src/directional_light.cpp.o:
+	$(MAKE) -f CMakeFiles/nori.dir/build.make CMakeFiles/nori.dir/src/directional_light.cpp.o
+.PHONY : src/directional_light.cpp.o
 
-src/disney.i: src/disney.cpp.i
-.PHONY : src/disney.i
+src/directional_light.i: src/directional_light.cpp.i
+.PHONY : src/directional_light.i
 
 # target to preprocess a source file
-src/disney.cpp.i:
-	$(MAKE) -f CMakeFiles/nori.dir/build.make CMakeFiles/nori.dir/src/disney.cpp.i
-.PHONY : src/disney.cpp.i
+src/directional_light.cpp.i:
+	$(MAKE) -f CMakeFiles/nori.dir/build.make CMakeFiles/nori.dir/src/directional_light.cpp.i
+.PHONY : src/directional_light.cpp.i
 
-src/disney.s: src/disney.cpp.s
-.PHONY : src/disney.s
+src/directional_light.s: src/directional_light.cpp.s
+.PHONY : src/directional_light.s
 
 # target to generate assembly for a file
-src/disney.cpp.s:
-	$(MAKE) -f CMakeFiles/nori.dir/build.make CMakeFiles/nori.dir/src/disney.cpp.s
-.PHONY : src/disney.cpp.s
+src/directional_light.cpp.s:
+	$(MAKE) -f CMakeFiles/nori.dir/build.make CMakeFiles/nori.dir/src/directional_light.cpp.s
+.PHONY : src/directional_light.cpp.s
+
+src/disneybsdf.o: src/disneybsdf.cpp.o
+.PHONY : src/disneybsdf.o
+
+# target to build an object file
+src/disneybsdf.cpp.o:
+	$(MAKE) -f CMakeFiles/nori.dir/build.make CMakeFiles/nori.dir/src/disneybsdf.cpp.o
+.PHONY : src/disneybsdf.cpp.o
+
+src/disneybsdf.i: src/disneybsdf.cpp.i
+.PHONY : src/disneybsdf.i
+
+# target to preprocess a source file
+src/disneybsdf.cpp.i:
+	$(MAKE) -f CMakeFiles/nori.dir/build.make CMakeFiles/nori.dir/src/disneybsdf.cpp.i
+.PHONY : src/disneybsdf.cpp.i
+
+src/disneybsdf.s: src/disneybsdf.cpp.s
+.PHONY : src/disneybsdf.s
+
+# target to generate assembly for a file
+src/disneybsdf.cpp.s:
+	$(MAKE) -f CMakeFiles/nori.dir/build.make CMakeFiles/nori.dir/src/disneybsdf.cpp.s
+.PHONY : src/disneybsdf.cpp.s
 
 src/environment.o: src/environment.cpp.o
 .PHONY : src/environment.o
@@ -1418,9 +1442,12 @@ help:
 	@echo "... src/direct_mis.o"
 	@echo "... src/direct_mis.i"
 	@echo "... src/direct_mis.s"
-	@echo "... src/disney.o"
-	@echo "... src/disney.i"
-	@echo "... src/disney.s"
+	@echo "... src/directional_light.o"
+	@echo "... src/directional_light.i"
+	@echo "... src/directional_light.s"
+	@echo "... src/disneybsdf.o"
+	@echo "... src/disneybsdf.i"
+	@echo "... src/disneybsdf.s"
 	@echo "... src/environment.o"
 	@echo "... src/environment.i"
 	@echo "... src/environment.s"

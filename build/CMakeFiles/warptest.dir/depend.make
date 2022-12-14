@@ -189,6 +189,7 @@ CMakeFiles/warptest.dir/src/microfacet.cpp.o: ../include/nori/object.h
 CMakeFiles/warptest.dir/src/microfacet.cpp.o: ../include/nori/proplist.h
 CMakeFiles/warptest.dir/src/microfacet.cpp.o: ../include/nori/ray.h
 CMakeFiles/warptest.dir/src/microfacet.cpp.o: ../include/nori/sampler.h
+CMakeFiles/warptest.dir/src/microfacet.cpp.o: ../include/nori/texture.h
 CMakeFiles/warptest.dir/src/microfacet.cpp.o: ../include/nori/transform.h
 CMakeFiles/warptest.dir/src/microfacet.cpp.o: ../include/nori/vector.h
 CMakeFiles/warptest.dir/src/microfacet.cpp.o: ../include/nori/warp.h
@@ -717,6 +718,7 @@ CMakeFiles/warptest.dir/src/warptest.cpp.o: ../include/nori/object.h
 CMakeFiles/warptest.dir/src/warptest.cpp.o: ../include/nori/proplist.h
 CMakeFiles/warptest.dir/src/warptest.cpp.o: ../include/nori/ray.h
 CMakeFiles/warptest.dir/src/warptest.cpp.o: ../include/nori/sampler.h
+CMakeFiles/warptest.dir/src/warptest.cpp.o: ../include/nori/texture.h
 CMakeFiles/warptest.dir/src/warptest.cpp.o: ../include/nori/transform.h
 CMakeFiles/warptest.dir/src/warptest.cpp.o: ../include/nori/vector.h
 CMakeFiles/warptest.dir/src/warptest.cpp.o: ../include/nori/warp.h

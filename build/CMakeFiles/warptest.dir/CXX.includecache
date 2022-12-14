@@ -81,6 +81,8 @@ array
 ../include/nori/bsdf.h
 nori/object.h
 -
+nori/texture.h
+-
 
 ../include/nori/color.h
 nori/common.h
@@ -126,6 +128,10 @@ nori/vector.h
 nori/object.h
 -
 memory
+-
+
+../include/nori/texture.h
+nori/object.h
 -
 
 ../include/nori/transform.h

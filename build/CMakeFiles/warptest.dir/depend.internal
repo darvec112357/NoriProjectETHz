@@ -190,6 +190,7 @@ CMakeFiles/warptest.dir/src/microfacet.cpp.o
  ../include/nori/proplist.h
  ../include/nori/ray.h
  ../include/nori/sampler.h
+ ../include/nori/texture.h
  ../include/nori/transform.h
  ../include/nori/vector.h
  ../include/nori/warp.h
@@ -718,6 +719,7 @@ CMakeFiles/warptest.dir/src/warptest.cpp.o
  ../include/nori/proplist.h
  ../include/nori/ray.h
  ../include/nori/sampler.h
+ ../include/nori/texture.h
  ../include/nori/transform.h
  ../include/nori/vector.h
  ../include/nori/warp.h
