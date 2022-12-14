@@ -17,8 +17,8 @@ public:
 
     Color3f eval(const Point2f & uv) {
 
-        int u = int((uv.x() * width) / imScale.x());
-        int v = int((uv.y() * height) / imScale.y());
+        int v = int((uv.x() * width) / imScale.x());
+        int u = int((uv.y() * height) / imScale.y());
 
         long index = (v * width + u)*4;
         index = index % image.size();
@@ -40,6 +40,7 @@ public:
                 imScale.toString()
         );
     }
+
 
 
 protected:

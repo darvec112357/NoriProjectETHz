@@ -12,8 +12,8 @@
 	<!--199.38762 199.42264 0.61237 199.29289-->
 	<camera type="perspective">
 		<transform name="toWorld">
-			<lookat target="-149.7, -499.046, 160" 
-			origin="-150 -500 160" 
+			<lookat target="-149.7, -999.046, 160" 
+			origin="-150 -1000 160" 
 			up="0.3, 0.954, 0.1"/>
 		</transform>
 
@@ -32,20 +32,21 @@
 
         <emitter type="environment">
             <float name="strength" value ="0.5"/>
-            <string name="filename" value="/cluster/home/jiusun/NoriProjectETHz/scenes/project/cloudy.exr"/>
+            <!-- <string name="filename" value="/cluster/home/jiusun/NoriProjectETHz/scenes/project/cloudy.exr"/> -->
 			<!-- <string name="filename" value="C:\Users\Rongxing\Desktop\ETH\CG\nori\scenes\project\cloudy.exr"/> -->
-			<!-- <string name="filename" value="/Users/apple/Downloads/NoriProjectETHz/scenes/project/cloudy.exr"/> -->
+			<string name="filename" value="/Users/apple/Downloads/NoriProjectETHz_local/scenes/project/cloudy.exr"/>
         </emitter>
     </mesh>
 
 	<mesh type="obj">
 		<string name="filename" value="CityLayOut.obj"/>
 
-		<bsdf type="diffuse">
+		<bsdf type="disney_bsdf">
             <texture type="imagetexture" name="albedo">
                 <string name="ImageName" value="BrickOld.png"/>
-                <vector name="scale" value="0.7,1.0"/>
+                <vector name="scale" value="0.7,1"/>
             </texture>
+			<boolean name="ifNormalMap" value="true"/>
         </bsdf>
 	</mesh>
 

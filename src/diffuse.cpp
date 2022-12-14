@@ -34,6 +34,8 @@ public:
             l.setColor("value", propList.getColor("albedo"));
             m_albedo = static_cast<Texture<Color3f> *>(NoriObjectFactory::createInstance("constant_color", l));
         }
+        // Normal Mapping
+        ifnormalmap = propList.getBoolean("ifNormalMap", false);
     }
     virtual ~Diffuse() {
         delete m_albedo;
@@ -123,13 +125,24 @@ public:
         return true;
     }
 
+    virtual bool ifNormalMap(Texture<Color3f>* &normalMap) const override {
+        if (ifnormalmap) {
+            normalMap = m_albedo;
+            return true;
+        }
+        return false;
+    }
+
     /// Return a human-readable summary
     virtual std::string toString() const override {
         return tfm::format(
             "Diffuse[\n"
             "  albedo = %s\n"
+            "  If normal mapping = %b\n"
+            "  to world = %s\n"
             "]",
-            m_albedo ? indent(m_albedo->toString()) : std::string("null")
+            m_albedo ? indent(m_albedo->toString()) : std::string("null"),
+            ifnormalmap
         );
     }
 
@@ -137,6 +150,7 @@ public:
 
 private:
     Texture<Color3f> * m_albedo;
+    bool ifnormalmap;
 };
 
 NORI_REGISTER_CLASS(Diffuse, "diffuse");

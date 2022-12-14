@@ -156,6 +156,38 @@ void Mesh::setHitInformation(uint32_t index, const Ray3f &ray, Intersection & it
     } else {
         its.shFrame = its.geoFrame;
     }
+
+    Texture<Color3f> *normalMap;
+    if (its.mesh->getBSDF()->ifNormalMap(normalMap)) {
+        Vector3f edge1 = p1 - p0;
+        Vector3f edge2 = p2 - p0;
+        Vector2f deltaUV1 = m_UV.col(idx1) - m_UV.col(idx0);
+        Vector2f deltaUV2 = m_UV.col(idx2) - m_UV.col(idx0);
+
+        float f = 1.0f / (deltaUV1.x() * deltaUV2.y() - deltaUV2.x() * deltaUV1.y());
+
+        Vector3f tangent;
+
+        tangent.x() = f * (deltaUV2.y() * edge1.x() - deltaUV1.y() * edge2.x());
+        tangent.y() = f * (deltaUV2.y() * edge1.y() - deltaUV1.y() * edge2.y());
+        tangent.z() = f * (deltaUV2.y() * edge1.z() - deltaUV1.y() * edge2.z());
+        tangent.normalize();
+
+        Vector3f n_vec = Vector3f(its.geoFrame.n.x(), its.geoFrame.n.y(), its.geoFrame.n.z());
+
+        Vector3f bitangent = n_vec.cross(tangent);
+        // Vector3f bitangent;
+
+        Frame frame = Frame(-tangent, bitangent, n_vec);
+        Color3f normal_color = normalMap->eval(its.uv);
+
+        Vector3f normal = Vector3f(normal_color.x(), normal_color.y(), normal_color.z());
+
+        normal = (normal * 2.0 - Vector3f(1.0)).normalized();
+
+        its.shFrame.n = frame.toWorld(normal);
+    }
+
 }
 
 BoundingBox3f Mesh::getBoundingBox(uint32_t index) const {

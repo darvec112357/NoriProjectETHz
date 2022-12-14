@@ -1,0 +1,50 @@
+<scene>
+	<!-- Independent sample generator, user-selected samples per pixel -->
+	<sampler type="independent">
+		<integer name="sampleCount" value="32"/>
+	</sampler>
+
+	<!-- Use a direct illumination integrator -->
+	<integrator type="path_mis" />
+
+	<!-- Render the scene as viewed by a perspective camera -->
+	<camera type="perspective">
+		<transform name="toWorld">
+			<lookat target="0,0,3" origin="10,10,10" up="0,0,1"/>
+		</transform>
+
+		<!-- Field of view: 40 degrees -->
+		<float name="fov" value="40"/>
+
+		<!-- 512 x 512 pixels -->
+		<integer name="width" value="720"/>
+		<integer name="height" value="720"/>
+	</camera>
+
+	<!-- Ground plane -->
+	<mesh type="obj">
+		<string name="filename" value="plane.obj"/>
+
+		<bsdf type="diffuse">
+			<texture type="imagetexture" name="albedo">
+                <string name="ImageName" value="BrickOldRounded.png"/>
+                <vector name="scale" value="5,5"/>
+            </texture>
+			<boolean name="ifNormalMap" value="false"/>
+		</bsdf>
+
+		<transform name="toWorld">
+			<scale value="10,1,10"/>
+			<rotate axis="1,0,0" angle="90"/>
+			<translate value="0,0, -1"/>
+		</transform>
+
+	</mesh>
+
+	<!-- Illuminate using a directional light -->
+	<emitter type="directional">
+		<color name="radiance" value="1.7,1.7,1.7"/>
+		<vector name="direction" value="0.0, 0.0, -1.0"/>
+	</emitter>
+
+</scene>
