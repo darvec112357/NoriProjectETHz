@@ -50,7 +50,7 @@
         </bsdf>
 	</mesh>
 
-	<!-- <mesh type="obj">
+	<mesh type="obj">
 		<string name="filename" value="mountain.obj"/>
 
 		<bsdf type="diffuse">
@@ -66,7 +66,43 @@
 				axis="0.0, 0.0, 0.0"/>
 			<translate value="350, 50, 0"/>
 		</transform>
-	</mesh> -->
+	</mesh>
+
+	<mesh type="obj">
+		<string name="filename" value="mountain.obj"/>
+
+		<bsdf type="diffuse">
+            <texture type="imagetexture" name="albedo">
+                <string name="ImageName" value="rock-surface-background.png"/>
+                <vector name="scale" value="0.7,1"/>
+            </texture>
+			<boolean name="ifNormalMap" value="false"/>
+        </bsdf>
+
+		<transform name="toWorld">
+			<rotate angle="30"
+				axis="0.0, 0.0, 0.0"/>
+			<translate value="250, 100, 0"/>
+		</transform>
+	</mesh>
+
+	<mesh type="obj">
+		<string name="filename" value="mountain.obj"/>
+
+		<bsdf type="diffuse">
+            <texture type="imagetexture" name="albedo">
+                <string name="ImageName" value="rock-surface-background.png"/>
+                <vector name="scale" value="0.7,1"/>
+            </texture>
+			<boolean name="ifNormalMap" value="false"/>
+        </bsdf>
+
+		<transform name="toWorld">
+			<rotate angle="60"
+				axis="0.0, 0.0, 0.0"/>
+			<translate value="150, 50, 50"/>
+		</transform>
+	</mesh>
 
 
 </scene>
