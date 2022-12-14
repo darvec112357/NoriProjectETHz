@@ -139,7 +139,7 @@ public:
             "Diffuse[\n"
             "  albedo = %s\n"
             "  If normal mapping = %b\n"
-            "  to world = %s\n"
+            // "  to world = %s\n"
             "]",
             m_albedo ? indent(m_albedo->toString()) : std::string("null"),
             ifnormalmap
