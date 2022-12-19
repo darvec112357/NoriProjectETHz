@@ -40,8 +40,9 @@
 
         <emitter type="environment">
             <float name="strength" value ="0.5"/>
+			<string name="filename" value="/cluster/home/jiusun/NoriProjectETHz/scenes/project/cloudy.exr"/>
             <!-- <string name="filename" value="/cluster/home/jiusun/NoriProjectETHz/scenes/project/cloudy.exr"/> -->
-			<string name="filename" value="C:\Users\Rongxing\Desktop\ETH\CG\nori\scenes\project\cloudy.exr"/>
+			<!-- <string name="filename" value="C:\Users\Rongxing\Desktop\ETH\CG\nori\scenes\project\cloudy.exr"/> -->
         </emitter>
     </mesh>
 
