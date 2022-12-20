@@ -28,7 +28,7 @@ function Nldenoise(f, r, k)
         end
     end
     flt =flt./wgtsum;
-    exrwrite(flt, strcat('cbox_path_mats', '_denoised.exr'));
+    exrwrite(flt, strcat('cbox_path_mis', '_denoised.exr'));
 
 
 end
