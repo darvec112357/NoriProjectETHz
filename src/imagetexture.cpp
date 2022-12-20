@@ -42,7 +42,6 @@ public:
     }
 
 
-
 protected:
     std::string imName;
     Vector2f imScale;

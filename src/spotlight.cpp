@@ -26,15 +26,13 @@ class SpotLight : public Emitter {
 public:
     SpotLight(const PropertyList &props) {
         power = props.getColor("power");
-        TotalWidth = props.getFloat("TotalWidth");
-        FalloffStart = props.getFloat("FalloffStart");
+        TotalWidth = props.getFloat("TotalWidth") * M_PI / 180;
+        FallOffStart = props.getFloat("FallOffStart") * M_PI / 180;
         origin = props.getPoint3("origin");
         lookat = props.getPoint3("lookat");
         direction = Vector3f(lookat.x() - origin.x(), lookat.y() - origin.y(), lookat.z() - origin.z());
-        cosFalloffStart = std::cos(FalloffStart * M_PI / 180);
-        cosTotalWidth = std::cos(TotalWidth * M_PI / 180);
-        //std::cout << cosFalloffStart << std::endl;
-        //std::cout << cosTotalWidth << std::endl;
+        cosFalloffStart = cos(FallOffStart);
+        cosTotalWidth = cos(TotalWidth);
     }
 
     virtual std::string toString() const override {
@@ -42,9 +40,8 @@ public:
     }
 
     virtual Color3f eval(const EmitterQueryRecord & lRec) const override {
-        float cosTheta = lRec.n.dot(-lRec.wi);
-        float fA = fallout(cosTheta);
-        return power * fA / (2.0f * M_PI) * (1.0f - 0.5f * (cosFalloffStart + cosTotalWidth));
+        float costheta = lRec.n.dot(-lRec.wi);
+        return power * fallout(costheta) / 2 * (1 - 0.5f * (cosFalloffStart + cosTotalWidth));
     }
 
     virtual Color3f sample(EmitterQueryRecord & lRec, const Point2f & sample) const override {
@@ -54,28 +51,23 @@ public:
         lRec.n = direction.normalized();
 		float distance = (origin - ref).norm();
 		lRec.shadowRay = Ray3f(lRec.ref, lRec.wi, Epsilon, distance - Epsilon);
-        return eval(lRec) / (pdf(lRec));
+        return eval(lRec);
     }
 
     virtual float pdf(const EmitterQueryRecord &lRec) const override {        
-        float pdfVal = Warp::squareToUniformSphereCapPdf(Vector3f(0, 0, 1), cosTotalWidth);
-        float cosThetaLight = abs(lRec.n.dot(-lRec.wi));
-        return pdfVal * (lRec.p - lRec.ref).squaredNorm() / cosThetaLight;
+        return 1.0f;
     }
 
     virtual float fallout(float costheta) const{
         if (costheta > cosFalloffStart) return 1;
         else if (costheta < cosTotalWidth) return 0;
-        else {
-            float delta = (costheta - cosTotalWidth) / (cosFalloffStart - cosTotalWidth);
-            return delta * delta * delta * delta;
-        }
+        return (TotalWidth - std::acos(costheta)) / (TotalWidth - FallOffStart);
     }
 
 
 protected:
     Color3f power;
-    float TotalWidth, FalloffStart;
+    float TotalWidth, FallOffStart;
     float cosTotalWidth, cosFalloffStart;
     Point3f origin;
     Point3f lookat;

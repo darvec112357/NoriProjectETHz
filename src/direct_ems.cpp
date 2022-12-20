@@ -1,67 +1,64 @@
 #include <nori/integrator.h>
 #include <nori/scene.h>
 #include <nori/emitter.h>
-#include <nori/bsdf.h>
 #include <nori/warp.h>
-
+#include <nori/bsdf.h>
 
 NORI_NAMESPACE_BEGIN
 
-class DirectIlluminationIntegrator : public Integrator {
+class DirectEMS : public Integrator {
 public:
-    DirectIlluminationIntegrator(const PropertyList &props) {
-        /* No parameters this time */
-    }
+    DirectEMS(const PropertyList& props) {}
 
-    Color3f Li(const Scene *scene, Sampler *sampler, const Ray3f &ray) const {
-
-        Color3f radiance_result = Color3f(0.0f);
-    
+    Color3f Li(const Scene* scene, Sampler* sampler, const Ray3f& ray) const {
         Intersection its;
         if (!scene->rayIntersect(ray, its))
-            return radiance_result;
+            return Color3f(0.0f);
 
+        
+
+        Frame localFrame = its.shFrame.n;
+        Normal3f n = its.shFrame.n / its.shFrame.n.norm();
+        n = localFrame.toLocal(n);
+
+        Vector3f wo = Vector3f(-ray.d.x(), -ray.d.y(), -ray.d.z());
+        wo = localFrame.toLocal(wo);
+
+        EmitterQueryRecord EQR = EmitterQueryRecord(its.p);
+        Color3f result = Color3f(0.f);
+        
+
+        std::vector<Emitter*> lights = scene->getLights();
+        for (int i = 0; i < lights.size(); i++)
+        {
+            Color3f L_in = lights[i]->sample(EQR, sampler->next2D());
+            Intersection its2;
+            if (scene->rayIntersect(EQR.shadowRay, its2))
+                continue;
+            
+            Vector3f wi1 = localFrame.toLocal(EQR.wi);
+            
+            BSDFQueryRecord BQR = BSDFQueryRecord(wo, wi1, ESolidAngle);
+            BQR.uv = its.uv;
+            Color3f BSDF = its.mesh->getBSDF()->eval(BQR);
+            float coswi = abs(wi1.dot(n));
+            result = Color3f(result.r() + L_in.r() * BSDF.r() * coswi,
+                result.g() + L_in.g() * BSDF.g() * coswi,
+                result.b() + L_in.b() * BSDF.b() * coswi);
+        }
         if (its.mesh->isEmitter()) {
-            EmitterQueryRecord eRec = EmitterQueryRecord(ray.o, its.p, its.shFrame.n);
-            radiance_result += its.mesh->getEmitter()->eval(eRec);
+            EmitterQueryRecord EQR_le = EmitterQueryRecord(ray.o, its.p, its.shFrame.n);
+            Color3f res = its.mesh->getEmitter()->eval(EQR_le);
+            result = Color3f(result.r() + res.r(), result.g() + res.g(), result.b() + res.b());
         }
         
-        EmitterQueryRecord eRec = EmitterQueryRecord(its.p);
-        std::vector<Emitter*> lights = scene->getLights();
-   
-        for (int i = 0; i < lights.size(); i++){
-
-            Emitter* emitter = lights[i];
-
-            Point2f sp = Point2f(sampler->next1D(), sampler->next1D());
-
-            Color3f lr = emitter->sample(eRec, sp);
-
-            Frame local_frame = Frame(its.shFrame.n);
-            Intersection its_shadow;
-            if (scene->rayIntersect(eRec.shadowRay, its_shadow))
-                continue;
-
-            BSDFQueryRecord bRec = BSDFQueryRecord(local_frame.toLocal(- ray.d), local_frame.toLocal(eRec.wi), ESolidAngle);
-            bRec.uv = its.uv;
-            float cos = its.shFrame.n.dot(eRec.wi);
-            
-            radiance_result += Color3f(its.mesh->getBSDF()->eval(bRec).r() * cos * lr.r(),
-                                    its.mesh->getBSDF()->eval(bRec).g() * cos * lr.g(),
-                                    its.mesh->getBSDF()->eval(bRec).b() * cos * lr.b());
-                    
-        }
-        return radiance_result;
+        return result;
     }
 
     std::string toString() const {
-        return "DirectIlluminationIntegrator[]";
+        return "DirectEMS[]";
     }
-
-protected:
-
 };
 
-NORI_REGISTER_CLASS(DirectIlluminationIntegrator, "direct_ems");
-
+NORI_REGISTER_CLASS(DirectEMS, "direct_ems");
 NORI_NAMESPACE_END

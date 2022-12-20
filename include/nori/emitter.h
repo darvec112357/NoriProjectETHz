@@ -29,6 +29,7 @@ struct Intersection;
  * direct illumination technique implemented by a emitter
  */
 struct EmitterQueryRecord {
+    Point2f uv;
     /// Origin point from which we sample the emitter
     Point3f ref;
     /// Sampled point on the emitter

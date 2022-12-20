@@ -57,6 +57,15 @@ public:
     /// Return a pointer to the scene's sample generator
     Sampler *getSampler() { return m_sampler; }
 
+    ///Return a reference to an array containing all media
+    const Medium * getMedium(float rnd) const {
+        auto const& n = m_media.size();
+        size_t index = std::min(
+            static_cast<size_t>(std::floor(n * rnd)),
+            n - 1);
+        return m_media[index];
+    }
+
     /// Return a reference to an array containing all shapes
     const std::vector<Shape *> &getShapes() const { return m_shapes; }
 
@@ -70,6 +79,17 @@ public:
                 static_cast<size_t>(std::floor(n*rnd)),
                 n-1);
         return m_emitters[index];
+    }
+
+    const Emitter * getEnv() const {
+        for (int i = 0; i < m_emitters.size(); ++i) {
+            std::string s1 = m_emitters[i]->toString();
+            std::string s2 = "EnvironmentMap";
+            if (s1.find(s2) != std::string::npos) {
+                return m_emitters[i];
+            }
+        }
+        return nullptr;
     }
 
     /**
@@ -131,9 +151,12 @@ public:
     /// Return a string summary of the scene (for debugging purposes)
     virtual std::string toString() const override;
 
+
+
     virtual EClassType getClassType() const override { return EScene; }
 private:
     std::vector<Shape *> m_shapes;
+    std::vector<Medium *> m_media;
     Integrator *m_integrator = nullptr;
     Sampler *m_sampler = nullptr;
     Camera *m_camera = nullptr;

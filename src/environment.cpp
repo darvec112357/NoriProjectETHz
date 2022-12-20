@@ -1,232 +1,152 @@
-//
-// Created by Alessia Paccagnella on 28/11/2019.
-//
-
-#include <nori/bitmap.h>
 #include <nori/emitter.h>
-#include <nori/frame.h>
-
+#include <nori/warp.h>
+#include <nori/shape.h>
+#include <nori/bitmap.h>
+#include <nori/color.h>
 
 NORI_NAMESPACE_BEGIN
 
-typedef Eigen::Array<float, Eigen::Dynamic, Eigen::Dynamic, Eigen::RowMajor> matrix;
+class EnvironmentEmitter : public Emitter {
 
-class EnvMap: public Emitter {
 public:
+    explicit EnvironmentEmitter(const PropertyList& props) {
+        std::string path = props.getString("filename");
+        map = Bitmap(path);
+        rows = map.rows();
+        cols = map.cols();
+        conditionalPdfPhi = Eigen::MatrixXf(rows, cols);
+        conditionalCdfPhi = Eigen::MatrixXf(rows, cols);
+        preCompute();
+    }
 
-        EnvMap(const PropertyList &propList) {
-
-            if (propList.has("strength")) {
-                m_strength = propList.getFloat("strength");
+    // Bilinear interpolation
+    static Color3f bilinear(const Color3f& q11, const Color3f& q12, const Color3f& q21, const Color3f& q22, const float& t1, const float& t2) {
+        Color3f temp1 = (1 - t1) * q11 + t1 * q21;
+        Color3f temp2 = (1 - t2) * q12 + t2 * q22;
+        return (1 - t2) * temp1 + t2 * temp2;
+    }
+    void preCompute() {
+        // Luminance * sinTheta
+        pdfTheta = Eigen::VectorXf(rows);
+        Eigen::MatrixXf luminance(rows, cols);
+        for (int i = 0; i < rows; ++i) {
+            for (int j = 0; j < cols; ++j) {
+                float theta = M_PI * i / rows;
+                luminance(i, j) = map(i, j).getLuminance() * sin(theta);
+                pdfTheta(i) += luminance(i, j);
             }
-            // loads the exr file, then create the imageMap with the Bitmap function
-            std::string filename = propList.getString("filename");
-            imageMap = Bitmap(filename);
-            mcols = imageMap.cols();
-            mrows = imageMap.rows();
+        }
+        pdfTheta /= pdfTheta.sum();
+        computeCdf(pdfTheta, cdfTheta);
+        for (int i = 0; i < rows; ++i) {
+            conditionalPdfPhi.row(i) = luminance.row(i) / luminance.row(i).sum();
+            Eigen::VectorXf cdf;
+            computeCdf(conditionalPdfPhi.row(i).transpose(), cdf);
+            conditionalCdfPhi.row(i) = cdf;
+        }
+    }
 
-            luminance = matrix(mrows, mcols);
-            mpdf = matrix(mrows, mcols);
-            mcdf = matrix(mrows, mcols + 1);
-            pmarginal = matrix(1, mrows);
-            cmarginal = matrix(1, mrows + 1);
+    static void computeCdf(const Eigen::VectorXf& pdf, Eigen::VectorXf& cdf) {
+        int n = pdf.size();
+        cdf = Eigen::VectorXf(n);
+        cdf(0) = pdf(0);
+        for (int i = 1; i < n; ++i) {
+            cdf(i) = cdf(i - 1) + pdf(i - 1);
+        }
+    }
 
-            for (int i = 0; i < mrows; i++) {
-                for (int j = 0; j < mcols; j++) {
-                    luminance(i,j) = sqrt(0.3* imageMap(i,j).r() + 0.6*imageMap(i,j).g() + 0.1*imageMap(i,j).b()) + Epsilon / 10000000;
-                }
+    static int binarySearch(const Eigen::VectorXf& cdf, const double& sample) {
+        int n = cdf.size();
+        int left = 0;
+        int right = n - 1;
+        while (left <= right) {
+            int mid = (left + right) / 2;
+            if (cdf(mid) == sample) {
+                return mid;
             }
-
-            //precomputing the pdf and cdf values
-            matrix sum(1, mrows);
-            for (int i = 0; i < mpdf.rows(); ++i) {
-                sum(0, i) = precompute1D(i, luminance, mpdf, mcdf);
+            else if (cdf(mid) < sample) {
+                left = mid + 1;
             }
-            precompute1D(0, sum, pmarginal, cmarginal);  //precompute the marginal pdf and cdf
-        }
-
-        virtual std::string toString() const override {
-            return tfm::format(
-                    "EnvironmentMap"
-            );
-        }
-
-
-        //From the paper
-        void sample1D(int rowNumber, const matrix &pf, const matrix &Pf , const float &sample , float &x, float &prob) const {
-            //Binary search
-            int i;
-            for (i = 0; i < Pf.cols(); i++) {
-                if ((sample >= Pf(rowNumber, i)) && (sample < Pf(rowNumber, i+1))) // Pf[i]<=unif<Pf[i+1]
-                    break;
+            else {
+                right = mid - 1;
             }
-            float t = (Pf(rowNumber, i+1) - sample) / (Pf(rowNumber, i+1) - Pf(rowNumber, i));
-            x = (1-t) * i + t * (i+1);
-            prob = pf(rowNumber, i);
+        }
+        return -1;
+    }
+
+    Color3f eval(const EmitterQueryRecord& lRec) const override {
+        Point2f uv = get_uv(lRec);
+        float u = uv.x();
+        float v = uv.y();
+        
+        int x1 = floor(u);
+        int y1 = floor(v);
+        int x2 = x1 + 1;
+        int y2 = y1 + 1;
+
+        Color3f q11 = (x1 >= 0 && x1 < rows && y1 >= 0 && y1 < cols) ? map(x1, y1) : Color3f(0.0f);
+        Color3f q12 = (x1 >= 0 && x1 < rows && y2 >= 0 && y2 < cols) ? map(x1, y2) : Color3f(0.0f);
+        Color3f q21 = (x2 >= 0 && x2 < rows && y1 >= 0 && y1 < cols) ? map(x2, y1) : Color3f(0.0f);
+        Color3f q22 = (x2 >= 0 && x2 < rows && y2 >= 0 && y2 < cols) ? map(x2, y2) : Color3f(0.0f);
+
+        float a = u - x1;
+        float b = v - y1;
+
+        return abs(bilinear(q11, q12, q21, q22, a, b));
+    }
+
+    Color3f sample(EmitterQueryRecord& lRec, const Point2f& sample) const override {
+
+        int i = binarySearch(cdfTheta, sample.x());
+        int j = binarySearch(conditionalCdfPhi.row(i), sample.y());
+
+        float theta = M_PI * i / rows;
+        float phi = 2 * M_PI * j / cols;
+
+        lRec.wi = sphericalDirection(theta, phi);
+        Ray3f ray(lRec.ref, lRec.wi);
+
+        float pdfValue = pdf(lRec);
+        if (pdfValue == 0) {
+            return 0;
         }
 
-        //From the paper
-        float precompute1D(int row, const matrix &f, matrix &pf, matrix &Pf) const {
-            float I = 0;
-            int i;
-            for(i= 0; i < f.cols(); i++)
-                I = i+f(row, i);
-            if (I == 0)
-                return I;
-            for(int j = 0; j < f.cols(); j++)
-                pf(row, j) = f(row, j)/I;
-            Pf(row, 0) = 0;
-            for(i = 1; i < f.cols(); i++)
-                Pf(row,i) = Pf(row, i-1) + pf(i-1);
-            Pf(row,i) = 1;
-            return I;
+        float Jacobian = cols * rows / (2 * M_PI * M_PI * Frame::sinTheta(lRec.wi));
+        return eval(lRec) / (Jacobian * pdfValue);
+    }
+
+    float pdf(const EmitterQueryRecord& lRec) const override {
+        Point2f uv = get_uv(lRec);
+        int u = round(uv.x());
+        int v = round(uv.y());
+
+        if (pdfTheta(u) == 0) {
+            return 0;
         }
+        return pdfTheta(u) * conditionalPdfPhi(u, v);
+    }
 
-        //returns the spherical coordinates from uv coordinates of a 2d pixel
-        Vector3f pixelToDirection(const Point2f &pixel) const{
-            //from u and v, calculate spherical coordinates
-            float theta = pixel[0] * M_PI /(mrows - 1);
-            float phi = pixel[1] * 2 * M_PI / (mcols - 1);
-            //spherical coordinates
-            return Vector3f(sin(theta) * cos(phi), sin(theta)*sin(phi), cos(theta)).normalized();
-        }
+    Point2f get_uv(const EmitterQueryRecord& lRec) const {
+        Point2f uv = sphericalCoordinates(lRec.wi);
+        float u = uv.x() * rows / M_PI;
+        float v = uv.y() * cols / (2 * M_PI);
+        return Point2f(u, v);
+    }
 
-
-        //returns the 2d coordinates of the pixel from 3d spherical coordinates
-        Point2f directionToPixel(const Vector3f &vec) const {
-            //take the spherical coordinates phi and theta
-            Point2f coordinates = sphericalCoordinates(vec);
-            float theta = coordinates.x();
-            float phi = coordinates.y();
-
-            //calculate u and v from spherical coordinates
-            float u = theta * (mrows -1) / M_PI ;
-            float v = phi  * 0.5 * (mcols - 1) / M_PI ;
-
-            if(std::isnan(u) || std::isnan(v)) {
-                return Point2f(0,0);
-            }
-
-            //return the indexes
-            return Point2f(u,v);
-
-        }
-
-
-        //formular for bilinear interpolation
-        Color3f bilinearInterpolation(float dx21, float dy21, Color3f Q11, Color3f Q21, Color3f Q12, Color3f Q22, float dx01, float dy01, float dx20, float dy20) const {
-            // check if the denominator is zero or not
-            if (dx21 == 0.f || dy21 == 0.f) return 0.f;
-            //wikipedia formula extended
-            return ((1.0 / (dx21 * dy21)) * (Q11 * dx20 * dy20 + Q21 * dx01 * dy20 + Q12 * dx20 * dy01 + Q22 * dx01 * dy01));
-        }
-
-
-
-Color3f eval(const EmitterQueryRecord & lRec) const override {
-            Point2f uv = directionToPixel(lRec.wi.normalized());
-
-            //prepare for bilinear interpolation
-            float x = uv[0]; //u
-            float y = uv[1]; //v
-            int x1 = floor(x); //floor of u
-            int y1 = floor(y); //floor of y
-            int x2 = x1 + 1; //superior value
-            int y2 = y1 + 1; //superior value
-            Color3f Q11 = 0.f;
-            if (x1 >= 0 && x1 < mrows && y1 >= 0 && y1 < mcols)
-                Q11 = imageMap(x1, y1); //value left down
-            Color3f Q12 = 0.f;
-            if (x1 >= 0 && x1 < mrows && y2 >= 0 && y2 < mcols)
-                Q12 = imageMap(x1, y2); //value left up
-            Color3f Q21 = 0.f;
-            if (x2 >= 0 && x2 < mrows && y1 >= 0 && y1 < mcols)
-                Q21 = imageMap(x2, y1); //value right down
-            Color3f Q22 = 0.f;
-            if (x2 >= 0 && x2 < mrows && y2 >= 0 && y2 < mcols)
-                Q22 = imageMap(x2, y2); //value right up
-            int dx21 = x2 - x1; //difference between superior and inferior value (single step)
-            int dy21 = y2 - y1; //difference between superior and inferior value (single step)
-            float dx20 = x2 - x;
-            float dx01 = x - x1;
-            float dy01 = y - y1;
-            float dy20 = y2 - y;
-
-            //bilinear interpolation
-            return m_strength * bilinearInterpolation(dx21, dy21, Q11, Q12, Q21, Q22, dy01, dx01, dy20, dx20);
-        }
-
-
-        virtual Color3f sample(EmitterQueryRecord & lRec, const Point2f & sample) const override {
-            //from the paper we know that the jacobian is
-            float jacobian = (mcols - 1) * (mrows - 1) / (2 * std::pow(M_PI, 2) * Frame::sinTheta(lRec.wi));
-            float u, v;
-            float pdfu, pdfv;
-            //sample the pixel, for u = 0 and v with u , marginal and conditional
-            sample1D(0, pmarginal, cmarginal, sample.x(), u, pdfu);
-            sample1D(u, mpdf, mcdf, sample.y(), v, pdfv);
-            Point2f pixel = Point2f(u, v);
-            Vector3f w = pixelToDirection(pixel);
-            //set the lRec parameters
-            lRec.wi = w;
-            lRec.shadowRay = Ray3f(lRec.ref, lRec.wi, Epsilon, 100000);
-            pdfv = pdf(lRec) * jacobian;
-            //return Color
-            return eval(lRec) / pdfv;
-        }
-
-
-        virtual float pdf(const EmitterQueryRecord &lRec) const override {
-            Point2f pixel = directionToPixel(lRec.wi.normalized());
-            int i = floor(pixel.x());
-            int j = floor(pixel.y());
-            if (i >= mrows) i = mrows - 1;
-            if (j >= mcols) j = mcols - 1;
-            if (i < 0) i = 0;
-            if (j < 0) j = 0;
-            //pdf = pdfmarginal * pdf
-            return (pmarginal(0, i) * mpdf(i,j));
-        }
-
-
-protected:
-    Bitmap imageMap;
-    //number of cols of the map
-    int mcols;
-    //number of rows of the map
-    int mrows;
-    //luminance matrix
-    matrix luminance;
-    //pdf matrix
-    matrix mpdf;
-    //cdf matrix
-    matrix mcdf;
-    //pdf marginal matrix
-    matrix pmarginal;
-    //cdf marginal matrix
-    matrix cmarginal;
-
-    float m_strength = 1;
+    std::string toString() const override {
+        return tfm::format(
+            "EnvironmentEmitter[]"
+        );
+    }
+private:
+    Bitmap map;
+    int rows;
+    int cols;
+    Eigen::VectorXf pdfTheta;
+    Eigen::VectorXf cdfTheta;
+    Eigen::MatrixXf conditionalPdfPhi;
+    Eigen::MatrixXf conditionalCdfPhi;
 };
 
-NORI_REGISTER_CLASS(EnvMap, "environment")
+NORI_REGISTER_CLASS(EnvironmentEmitter, "environment")
 NORI_NAMESPACE_END
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

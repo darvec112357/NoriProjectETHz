@@ -44,6 +44,8 @@ add_executable(nori
   include/nori/vector.h
   include/nori/warp.h
   include/nori/lodepng.h
+  include/nori/medium.h
+  include/nori/PhaseFunction.h
 
   # Source code files
   src/bitmap.cpp
@@ -91,6 +93,9 @@ add_executable(nori
   src/lodepng.cpp
   src/disneybsdf.cpp
   src/directional_light.cpp
+  src/medium.cpp
+  src/PhaseFunction.cpp
+  src/path_volumetric.cpp
 )
 
 # The following lines build the warping test application

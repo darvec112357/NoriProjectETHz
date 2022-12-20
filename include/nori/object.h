@@ -53,8 +53,10 @@ public:
             case EScene:      return "scene";
             case EMesh:       return "shape";
             case ETexture:    return "texture";
+            case EMedium:     return "medium";
             case EBSDF:       return "bsdf";
             case EEmitter:    return "emitter";
+            case EPhaseFunction: return "phaseFunction";
             case ECamera:     return "camera";
             case EIntegrator: return "integrator";
             case ESampler:    return "sampler";

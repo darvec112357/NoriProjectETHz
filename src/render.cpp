@@ -146,16 +146,18 @@ void RenderThread::renderScene(const std::string & filename) {
             tbb::concurrent_vector< std::unique_ptr<Sampler> > samplers;
             samplers.resize(numBlocks);
 
+            //variance
             ImageBlock varBlock(camera->getOutputSize(), camera->getReconstructionFilter());
-            Bitmap sBitmap(camera->getOutputSize());
-            Bitmap ssBitmap(camera->getOutputSize());
+            Bitmap Bitmap1(camera->getOutputSize());
+            Bitmap Bitmap2(camera->getOutputSize());
 
             for (uint32_t k = 0; k < numSamples ; ++k) {
+                //variance
                 varBlock.clear();
 
                 m_progress = k/float(numSamples);
-                /*if(m_render_status == 2)
-                    break;*/
+                if(m_render_status == 2)
+                    break;
 
                 tbb::blocked_range<int> range(0, numBlocks);
 
@@ -191,13 +193,15 @@ void RenderThread::renderScene(const std::string & filename) {
 
                 /// Default: parallel rendering
                 tbb::parallel_for(range, map);
+
+                //variance
                 varBlock.lock();
                 Bitmap curBitmap(*varBlock.toBitmap());
                 varBlock.unlock();
                 for (int i = 0; i < curBitmap.rows(); ++i) {
                     for (int j = 0; j < curBitmap.cols(); ++j) {
-                        ssBitmap(i, j) += pow(curBitmap(i, j), 2);
-                        sBitmap(i, j) += curBitmap(i, j);
+                        Bitmap2(i, j) += pow(curBitmap(i, j), 2);
+                        Bitmap1(i, j) += curBitmap(i, j);
                     }
                 }
 
@@ -219,7 +223,7 @@ void RenderThread::renderScene(const std::string & filename) {
             Bitmap varBitmap(camera->getOutputSize()); //bitmap for variance of the size of the output img
             for (int i = 0; i < varBitmap.rows(); ++i) {
                 for (int j = 0; j < varBitmap.cols(); ++j) {
-                    varBitmap(i, j) = (ssBitmap(i, j) - pow(sBitmap(i, j), 2) / numSamples) / ((numSamples - 1) * numSamples);
+                    varBitmap(i, j) = (Bitmap2(i, j) - pow(Bitmap1(i, j), 2) / numSamples) / ((numSamples - 1) * numSamples);
                 }
             }
             varBitmap.save(outputName.substr(0, outputName.size() - 4) + "_var.exr");

@@ -29,13 +29,14 @@ public:
     virtual std::string toString() const override;
 
     virtual T eval(const Point2f & uv) override {
-        
-        Point2i position = Point2i(ceil(uv.x()/m_scale.x() + m_delta.x()), ceil(uv.y()/m_scale.y() + m_delta.y()));
-
-        if(mod(position.x(),2)==mod(position.y(),2))
-            return m_value1;
-
-	    return m_value2;
+		int x = ceil(uv.x() / m_scale.x() + m_delta.x());
+		int y = ceil(uv.y() / m_scale.y() + m_delta.y());
+		if (mod(x, 2) - mod(y, 2))
+			return m_value2;
+		else
+			return m_value1;
+        /*Color3f result = Color3f(uv.x(), uv.y(), 0.0);
+        return T<Color3f> result;*/
     }
 
 protected:

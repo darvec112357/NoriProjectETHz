@@ -82,7 +82,7 @@ public:
             parameterValue = std::exp(std::log(0.05f) * (1 - parameterValue) +
                                       std::log(1.f)   *  parameterValue);
         return parameterValue;
-    } 
+    }
 
     std::pair<Point3f, float> warpPoint(WarpType warpType, const Point2f &sample, float parameterValue) {
         Point3f result;
